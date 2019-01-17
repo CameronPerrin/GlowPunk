@@ -16,13 +16,13 @@ public class Shootin : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetAxis("Fire1") != 0)//Input.GetKeyDown(KeyCode.Mouse0))
             //Debug.Log("mouse clicked");
         {
             //if (Physics.Raycast(transform.position, transform.TransformDirection(Input.mousePosition), out hit, Mathf.Infinity, layerMask))
             //{
             //Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-            bullet.transform.position = new Vector3(rb.transform.position.x-10, rb.transform.position.y-2, 0);
+            bullet.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, 0);
             Instantiate(bullet);
             
             //Debug.DrawRay(transform.position, mousePos * 10, Color.white, 10, false);
