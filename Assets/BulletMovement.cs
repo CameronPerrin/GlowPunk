@@ -34,10 +34,17 @@ public class BulletMovement : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
         //rb.velocity = shootDirection * 2; //* new Vector2 (.02f,.02f);
         float step = speed * Time.deltaTime;
         transform.position += target; //Vector2.MoveTowards(transform.position, target, 1);
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("BUllet des");
+        Destroy(this.gameObject);
+        
     }
 }

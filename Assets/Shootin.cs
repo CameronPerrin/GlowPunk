@@ -15,7 +15,7 @@ public class Shootin : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (Input.GetAxis("Fire1") != 0)//Input.GetKeyDown(KeyCode.Mouse0))
             //Debug.Log("mouse clicked");
         {
