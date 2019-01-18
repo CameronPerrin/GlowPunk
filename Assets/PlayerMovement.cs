@@ -21,14 +21,8 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (Input.GetAxis("MoveJoy1Y") != 0 || Input.GetAxis("MoveJoy1X") != 0)
             {
-               this.transform.position += new Vector3(Input.GetAxis("MoveJoy1X") * move, Input.GetAxis("MoveJoy1Y") * -move, 0);
+                this.transform.position += new Vector3(Input.GetAxis("MoveJoy1X") * move, Input.GetAxis("MoveJoy1Y") * -move, 0);
             }
-           /* if (Input.GetAxis("Horizontal") == -1)
-                transform.position += new Vector3(-move, 0, 0);
-            if (Input.GetAxis("Vertical") == -1)
-                transform.position += new Vector3(0, -move, 0);
-            if (Input.GetAxis("Horizontal") == 1)
-                transform.position += new Vector3(move, 0, 0);*/
         }
         else if (this.tag == "Player2")
         {
@@ -37,5 +31,6 @@ public class PlayerMovement : MonoBehaviour {
                 this.transform.position += new Vector3(Input.GetAxis("MoveJoy2X") * move, Input.GetAxis("MoveJoy2Y") * -move, 0);
             }
         }
+        else { }
     }
 }

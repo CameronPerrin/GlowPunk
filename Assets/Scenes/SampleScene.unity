@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113462630}
   - component: {fileID: 113462629}
+  - component: {fileID: 113462631}
   m_Layer: 0
   m_Name: Border (1)
   m_TagString: Border
@@ -167,6 +168,26 @@ Transform:
   m_Father: {fileID: 912214851}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &113462631
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113462628}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &315795134
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,11 +315,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4424684640371728, guid: df815285b32f25346b7eac3f333e0314, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.52
+      value: 18.3
       objectReference: {fileID: 0}
     - target: {fileID: 4424684640371728, guid: df815285b32f25346b7eac3f333e0314, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.52
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4424684640371728, guid: df815285b32f25346b7eac3f333e0314, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2095,6 +2116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 912214851}
+  - component: {fileID: 912214852}
   m_Layer: 0
   m_Name: BulletBorders
   m_TagString: Untagged
@@ -2119,6 +2141,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &912214852
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 912214850}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &946855418
 Prefab:
   m_ObjectHideFlags: 0
@@ -2158,6 +2205,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1631284371048658, guid: df815285b32f25346b7eac3f333e0314, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df815285b32f25346b7eac3f333e0314, type: 2}
   m_IsPrefabAsset: 0
@@ -2170,6 +2221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230744708}
   - component: {fileID: 1230744707}
+  - component: {fileID: 1230744709}
   m_Layer: 0
   m_Name: Border (2)
   m_TagString: Border
@@ -2215,6 +2267,26 @@ Transform:
   m_Father: {fileID: 912214851}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1230744709
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230744706}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1334439030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,6 +2296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1334439032}
   - component: {fileID: 1334439031}
+  - component: {fileID: 1334439033}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -2269,6 +2342,26 @@ Transform:
   m_Father: {fileID: 912214851}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1334439033
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334439030}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1647159248
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,6 +2371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647159250}
   - component: {fileID: 1647159249}
+  - component: {fileID: 1647159251}
   m_Layer: 0
   m_Name: Border (3)
   m_TagString: Border
@@ -2323,3 +2417,23 @@ Transform:
   m_Father: {fileID: 912214851}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1647159251
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647159248}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

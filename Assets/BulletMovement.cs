@@ -33,10 +33,11 @@ public class BulletMovement : MonoBehaviour {
         {
             target = new Vector3(Input.GetAxis("ShotJoy1X"), Input.GetAxis("ShotJoy1Y"), 0); //+ transform.position;
         }
-        if (this.tag == "User2")
+        else if (this.tag == "User2")
         {
             target = new Vector3(Input.GetAxis("ShotJoy2X"), -Input.GetAxis("ShotJoy2Y"), 0); //+ transform.position;
         }
+        else { }
         //target.z = 0.0f;
         target.Normalize();
     }
@@ -49,10 +50,8 @@ public class BulletMovement : MonoBehaviour {
         transform.position += target; //Vector2.MoveTowards(transform.position, target, 1);
 
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("BUllet des");
         Destroy(this.gameObject);
-        
     }
 }
