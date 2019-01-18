@@ -10,6 +10,7 @@ public class BulletMovement : MonoBehaviour {
     //private float yMag;
     public Vector3 target;
     public float speed = 100.0f;
+    public string user;
 
     // Use this for initialization
     void OnStart () {
@@ -28,7 +29,14 @@ public class BulletMovement : MonoBehaviour {
 
     void Awake ()
     {
-        target = new Vector3(Input.GetAxis("ShotDirectionHori"), Input.GetAxis("ShotDirectionVerti"), 0); //+ transform.position;
+        if (this.tag == "User1")
+        {
+            target = new Vector3(Input.GetAxis("ShotJoy1X"), Input.GetAxis("ShotJoy1Y"), 0); //+ transform.position;
+        }
+        if (this.tag == "User2")
+        {
+            target = new Vector3(Input.GetAxis("ShotJoy2X"), -Input.GetAxis("ShotJoy2Y"), 0); //+ transform.position;
+        }
         //target.z = 0.0f;
         target.Normalize();
     }

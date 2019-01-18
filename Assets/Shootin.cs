@@ -16,18 +16,29 @@ public class Shootin : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (Input.GetAxis("Fire1") != 0)//Input.GetKeyDown(KeyCode.Mouse0))
-            //Debug.Log("mouse clicked");
+        if (this.tag == "Player1")
         {
-            //if (Physics.Raycast(transform.position, transform.TransformDirection(Input.mousePosition), out hit, Mathf.Infinity, layerMask))
-            //{
-            //Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-            bullet.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, 0);
-            Instantiate(bullet);
-            
-            //Debug.DrawRay(transform.position, mousePos * 10, Color.white, 10, false);
-            //Debug.Log("Did Hit");
-            //}
+            if (Input.GetAxis("P1Fire1") != 0)
+            {
+                if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
+                {
+                    bullet.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, 0);
+                    bullet.tag = "User1";
+                    Instantiate(bullet);
+                }
+            }
+        }
+        else if (this.tag == "Player2")
+        {
+            if (Input.GetAxis("P2Fire1") != 0)
+            {
+                if (Input.GetAxis("ShotJoy2X") != 0 || Input.GetAxis("ShotJoy2Y") != 0)
+                {
+                    bullet.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, 0);
+                    bullet.tag = "User2";
+                    Instantiate(bullet);
+                }
+            }
         }
     }
 }
