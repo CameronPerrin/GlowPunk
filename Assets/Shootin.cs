@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shootin : MonoBehaviour {
 
     RaycastHit hit;
-    LayerMask layerMask = 1 << 8;
+    //LayerMask layerMask = 1 << 8;
     public GameObject bullet;
     private Rigidbody2D rb;
     public int timer;

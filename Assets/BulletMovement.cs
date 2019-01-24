@@ -52,11 +52,11 @@ public class BulletMovement : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        Destroy(this.gameObject);
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       Destroy(this.gameObject);
+        if (this.tag == "User1" && collision.tag == "Player2")
+            Destroy(this.gameObject);
+        if (this.tag == "User2" && collision.tag == "Player1")
+            Destroy(this.gameObject);
+        if (collision.tag == "Border")
+            Destroy(this.gameObject);
     }
 }
