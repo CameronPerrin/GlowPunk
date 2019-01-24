@@ -52,10 +52,11 @@ public class BulletMovement : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         Destroy(this.gameObject);
     }
-    private void OnCollisionEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject);
+       Destroy(this.gameObject);
     }
 }

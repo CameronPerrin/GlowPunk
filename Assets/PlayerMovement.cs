@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        this.transform.rotation = new Quaternion(0, 0, 0, 0);
         if (this.tag == "Player1")
         {
             if (Input.GetAxis("MoveJoy1Y") != 0 || Input.GetAxis("MoveJoy1X") != 0)
