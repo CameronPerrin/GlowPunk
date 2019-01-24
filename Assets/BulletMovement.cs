@@ -31,11 +31,11 @@ public class BulletMovement : MonoBehaviour {
     {
         if (this.tag == "User1")
         {
-            target = new Vector3(Input.GetAxis("ShotJoy1X"), Input.GetAxis("ShotJoy1Y"), 0); //+ transform.position;
+            target = new Vector3(Input.GetAxisRaw("ShotJoy1X"), Input.GetAxisRaw("ShotJoy1Y"), 0); //+ transform.position;
         }
         else if (this.tag == "User2")
         {
-            target = new Vector3(Input.GetAxis("ShotJoy2X"), -Input.GetAxis("ShotJoy2Y"), 0); //+ transform.position;
+            target = new Vector3(Input.GetAxisRaw("ShotJoy2X"), -Input.GetAxisRaw("ShotJoy2Y"), 0); //+ transform.position;
         }
         else { }
         //target.z = 0.0f;
