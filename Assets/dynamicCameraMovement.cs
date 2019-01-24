@@ -28,7 +28,7 @@ public class dynamicCameraMovement : MonoBehaviour
         float height = Mathf.Abs(player1.position.y - player2.position.y) * 0.5f;
 
         //computing the size
-        float camSizeX = Mathf.Max(width, minSizeX);
+        float camSizeX = Mathf.Max(width, minSizeX) + 10;
         GetComponent<Camera>().orthographicSize = Mathf.Max(height,
             camSizeX * Screen.height / Screen.width, minSizeY);
     }
