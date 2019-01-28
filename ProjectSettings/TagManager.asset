@@ -9,6 +9,7 @@ TagManager:
   - Border
   - User1
   - User2
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Walls
+    uniqueID: 2511590423
     locked: 0
