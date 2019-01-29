@@ -56,7 +56,7 @@ public class BulletMovement : MonoBehaviour {
             Destroy(this.gameObject);
         if (this.tag == "User2" && collision.tag == "Player1")
             Destroy(this.gameObject);
-        if (collision.tag == "Border")
+        if (collision.tag == "Border" || collision.tag == "Wall")
             Destroy(this.gameObject);
     }
 }
