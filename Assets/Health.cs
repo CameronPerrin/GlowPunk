@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
 
@@ -8,9 +9,10 @@ public class Health : MonoBehaviour {
     public float P2Health = 5f;
     public GameObject P1;
     public GameObject P2;
-
-	// Use this for initialization
-	void Start () {
+    public Text healthText;
+    public Text healthText2;
+    // Use this for initialization
+    void Start () {
 		
 	}
 
@@ -24,7 +26,10 @@ public class Health : MonoBehaviour {
         {
             P2.SetActive(false);
         }
-	}
+
+        //healthText.text = "Player 1 Health: " + P1Health.ToString();
+        //healthText2.text = "Player 2 Health: " + P2Health.ToString();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,5 +41,7 @@ public class Health : MonoBehaviour {
         {
             P2Health -= 1f;
         }
+        healthText.text = "Player 1 Health: " + P1Health.ToString();
+        healthText2.text = "Player 2 Health: " + P2Health.ToString();
     }
 }
