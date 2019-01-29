@@ -7,7 +7,7 @@ public class Shotgun : MonoBehaviour
     public float bulletSpeed, fireRate;
     public float spread;
     public int pellets;
-    private float coolDown = 0;
+    public float coolDown = 0;
     private Rigidbody2D rb;
     public GameObject bullet;
     public ProjectileMovementZec PMZ;
@@ -183,13 +183,15 @@ public class Shotgun : MonoBehaviour
                         Instantiate(bullet, transform.position, transform.rotation);
                     }
 
-                    this.coolDown = 1 / fireRate;
+                    
                 }
+                this.coolDown = 60;
             }
+            this.coolDown -= 1;
         }
         else
         {
-            this.coolDown -= Time.deltaTime;
+            
         }
     }
 }

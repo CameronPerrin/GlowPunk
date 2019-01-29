@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileMovementZec : MonoBehaviour
 {
-    public float speed;
+    public float speed = 100f;
     public Vector3 velocity;
 
     // Update is called once per frame
@@ -22,8 +22,12 @@ public class ProjectileMovementZec : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        Destroy(this.gameObject);
+        if (this.tag == "User1" && collision.tag == "Player2")
+            Destroy(this.gameObject);
+        if (this.tag == "User2" && collision.tag == "Player1")
+            Destroy(this.gameObject);
+        if (collision.tag == "Border" || collision.tag == "Wall")
+            Destroy(this.gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

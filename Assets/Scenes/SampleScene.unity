@@ -579,6 +579,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1905468942291286, guid: a660723d46b02434cbd7ac0123616c7f,
     type: 2}
   m_PrefabInternal: {fileID: 679462739}
+--- !u!114 &249794149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249794148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f629ac4d009047a418c995202303ad97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 10
+  fireRate: 60
+  spread: 1
+  pellets: 3
+  coolDown: 0
+  bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 2}
+  PMZ: {fileID: 0}
+  useMouse: 0
 --- !u!111 &249794154
 Animation:
   m_ObjectHideFlags: 0
@@ -1709,6 +1728,11 @@ Prefab:
     - target: {fileID: 61458439730903996, guid: a660723d46b02434cbd7ac0123616c7f,
         type: 2}
       propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355406602430652, guid: a660723d46b02434cbd7ac0123616c7f,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4074,6 +4098,11 @@ Prefab:
     - target: {fileID: 50041060803957686, guid: a660723d46b02434cbd7ac0123616c7f,
         type: 2}
       propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50041060803957686, guid: a660723d46b02434cbd7ac0123616c7f,
+        type: 2}
+      propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
