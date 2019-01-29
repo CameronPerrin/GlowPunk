@@ -57,7 +57,9 @@
      <Compile Include="Assets\dynamicCameraMovement.cs" />
      <Compile Include="Assets\Health.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
+     <Compile Include="Assets\ProjectileMovementZec.cs" />
      <Compile Include="Assets\Shootin.cs" />
+     <Compile Include="Assets\Shotgun.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/rshamus/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
