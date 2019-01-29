@@ -41,7 +41,13 @@ public class Health : MonoBehaviour {
         {
             P2Health -= 1f;
         }
-        healthText.text = "Player 1 Health: " + P1Health.ToString();
-        healthText2.text = "Player 2 Health: " + P2Health.ToString();
+        if (this.tag == "Player1")
+        {
+            healthText.text = "Player 1 Health: " + P1Health.ToString();
+        }
+        if (this.tag == "Player2")
+        {
+            healthText2.text = "Player 2 Health: " + P2Health.ToString();
+        }
     }
 }
