@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\BulletMovement.cs" />
      <Compile Include="Assets\dynamicCameraMovement.cs" />
+     <Compile Include="Assets\Health.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\Shootin.cs" />
  <Reference Include="UnityEditor.StandardEvents">
