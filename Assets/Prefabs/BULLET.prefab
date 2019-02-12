@@ -158,4 +158,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  velocity: {x: 0.9999877, y: -0.004949793, z: 0}
+  velocity: {x: 0.99879444, y: 0.04908874, z: 0}
