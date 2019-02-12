@@ -1785,7 +1785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &491492322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2474,6 +2474,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 946855418}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &674504177 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 674504181, guid: 759528dfa432ffe488004441f492dfea,
+    type: 3}
+  m_PrefabInstance: {fileID: 946855418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &679462739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2484,6 +2490,10 @@ PrefabInstance:
     - target: {fileID: 249794148, guid: 9b69bc4a18279f04bb847dd0f3db92b0, type: 3}
       propertyPath: m_Name
       value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 249794148, guid: 9b69bc4a18279f04bb847dd0f3db92b0, type: 3}
+      propertyPath: m_TagString
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 885845397, guid: 9b69bc4a18279f04bb847dd0f3db92b0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2546,6 +2556,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1796514402429130, guid: d0ed059862040144b9a786669c20455c,
         type: 2}
+    - target: {fileID: 249794155, guid: 9b69bc4a18279f04bb847dd0f3db92b0, type: 3}
+      propertyPath: Anim
+      value: 
+      objectReference: {fileID: 674504177}
+    - target: {fileID: 249794149, guid: 9b69bc4a18279f04bb847dd0f3db92b0, type: 3}
+      propertyPath: bulletSpeed
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b69bc4a18279f04bb847dd0f3db92b0, type: 3}
 --- !u!1 &716177915
@@ -4764,6 +4782,10 @@ PrefabInstance:
     - target: {fileID: 674504175, guid: 759528dfa432ffe488004441f492dfea, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 674504175, guid: 759528dfa432ffe488004441f492dfea, type: 3}
+      propertyPath: m_TagString
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 28439857, guid: 759528dfa432ffe488004441f492dfea, type: 3}
       propertyPath: m_LocalPosition.x
