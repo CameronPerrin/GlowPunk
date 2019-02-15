@@ -6,63 +6,72 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
-    public float P1Health = 5f;
-    public float P2Health = 5f;
-    public GameObject P1;
-    public GameObject P2;
-    public Text healthText;
-    public Text healthText2;
-    public GameObject Player1Wins;
-    private bool P1Won = false;
-    private bool P2Won = false;
-    public GameObject Player2Wins;
+    public float health = 5f;
+    public int currentPlayer;//which player is this script on
+    public GameObject Player;
+    private GameObject TextGO, Access;//Access Game Object is for the game object that tracks which players are left standing
+    private Text healthText;
+    private SharedVariables share;
+    
     // Use this for initialization
-    void Start () {
-		
+    void Awake ()
+    {
+        if(currentPlayer == 1)
+        {
+            TextGO = GameObject.Find("P1 Health");
+        }
+        else if(currentPlayer == 2)
+        {
+            TextGO = GameObject.Find("P2 Health");
+        }
+
+        Access = GameObject.Find("HealthVariables");
+        healthText = TextGO.GetComponent<Text>();
+        share = Access.GetComponent<SharedVariables>();
+        share.totalPlayers++;
 	}
 
     // Update is called once per frame
     void Update() {
-        if (P1Health <= 0)
+        if(share.totalPlayers < 2)
         {
-            P1.SetActive(false);
+            if(currentPlayer == 1)//Player 1 wins
+            {
+                SceneManager.LoadScene("EndingScreen2");
+            }
+            else if(currentPlayer == 2)
+            {
+                SceneManager.LoadScene("EndingScreen1");
+            }
         }
-        if (P2Health <= 0)
+        if (this.health <= 0)
         {
-            P2.SetActive(false);
+            share.totalPlayers--;
+            Player.SetActive(false);
         }
-
         //healthText.text = "Player 1 Health: " + P1Health.ToString();
         //healthText2.text = "Player 2 Health: " + P2Health.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "User2" && this.tag == "Player1")
+        Debug.Log("Colliding");
+        if (collision.tag == "User2" && currentPlayer == 1)
         {
-            P1Health -= 1f;
+            health -= 1f;
         }
-        if (collision.tag == "User1" && this.tag == "Player2")
+        if (collision.tag == "User1" && currentPlayer == 2)
         {
-            P2Health -= 1f;
+            health -= 1f;
         }
-        if (this.tag == "Player1")
+        if (currentPlayer == 1)
         {
-            healthText.text = "Player 1 Health: " + P1Health.ToString();
-            if (P1Health <= 0 && P1Won == false)
-            {
-                P1Won = true;
-                SceneManager.LoadScene(2);
-            }
+            healthText.text = "Player 1 Health: " + health.ToString();
+   
         }
-        if (this.tag == "Player2")
+        else if (currentPlayer == 2)
         {
-            healthText2.text = "Player 2 Health: " + P2Health.ToString();
-            if (P2Health <= 0 && P2Won == false)
-            {
-                P2Won = true;
-                SceneManager.LoadScene(3);
-            }
+            healthText.text = "Player 2 Health: " + health.ToString();
         }
     }
 }

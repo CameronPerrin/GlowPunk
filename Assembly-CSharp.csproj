@@ -59,9 +59,13 @@
      <Compile Include="Assets\EndingScreen.cs" />
      <Compile Include="Assets\Health.cs" />
      <Compile Include="Assets\MainMenu.cs" />
+     <Compile Include="Assets\MasterController.cs" />
+     <Compile Include="Assets\P1CharSelect.cs" />
+     <Compile Include="Assets\P2CharSelect.cs" />
      <Compile Include="Assets\Pause.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\ProjectileMovementZec.cs" />
+     <Compile Include="Assets\SharedVariables.cs" />
      <Compile Include="Assets\Shootin.cs" />
      <Compile Include="Assets\Shotgun.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
