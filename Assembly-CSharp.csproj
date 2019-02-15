@@ -53,21 +53,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AssaultRifle.cs" />
-     <Compile Include="Assets\BulletMovement.cs" />
-     <Compile Include="Assets\dynamicCameraMovement.cs" />
-     <Compile Include="Assets\EndingScreen.cs" />
-     <Compile Include="Assets\Health.cs" />
-     <Compile Include="Assets\MainMenu.cs" />
-     <Compile Include="Assets\MasterController.cs" />
-     <Compile Include="Assets\P1CharSelect.cs" />
-     <Compile Include="Assets\P2CharSelect.cs" />
-     <Compile Include="Assets\Pause.cs" />
-     <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\ProjectileMovementZec.cs" />
-     <Compile Include="Assets\SharedVariables.cs" />
-     <Compile Include="Assets\Shootin.cs" />
-     <Compile Include="Assets\Shotgun.cs" />
+     <Compile Include="Assets\Scripts\AssaultRifle.cs" />
+     <Compile Include="Assets\Scripts\BulletMovement.cs" />
+     <Compile Include="Assets\Scripts\dynamicCameraMovement.cs" />
+     <Compile Include="Assets\Scripts\EndingScreen.cs" />
+     <Compile Include="Assets\Scripts\Health.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\MasterController.cs" />
+     <Compile Include="Assets\Scripts\P1CharSelect.cs" />
+     <Compile Include="Assets\Scripts\P2CharSelect.cs" />
+     <Compile Include="Assets\Scripts\Pause.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\ProjectileMovementZec.cs" />
+     <Compile Include="Assets\Scripts\SharedVariables.cs" />
+     <Compile Include="Assets\Scripts\Shootin.cs" />
+     <Compile Include="Assets\Scripts\Shotgun.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -86,19 +86,19 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/rshamus/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/zmccarthy/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/rshamus/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/zmccarthy/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/rshamus/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/zmccarthy/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/rshamus/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/zmccarthy/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/rshamus/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/zmccarthy/Documents/GitHub/GlowPunk/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -302,13 +302,13 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.4f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/rshamus/Documents/GitHub/GlowPunk/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/zmccarthy/Documents/GitHub/GlowPunk/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/rshamus/Documents/GitHub/GlowPunk/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/zmccarthy/Documents/GitHub/GlowPunk/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/rshamus/Documents/GitHub/GlowPunk/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/zmccarthy/Documents/GitHub/GlowPunk/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
