@@ -68,7 +68,7 @@ public class AssaultRifle : MonoBehaviour
                         rotate = new Vector3(1, 0, 0);
                         PMZ.velocity = Vector3.RotateTowards(target, rotate, Random.Range(-inaccuracy, inaccuracy), 0.0f);//sets bullets velocity with inaccuracy
                     }
-                    bullet.tag = "User1";
+                    //bullet.tag = "User1";
                     PMZ.speed = bulletSpeed;
                     Instantiate(bullet, transform.position, transform.rotation);
 
@@ -114,7 +114,7 @@ public class AssaultRifle : MonoBehaviour
                         rotate = new Vector3(1, 0, 0);
                         PMZ.velocity = Vector3.RotateTowards(target, rotate, Random.Range(-inaccuracy, inaccuracy), 0.0f);//sets bullets velocity with inaccuracy
                     }
-                    bullet.tag = "User2";
+                    //bullet.tag = "User2";
                     PMZ.speed = bulletSpeed;
                     Instantiate(bullet, transform.position, transform.rotation);
 

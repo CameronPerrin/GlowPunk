@@ -45,6 +45,11 @@ public class PlayerMovement : MonoBehaviour {
         {
             // ## Animator change based off of movement
             // ## - THIS IS JUST FOR ANIMATION, LOOK UNDER THIS FOR ACTUAL MOVEMENT - ##
+            if (Input.GetAxis("MoveJoy1Y") != 0 || Input.GetAxis("MoveJoy1X") != 0)
+            {
+                this.transform.position += new Vector3(Input.GetAxis("MoveJoy1X") * P1move, Input.GetAxis("MoveJoy1Y") * -P1move, 0);
+                //>>>>>>> a0931f296ac0361663d52bea20484e679caab3fd
+            }
             Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy1X")));
             if (Input.GetAxis("MoveJoy1Y") != 0 && Input.GetAxis("MoveJoy1X") != 0)
             {
@@ -70,11 +75,7 @@ public class PlayerMovement : MonoBehaviour {
                 P1move = 3;
                 P1DashTimer = 60;
             }
-            if (Input.GetAxis("MoveJoy1Y") != 0 || Input.GetAxis("MoveJoy1X") != 0)
-            {
-                this.transform.position += new Vector3(Input.GetAxis("MoveJoy1X") * P1move, Input.GetAxis("MoveJoy1Y") * -P1move, 0);
-                //>>>>>>> a0931f296ac0361663d52bea20484e679caab3fd
-            }
+            
             P1move = .25f;
             P1DashTimer -= 1;
 

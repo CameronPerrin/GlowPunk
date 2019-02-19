@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 7933796380839943416}
   - component: {fileID: 2925176587580949336}
   - component: {fileID: 730682881159363797}
+  - component: {fileID: 6229553176715834869}
   - component: {fileID: 7818521735989129555}
   m_Layer: 8
   m_Name: P2Choice2
@@ -238,6 +239,23 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &6229553176715834869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9046282496301268155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391456749e77c9a4ba56012029d9cd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 30
+  fireRate: 1.1
+  inaccuracy: 0.1
+  bullet: {fileID: 5433520768389638577, guid: 92dddfd6598f0fb41b7b5266cc16f6ab, type: 3}
+  PMZ: {fileID: 0}
 --- !u!114 &7818521735989129555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +273,6 @@ MonoBehaviour:
   spread: 0.1
   pellets: 4
   coolDown: 0
-  bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
+  bullet: {fileID: 5433520768389638577, guid: 92dddfd6598f0fb41b7b5266cc16f6ab, type: 3}
   PMZ: {fileID: 0}
   useMouse: 0

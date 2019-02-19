@@ -29,8 +29,8 @@ public class ProjectileMovementZec : MonoBehaviour
         if (collision.tag == "Border" || collision.tag == "Wall")
             Destroy(this.gameObject);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(this.gameObject);
-    }
+    }*/
 }

@@ -27,96 +27,85 @@ public class Shotgun : MonoBehaviour
     {
         if (this.tag == "Player1")
         {
-            if (useMouse)
+            if (Input.GetAxis("P1Fire2") != 0 && this.coolDown <= 0)
             {
-                if (Input.GetButtonDown("Fire1"))
+                if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
                 {
-                    Instantiate(bullet, transform.position, transform.rotation);
-                    Debug.Log("Fire");
+
+                    int temp;
+
+
+                    target = new Vector3(Input.GetAxis("ShotJoy1X"), Input.GetAxis("ShotJoy1Y"), 0);
+                    target.Normalize();
+                    float offset, convert;
+                    for (int i = 0; i < pellets; i++)
+                    {
+                        int midpoint = (pellets - 1) / 2;
+                        convert = i;
+
+                        if (target.x > 0)
+                        {
+                            rotate = new Vector3(-1, 0, 0);
+                            if (target.y == 0)//shot will be straight if there in no y input
+                            {
+                                rotate = new Vector3(0, 1, 0);
+                            }
+                            if (i <= midpoint)//rotate towards
+                            {
+                                PMZ.velocity = Vector3.RotateTowards(target, rotate, spread * convert, 0.0f);
+                            }
+                            else//rotate away
+                            {
+                                offset = i - midpoint;
+                                PMZ.velocity = Vector3.RotateTowards(target, rotate, -spread * offset, 0.0f);
+                            }
+                        }
+                        else if (target.x < 0)
+                        {
+                            rotate = new Vector3(1, 0, 0);
+                            if (target.y == 0)//shot will be straight if there in no y input
+                            {
+                                rotate = new Vector3(0, 1, 0);
+                            }
+                            if (i <= midpoint)//rotate towards
+                            {
+                                PMZ.velocity = Vector3.RotateTowards(target, rotate, spread * convert, 0.0f);
+                            }
+                            else//rotate away
+                            {
+                                offset = i - midpoint;
+                                PMZ.velocity = Vector3.RotateTowards(target, rotate, -spread * offset, 0.0f);
+                            }
+                        }
+                        else//no x input
+                        {
+                            rotate = new Vector3(1, 0, 0);
+                            if (i <= midpoint)//rotate towards
+                            {
+                                PMZ.velocity = Vector3.RotateTowards(target, rotate, spread * convert, 0.0f);
+                            }
+                            else//rotate away
+                            {
+                                offset = i - midpoint;
+                                PMZ.velocity = Vector3.RotateTowards(target, rotate, -spread * offset, 0.0f);
+                            }
+                        }
+                        //bullet.tag = "User1";
+                        PMZ.speed = bulletSpeed;
+                        Instantiate(bullet, transform.position, transform.rotation);
+                    }
+
+                    this.coolDown = 1 / fireRate;
                 }
             }
             else
             {
-                if (Input.GetAxis("P1Fire1") != 0 && this.coolDown <= 0)
-                {
-                    if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
-                    {
-
-                        int temp;
-                        
-
-                        target = new Vector3(Input.GetAxis("ShotJoy1X"), Input.GetAxis("ShotJoy1Y"), 0);
-                        target.Normalize();
-                        float offset,convert;
-                        for (int i = 0; i < pellets; i++)
-                        {
-                            int midpoint = (pellets - 1) / 2;
-                            convert = i;
-                            
-                            if (target.x > 0)
-                            {
-                                rotate = new Vector3(-1, 0, 0);
-                                if(target.y == 0)//shot will be straight if there in no y input
-                                {
-                                    rotate = new Vector3(0, 1, 0);
-                                }
-                                if(i <= midpoint)//rotate towards
-                                {
-                                    PMZ.velocity = Vector3.RotateTowards(target, rotate, spread * convert, 0.0f);
-                                }
-                                else//rotate away
-                                {
-                                    offset = i - midpoint;
-                                    PMZ.velocity = Vector3.RotateTowards(target, rotate, -spread * offset, 0.0f);
-                                }
-                            }
-                            else if (target.x < 0)
-                            {
-                                rotate = new Vector3(1, 0, 0);
-                                if (target.y == 0)//shot will be straight if there in no y input
-                                {
-                                    rotate = new Vector3(0, 1, 0);
-                                }
-                                if (i <= midpoint)//rotate towards
-                                {
-                                    PMZ.velocity = Vector3.RotateTowards(target, rotate, spread * convert, 0.0f);
-                                }
-                                else//rotate away
-                                {
-                                    offset = i - midpoint;
-                                    PMZ.velocity = Vector3.RotateTowards(target, rotate, -spread * offset, 0.0f);
-                                }
-                            }
-                            else//no x input
-                            {
-                                rotate = new Vector3(1, 0, 0);
-                                if (i <= midpoint)//rotate towards
-                                {
-                                    PMZ.velocity = Vector3.RotateTowards(target, rotate, spread * convert, 0.0f);
-                                }
-                                else//rotate away
-                                {
-                                    offset = i - midpoint;
-                                    PMZ.velocity = Vector3.RotateTowards(target, rotate, -spread * offset, 0.0f);
-                                }
-                            }
-                            bullet.tag = "User1";
-                            PMZ.speed = bulletSpeed;
-                            Instantiate(bullet, transform.position, transform.rotation);
-                        }
-                                                
-                        this.coolDown = 1 / fireRate;
-                    }
-                }
-                else
-                {
-                    this.coolDown -= Time.deltaTime;
-                }
+                this.coolDown -= Time.deltaTime;
             }
         }
         else if (this.tag == "Player2")
         {
-            if (Input.GetAxis("P2Fire1") != 0 && this.coolDown <= 0)
+            if (Input.GetAxis("P2Fire2") != 0 && this.coolDown <= 0)
             {
                 if (Input.GetAxis("ShotJoy2X") != 0 || Input.GetAxis("ShotJoy2Y") != 0)
                 {
@@ -178,12 +167,12 @@ public class Shotgun : MonoBehaviour
                                 PMZ.velocity = Vector3.RotateTowards(target, rotate, -spread * offset, 0.0f);
                             }
                         }
-                        bullet.tag = "User2";
+                        //bullet.tag = "User2";
                         PMZ.speed = bulletSpeed;
                         Instantiate(bullet, transform.position, transform.rotation);
                     }
 
-                    
+
                 }
                 this.coolDown = 60;
             }
@@ -191,7 +180,7 @@ public class Shotgun : MonoBehaviour
         }
         else
         {
-            
+
         }
     }
 }
