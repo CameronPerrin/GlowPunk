@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7394170151387260774}
   - component: {fileID: 6471361922500089886}
   - component: {fileID: 4034908850690924918}
-  - component: {fileID: 7262107905937297285}
   - component: {fileID: 4993665306851672429}
   - component: {fileID: 3710471747055862120}
   - component: {fileID: 973482646501455099}
@@ -77,20 +76,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7262107905937297285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127646746098084311}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f028aa8267414bc42be105101fcdee3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
-  timer: 0
 --- !u!212 &4993665306851672429
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -127,7 +112,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: f50e0000c107c0347a184a77b0c0d392, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
