@@ -4,10 +4,17 @@ using System.Collections;
 public class dynamicCameraMovement : MonoBehaviour
 {
     public Transform player1, player2;
+    public GameObject player1GM, player2GM;
+
     public float minSizeY = 5f;
 
     void SetCameraPos()
     {
+        //Debug.Log(GameObject.FindWithTag("Player1"));
+        player1GM = GameObject.FindWithTag("Player1");
+        player2GM = GameObject.FindWithTag("Player2");
+        player1 = player1GM.transform;
+        player2 = player2GM.transform;
         Vector3 middle = (player1.position + player2.position) * 0.5f;
 
 
