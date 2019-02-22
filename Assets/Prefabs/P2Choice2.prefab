@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 730682881159363797}
   - component: {fileID: 6229553176715834869}
   - component: {fileID: 7818521735989129555}
+  - component: {fileID: 3204779029688920595}
   m_Layer: 8
   m_Name: P2Choice2
   m_TagString: Player2
@@ -255,7 +256,6 @@ MonoBehaviour:
   fireRate: 1.1
   inaccuracy: 0.1
   bullet: {fileID: 5433520768389638577, guid: 92dddfd6598f0fb41b7b5266cc16f6ab, type: 3}
-  PMZ: {fileID: 0}
 --- !u!114 &7818521735989129555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +272,19 @@ MonoBehaviour:
   fireRate: 1
   spread: 0.1
   pellets: 4
-  coolDown: 0
   bullet: {fileID: 5433520768389638577, guid: 92dddfd6598f0fb41b7b5266cc16f6ab, type: 3}
-  PMZ: {fileID: 0}
-  useMouse: 0
+--- !u!114 &3204779029688920595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9046282496301268155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0928ffb90161d9846b5d2e99f5678102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullets: 2
+  magSize: 2
+  regenTime: 5

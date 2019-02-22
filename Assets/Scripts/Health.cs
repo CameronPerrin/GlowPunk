@@ -9,26 +9,32 @@ public class Health : MonoBehaviour {
     public float health = 5f;
     public int currentPlayer;//which player is this script on
     public GameObject Player;
-    private GameObject TextGO, Access;//Access Game Object is for the game object that tracks which players are left standing
-    private Text healthText;
+    private GameObject HealthGO, SpecialGO, Access;//Access Game Object is for the game object that tracks which players are left standing
+    private Text healthText, specialText;
     private SharedVariables share;
+    private SpecialWeapon SW;
     
     // Use this for initialization
     void Awake ()
     {
         if(currentPlayer == 1)
         {
-            TextGO = GameObject.Find("P1 Health");
+            HealthGO = GameObject.Find("P1 Health");
+            SpecialGO = GameObject.Find("P1 Special");
+
         }
         else if(currentPlayer == 2)
         {
-            TextGO = GameObject.Find("P2 Health");
+            HealthGO = GameObject.Find("P2 Health");
+            SpecialGO = GameObject.Find("P2 Special");
         }
 
         Access = GameObject.Find("HealthVariables");
-        healthText = TextGO.GetComponent<Text>();
+        healthText = HealthGO.GetComponent<Text>();
+        specialText = SpecialGO.GetComponent<Text>();
         share = Access.GetComponent<SharedVariables>();
         share.totalPlayers++;
+        SW = Player.GetComponent<SpecialWeapon>();
 	}
 
     // Update is called once per frame
@@ -49,6 +55,8 @@ public class Health : MonoBehaviour {
             share.totalPlayers--;
             Player.SetActive(false);
         }
+        int temp = SW.bullets;
+        specialText.text = "Special Ammo: " + temp.ToString();
         //healthText.text = "Player 1 Health: " + P1Health.ToString();
         //healthText2.text = "Player 2 Health: " + P2Health.ToString();
     }

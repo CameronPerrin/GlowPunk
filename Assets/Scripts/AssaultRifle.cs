@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class AssaultRifle : MonoBehaviour
 {
-    public float bulletSpeed, fireRate, bulletRegen;
+    public float bulletSpeed, fireRate;
     public float inaccuracy;
-    public int magSize;
-    private int bullets;
-    private float coolDown = 0, regeneration = 0;
+    private float coolDown = 0;
     public GameObject bullet;
-    public ProjectileMovementZec PMZ;
+    private ProjectileMovementZec PMZ;
+    private SpecialWeapon SW;
 
     Vector3 target, rotate;
 
@@ -18,28 +17,15 @@ public class AssaultRifle : MonoBehaviour
     void Start()
     {
         PMZ = bullet.GetComponent<ProjectileMovementZec>();
-        bullets = magSize;
+        SW = this.GetComponent<SpecialWeapon>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (bullets < magSize)//if we do not have max ammo regenerate ammo
-        {
-            regeneration += Time.deltaTime;
-            if (regeneration > bulletRegen)//time to regenerate some ammo
-            {
-                bullets++;
-                regeneration -= bulletRegen;
-            }
-        }
-        else//if we are not setting the regenerating ammo set the regen to 0 so we start regeneration correctly
-        {
-            regeneration = 0;
-        }
         if (this.tag == "Player1")
         {
-            if (Input.GetAxis("P1Fire2") != 0 && this.coolDown <= 0 && bullets > 0)
+            if (Input.GetAxis("P1Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
             {
                 if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
                 {
@@ -72,7 +58,7 @@ public class AssaultRifle : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     Instantiate(bullet, transform.position, transform.rotation);
 
-                    bullets--;
+                    SW.bullets--;
 
                     this.coolDown = 1 / fireRate;
 
@@ -85,7 +71,7 @@ public class AssaultRifle : MonoBehaviour
         }
         else if (this.tag == "Player2")
         {
-            if (Input.GetAxis("P2Fire2") != 0 && this.coolDown <= 0 && bullets > 0)
+            if (Input.GetAxis("P2Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
             {
                 if (Input.GetAxis("ShotJoy2X") != 0 || Input.GetAxis("ShotJoy2Y") != 0)
                 {
@@ -118,7 +104,7 @@ public class AssaultRifle : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     Instantiate(bullet, transform.position, transform.rotation);
 
-                    bullets--;
+                    SW.bullets--;
                     this.coolDown = 1 / fireRate;
                 }
             }

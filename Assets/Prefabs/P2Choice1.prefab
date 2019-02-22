@@ -4796,6 +4796,7 @@ GameObject:
   - component: {fileID: 2547670264259691652}
   - component: {fileID: 3798905616250662029}
   - component: {fileID: 6223344844840524139}
+  - component: {fileID: 8980540489032565659}
   m_Layer: 8
   m_Name: P2Choice1
   m_TagString: Player2
@@ -4982,8 +4983,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 50
   fireRate: 9
-  bulletRegen: 1
   inaccuracy: 0.2
-  magSize: 20
   bullet: {fileID: 5433520768389638577, guid: 92dddfd6598f0fb41b7b5266cc16f6ab, type: 3}
-  PMZ: {fileID: 0}
+--- !u!114 &8980540489032565659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5006348545167343119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0928ffb90161d9846b5d2e99f5678102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullets: 20
+  magSize: 20
+  regenTime: 1

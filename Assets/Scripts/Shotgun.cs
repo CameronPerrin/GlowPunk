@@ -7,12 +7,12 @@ public class Shotgun : MonoBehaviour
     public float bulletSpeed, fireRate;
     public float spread;
     public int pellets;
-    public float coolDown = 0;
+    private float coolDown = 0;
     private Rigidbody2D rb;
     public GameObject bullet;
-    public ProjectileMovementZec PMZ;
-    //TESTING PURPOSES ONLY
-    public bool useMouse;
+    private ProjectileMovementZec PMZ;
+    private SpecialWeapon SW;
+
     Vector3 target, rotate;
 
     // Start is called before the first frame update
@@ -20,6 +20,7 @@ public class Shotgun : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         PMZ = bullet.GetComponent<ProjectileMovementZec>();
+        SW = this.GetComponent<SpecialWeapon>();
     }
 
     // Update is called once per frame
@@ -27,13 +28,11 @@ public class Shotgun : MonoBehaviour
     {
         if (this.tag == "Player1")
         {
-            if (Input.GetAxis("P1Fire2") != 0 && this.coolDown <= 0)
+            if (Input.GetAxis("P1Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
             {
                 if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
                 {
-
                     int temp;
-
 
                     target = new Vector3(Input.GetAxis("ShotJoy1X"), Input.GetAxis("ShotJoy1Y"), 0);
                     target.Normalize();
@@ -95,17 +94,18 @@ public class Shotgun : MonoBehaviour
                         Instantiate(bullet, transform.position, transform.rotation);
                     }
 
+                    SW.bullets--;
                     this.coolDown = 1 / fireRate;
                 }
             }
-            else
+            else if(coolDown > 0)
             {
                 this.coolDown -= Time.deltaTime;
             }
         }
         else if (this.tag == "Player2")
         {
-            if (Input.GetAxis("P2Fire2") != 0 && this.coolDown <= 0)
+            if (Input.GetAxis("P2Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
             {
                 if (Input.GetAxis("ShotJoy2X") != 0 || Input.GetAxis("ShotJoy2Y") != 0)
                 {
@@ -172,15 +172,17 @@ public class Shotgun : MonoBehaviour
                         Instantiate(bullet, transform.position, transform.rotation);
                     }
 
+                    SW.bullets--;
+                    this.coolDown = 1/fireRate;
 
                 }
-                this.coolDown = 60;
+                
             }
-            this.coolDown -= 1;
-        }
-        else
-        {
-
+            else if(coolDown > 0)
+            {
+                this.coolDown -= Time.deltaTime;
+            }
+            
         }
     }
 }

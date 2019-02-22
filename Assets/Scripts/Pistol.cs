@@ -8,7 +8,7 @@ public class Pistol : MonoBehaviour
     public float inaccuracy;
     private float coolDown = 0;
     public GameObject bullet;
-    public ProjectileMovementZec PMZ;
+    private ProjectileMovementZec PMZ;
 
     Vector3 target, rotate;
 
