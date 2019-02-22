@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // ## Movement animation and direction
     public Animator Anim;
-    private bool facingRight = true;
+    public bool facingRight = true;
     private Transform playerGraphics; // ## I need something to reference when changing direction (regarding graphics)
 
     // ## Not sure if I can move the information inside here into the Start() function
@@ -60,14 +60,27 @@ public class PlayerMovement : MonoBehaviour {
                 this.transform.position += new Vector3(Input.GetAxis("MoveJoy1X") * move, Input.GetAxis("MoveJoy1Y") * -move, 0);
 
                 // ## Flip the sprite left or right
-                if (Input.GetAxis("MoveJoy1X") > 0 && !facingRight)
+                if (Input.GetAxis("ShotJoy1X") == 0)
                 {
-                    Flip();
+                    if (Input.GetAxis("MoveJoy1X") > 0 && !facingRight)
+                    {
+                        Flip();
+                    }
+                    else if (Input.GetAxis("MoveJoy1X") < 0 && facingRight)
+                    {
+                        Flip();
+                    }
                 }
-
-                else if (Input.GetAxis("MoveJoy1X") < 0 && facingRight)
+                else
                 {
-                    Flip();
+                    if (Input.GetAxis("ShotJoy1X") > 0 && !facingRight)
+                    {
+                        Flip();
+                    }
+                    else if (Input.GetAxis("ShotJoy1X") < 0 && facingRight)
+                    {
+                        Flip();
+                    }
                 }
             }
             if (Input.GetAxis("P1Dash") != 0 && P1DashTimer <= 0)
