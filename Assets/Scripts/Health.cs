@@ -41,14 +41,22 @@ public class Health : MonoBehaviour {
     void Update() {
         if(share.totalPlayers < 2)
         {
-            if(currentPlayer == 1)//Player 1 wins
-            {
-                SceneManager.LoadScene("EndingScreen2");
-            }
-            else if(currentPlayer == 2)
-            {
-                SceneManager.LoadScene("EndingScreen1");
-            }
+            if (Player.name.Contains("P1Choice1"))//Player 1 wins
+                {
+                    SceneManager.LoadScene("EndingScreenP1Gunner");
+                }
+                else if (Player.name.Contains("P1Choice2"))
+                {
+                    SceneManager.LoadScene("EndingScreenP1Shotgunner");
+                }
+                else if (Player.name.Contains("P2Choice1"))
+                {
+                    SceneManager.LoadScene("EndingScreenP2Gunner");
+                }
+                else if (Player.name.Contains("P2Choice2"))
+                {
+                    SceneManager.LoadScene("EndingScreenP2Shotgunner");
+                }
         }
         if (this.health <= 0)
         {

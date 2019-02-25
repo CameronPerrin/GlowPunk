@@ -88,7 +88,7 @@ public class P2CharSelect : MonoBehaviour
                     P2Choice2Text.SetActive(true);
                     P2Choice2Image.SetActive(true);
                 }
-                else
+                else 
                 {
                     pick = 1;
                     P2Choice1Text.SetActive(true);

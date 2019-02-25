@@ -3,7 +3,16 @@ guid: cfcedfd54a8c25f4285d9a286faa08f6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - P1Choice1: {fileID: 5972403233602195711, guid: eb0cb3f866c54b74f8e3169050a0a7ae,
+      type: 3}
+  - P1Choice2: {fileID: 4127646746098084311, guid: e1432a05e71963e439e5138cf90484dd,
+      type: 3}
+  - P2Choice1: {fileID: 5006348545167343119, guid: 759528dfa432ffe488004441f492dfea,
+      type: 3}
+  - P2Choice2: {fileID: 9046282496301268155, guid: 9b69bc4a18279f04bb847dd0f3db92b0,
+      type: 3}
+  - BeginGameText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
