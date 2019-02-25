@@ -95,20 +95,50 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (this.tag == "Player2")
         {
+            if (Input.GetAxis("MoveJoy2Y") != 0 || Input.GetAxis("MoveJoy2X") != 0)
+            {
+                this.transform.position += new Vector3(Input.GetAxis("MoveJoy2X") * P1move, Input.GetAxis("MoveJoy2Y") * -P2move, 0);
+                //>>>>>>> a0931f296ac0361663d52bea20484e679caab3fd
+            }
+            Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy2X")));
+            if (Input.GetAxis("MoveJoy2Y") != 0 && Input.GetAxis("MoveJoy2X") != 0)
+            {
+                Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy2Y")));
+            }
+            if (Input.GetAxis("MoveJoy2Y") != 0 || Input.GetAxis("MoveJoy2X") != 0)
+            {
+                this.transform.position += new Vector3(Input.GetAxis("MoveJoy2X") * move, Input.GetAxis("MoveJoy2Y") * -move, 0);
+
+                // ## Flip the sprite left or right
+                if (Input.GetAxis("ShotJoy2X") == 0)
+                {
+                    if (Input.GetAxis("MoveJoy2X") > 0 && !facingRight)
+                    {
+                        Flip();
+                    }
+                    else if (Input.GetAxis("MoveJoy2X") < 0 && facingRight)
+                    {
+                        Flip();
+                    }
+                }
+                else
+                {
+                    if (Input.GetAxis("ShotJoy2X") > 0 && !facingRight)
+                    {
+                        Flip();
+                    }
+                    else if (Input.GetAxis("ShotJoy2X") < 0 && facingRight)
+                    {
+                        Flip();
+                    }
+                }
+            }
             if (Input.GetAxis("P2Dash") != 0 && P2DashTimer <= 0)
             {
                 P2move = 3;
                 P2DashTimer = 60;
             }
-            if (Input.GetAxis("MoveJoy2Y") != 0 || Input.GetAxis("MoveJoy2X") != 0)
-            {
-                //<<<<<<< HEAD
-                this.transform.position += new Vector3(Input.GetAxis("MoveJoy2X") * move, Input.GetAxis("MoveJoy2Y") * -move, 0);
-
-                //=======
-                this.transform.position += new Vector3(Input.GetAxis("MoveJoy2X") * P2move, Input.GetAxis("MoveJoy2Y") * -P2move, 0);
-                //>>>>>>> a0931f296ac0361663d52bea20484e679caab3fd
-            }
+            
             P2move = .25f;
             P2DashTimer -= 1;
         }
