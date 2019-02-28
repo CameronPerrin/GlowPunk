@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Menu.unity
-=======
-- path: Assets/Scenes/CharacterSelection.unity
->>>>>>> 8cfb57fc26e83dc3065c73de4719303539463bb3
   isLoaded: 1
   isActive: 1
