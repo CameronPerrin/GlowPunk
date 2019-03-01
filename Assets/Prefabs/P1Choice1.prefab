@@ -4916,9 +4916,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0928ffb90161d9846b5d2e99f5678102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullets: 20
-  magSize: 20
-  regenTime: 1
+  bullets: 10
+  magSize: 10
+  regenTime: 0.6
 --- !u!1 &7499514829690545438
 GameObject:
   m_ObjectHideFlags: 0

@@ -61,7 +61,6 @@ public class AssaultRifle : MonoBehaviour
                     SW.bullets--;
 
                     this.coolDown = 1 / fireRate;
-
                 }
             }
             else
@@ -112,10 +111,6 @@ public class AssaultRifle : MonoBehaviour
             {
                 this.coolDown -= Time.deltaTime;
             }
-        }
-        else
-        {
-
         }
     }
 }
