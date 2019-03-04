@@ -55,7 +55,6 @@ public class Pistol : MonoBehaviour
                     //bullet.tag = "User1";
                     PMZ.speed = bulletSpeed;
                     Instantiate(bullet, transform.position, transform.rotation);
-
                     this.coolDown = 1 / fireRate;
                 }
             }

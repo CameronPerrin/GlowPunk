@@ -7,8 +7,7 @@ public class HealthBar : MonoBehaviour
 {
     [SerializeField]
     private Image foregroundImage;
-    [SerializeField]
-    private float updateSpeedSeconds = 0.5f;
+    private float updateSpeedSeconds = 0.1f;
 
     private void Awake()
     {
