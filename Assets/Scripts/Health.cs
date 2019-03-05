@@ -14,8 +14,7 @@ public class Health : MonoBehaviour {
 
     private int cHealth;
 
-    private GameObject HealthGO, SpecialGO, Access;//Access Game Object is for the game object that tracks which players are left standing
-    private Text healthText, specialText;
+    private GameObject Access;//Access Game Object is for the game object that tracks which players are left standing
     private SharedVariables share;
     private SpecialWeapon SW;
 
@@ -28,21 +27,7 @@ public class Health : MonoBehaviour {
 
     void Awake ()
     {
-        if(currentPlayer == 1)
-        {
-            HealthGO = GameObject.Find("P1 Health");
-            SpecialGO = GameObject.Find("P1 Special");
-
-        }
-        else if(currentPlayer == 2)
-        {
-            HealthGO = GameObject.Find("P2 Health");
-            SpecialGO = GameObject.Find("P2 Special");
-        }
-
         Access = GameObject.Find("HealthVariables");
-        healthText = HealthGO.GetComponent<Text>();
-        specialText = SpecialGO.GetComponent<Text>();
         share = Access.GetComponent<SharedVariables>();
         share.totalPlayers++;
         SW = Player.GetComponent<SpecialWeapon>();
@@ -82,7 +67,6 @@ public class Health : MonoBehaviour {
             Player.SetActive(false);
         }
         int temp = SW.bullets;
-        specialText.text = "Special Ammo: " + temp.ToString();
         
         //healthText.text = "Player 1 Health: " + P1Health.ToString();
         //healthText2.text = "Player 2 Health: " + P2Health.ToString();
@@ -100,15 +84,6 @@ public class Health : MonoBehaviour {
         if (collision.tag == "User1" && currentPlayer == 2)
         {
             modifyHealth(-8);
-        }
-        if (currentPlayer == 1)
-        {
-            healthText.text = "Player 1 Health: " + cHealth.ToString();
-            
-        }
-        else if (currentPlayer == 2)
-        {
-            healthText.text = "Player 2 Health: " + cHealth.ToString();
         }
     }
 }

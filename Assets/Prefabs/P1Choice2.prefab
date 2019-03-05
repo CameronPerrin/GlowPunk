@@ -288,7 +288,6 @@ MonoBehaviour:
   fireRate: 1.1
   inaccuracy: 0.1
   bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
-  rotationPoint: {fileID: 0}
 --- !u!114 &7599379066078367416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: a7ed6cba66ef98147af4242fed18135c, type: 2}
-  m_Color: {r: 0.08675194, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.086274385, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
