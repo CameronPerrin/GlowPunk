@@ -4887,7 +4887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foregroundImage: {fileID: 4262367783923288648}
-  updateSpeedSeconds: 0.2
 --- !u!1 &5621846016892029289
 GameObject:
   m_ObjectHideFlags: 0
@@ -5072,7 +5071,7 @@ GameObject:
   - component: {fileID: 7173577524432899677}
   - component: {fileID: 2713740560359403484}
   - component: {fileID: 4120547976169746916}
-  - component: {fileID: 6357706391233301844}
+  - component: {fileID: 1824262702128690522}
   m_Layer: 8
   m_Name: P2Choice4
   m_TagString: Player2
@@ -5258,26 +5257,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0928ffb90161d9846b5d2e99f5678102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullets: 2
-  magSize: 2
-  regenTime: 4
---- !u!114 &6357706391233301844
+  bullets: 1
+  magSize: 1
+  regenTime: 10
+--- !u!114 &1824262702128690522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6357706391233301845}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce53a51e34435344e9eb6f61f8521485, type: 3}
+  m_Script: {fileID: 11500000, guid: ec4945053c060a8498a2ee9b60d8ebde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 15
-  fireRate: 0.4
-  throwDistance: 8
-  projSpeed: 20
-  grenade: {fileID: 1628596182892200078, guid: 0f737fab48a1f554ba297085278f84ec, type: 3}
+  bulletSpeed: 55
+  fireRate: 0.5
+  inaccuracy: 0
+  bullet: {fileID: 1778932910738145927, guid: 3ae12db3160dc0a49b27a8a8072509c0, type: 3}
 --- !u!1 &7072111205437856694
 GameObject:
   m_ObjectHideFlags: 0

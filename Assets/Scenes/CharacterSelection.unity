@@ -1312,11 +1312,11 @@ MonoBehaviour:
   P2Spawn: {x: 35, y: 0, z: 0}
   P1Choice1: {fileID: 5972403233602195711, guid: eb0cb3f866c54b74f8e3169050a0a7ae,
     type: 3}
-  P1Choice2: {fileID: 4127646746098084311, guid: e1432a05e71963e439e5138cf90484dd,
+  P1Choice2: {fileID: 6598079689660797429, guid: d51cedc0f7368374082560467379eb9b,
     type: 3}
   P2Choice1: {fileID: 5006348545167343119, guid: 759528dfa432ffe488004441f492dfea,
     type: 3}
-  P2Choice2: {fileID: 9046282496301268155, guid: 9b69bc4a18279f04bb847dd0f3db92b0,
+  P2Choice2: {fileID: 6357706391233301845, guid: 7c47fbbebe1c6a841a5644961c8a6204,
     type: 3}
   BeginGameText: {fileID: 332556465}
 --- !u!4 &1844727437

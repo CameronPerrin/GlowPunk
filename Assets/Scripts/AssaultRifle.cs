@@ -56,6 +56,7 @@ public class AssaultRifle : MonoBehaviour
                     }
                     //bullet.tag = "User1";
                     PMZ.speed = bulletSpeed;
+                    bullet.tag = "User1";
                     Instantiate(bullet, transform.position, transform.rotation);
 
                     SW.bullets--;
@@ -101,6 +102,7 @@ public class AssaultRifle : MonoBehaviour
                     }
                     //bullet.tag = "User2";
                     PMZ.speed = bulletSpeed;
+                    bullet.tag = "User2";
                     Instantiate(bullet, transform.position, transform.rotation);
 
                     SW.bullets--;
