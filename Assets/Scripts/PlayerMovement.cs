@@ -7,7 +7,11 @@ public class PlayerMovement : MonoBehaviour {
 
     //public GameObject player;
     private Rigidbody2D rb2d;
-    public float move;
+    public float speed;
+    public float blink, coolDown;//distance of players blink ability
+    private float recharge = 0;
+    [HideInInspector]
+    public float normalSpeed;//want variable so the outside objects and scripts and alter the speed of player and change it back
 
     // ## Movement animation and direction
     public Animator Anim;
@@ -17,23 +21,15 @@ public class PlayerMovement : MonoBehaviour {
     // ## Not sure if I can move the information inside here into the Start() function
     private void Awake()
     {
+        normalSpeed = speed;
         Anim = GetComponent<Animator>();
         this.playerGraphics = this.transform.Find("Graphics");
     }
-
-    public float P1move;
-    public float P2move;
-    public float P1DashTimer;
-    public float P2DashTimer;
         
     // Use this for initialization
     void Start ()
     {
         Rigidbody2D rb2d = this.GetComponent<Rigidbody2D>();
-        P1move = 0.25f;
-        P2move = 0.25f;
-        P1DashTimer = 0;
-        P2DashTimer = 0;
         rb2d.angularVelocity = 0;
     }
 
@@ -45,19 +41,21 @@ public class PlayerMovement : MonoBehaviour {
         {
             // ## Animator change based off of movement
             // ## - THIS IS JUST FOR ANIMATION, LOOK UNDER THIS FOR ACTUAL MOVEMENT - ##
-            if (Input.GetAxis("MoveJoy1Y") != 0 || Input.GetAxis("MoveJoy1X") != 0)
-            {
-                this.transform.position += new Vector3(Input.GetAxis("MoveJoy1X") * P1move, Input.GetAxis("MoveJoy1Y") * -P1move, 0);
-                //>>>>>>> a0931f296ac0361663d52bea20484e679caab3fd
-            }
-            Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy1X")));
+            
             if (Input.GetAxis("MoveJoy1Y") != 0 && Input.GetAxis("MoveJoy1X") != 0)
             {
+                Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy1X")));
                 Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy1Y")));
             }
+            else//not moving so set speeds to 0
+            {
+                Anim.SetFloat("Speed", 0.0f);
+                Anim.SetFloat("VertSpeed", 0.0f);
+            }
+
             if (Input.GetAxis("MoveJoy1Y") != 0 || Input.GetAxis("MoveJoy1X") != 0)
             {
-                this.transform.position += new Vector3(Input.GetAxis("MoveJoy1X") * move, Input.GetAxis("MoveJoy1Y") * -move, 0);
+                this.transform.position += new Vector3(Input.GetAxis("MoveJoy1X") * speed * Time.deltaTime, Input.GetAxis("MoveJoy1Y") * -speed * Time.deltaTime, 0);
 
                 // ## Flip the sprite left or right
                 if (Input.GetAxis("ShotJoy1X") == 0)
@@ -83,31 +81,36 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
-            if (Input.GetAxis("P1Dash") != 0 && P1DashTimer <= 0)
+            if (Input.GetAxis("A1") != 0 && recharge <= 0)//player blink
             {
-                P1move = 3;
-                P1DashTimer = 60;
+                Vector3 temp = new Vector3(Input.GetAxis("MoveJoy1X"), -Input.GetAxis("MoveJoy1Y"), 0);
+                temp.Normalize();
+
+                this.transform.position += temp * blink;
+                recharge = coolDown;
             }
             
-            P1move = .25f;
-            P1DashTimer -= 1;
-
+            if(recharge > 0)//recharge for blink
+            {
+                recharge -= Time.deltaTime;
+            }
         }
         else if (this.tag == "Player2")
         {
-            if (Input.GetAxis("MoveJoy2Y") != 0 || Input.GetAxis("MoveJoy2X") != 0)
-            {
-                this.transform.position += new Vector3(Input.GetAxis("MoveJoy2X") * P1move, Input.GetAxis("MoveJoy2Y") * -P2move, 0);
-                //>>>>>>> a0931f296ac0361663d52bea20484e679caab3fd
-            }
-            Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy2X")));
             if (Input.GetAxis("MoveJoy2Y") != 0 && Input.GetAxis("MoveJoy2X") != 0)
             {
+                Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy2X")));
                 Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy2Y")));
             }
+            else//not moving so set speeds to 0
+            {
+                Anim.SetFloat("Speed", 0.0f);
+                Anim.SetFloat("VertSpeed", 0.0f);
+            }
+
             if (Input.GetAxis("MoveJoy2Y") != 0 || Input.GetAxis("MoveJoy2X") != 0)
             {
-                this.transform.position += new Vector3(Input.GetAxis("MoveJoy2X") * move, Input.GetAxis("MoveJoy2Y") * -move, 0);
+                this.transform.position += new Vector3(Input.GetAxis("MoveJoy2X") * speed * Time.deltaTime, Input.GetAxis("MoveJoy2Y") * -speed * Time.deltaTime, 0);
 
                 // ## Flip the sprite left or right
                 if (Input.GetAxis("ShotJoy2X") == 0)
@@ -133,17 +136,132 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
-            if (Input.GetAxis("P2Dash") != 0 && P2DashTimer <= 0)
+            if (Input.GetAxis("A2") != 0 && recharge <= 0)
             {
-                P2move = 3;
-                P2DashTimer = 60;
-            }
-            
-            P2move = .25f;
-            P2DashTimer -= 1;
-        }
-        else { }
+                Vector3 temp = new Vector3(Input.GetAxis("MoveJoy2X"), -Input.GetAxis("MoveJoy2Y"), 0);
+                temp.Normalize();
 
+                this.transform.position += temp * blink;
+                recharge = coolDown;
+            }
+
+            if (recharge > 0)
+            {
+                recharge -= Time.deltaTime;
+            }
+        }
+
+        else if (this.tag == "Player3")
+        {
+            if (Input.GetAxis("MoveJoy3Y") != 0 && Input.GetAxis("MoveJoy3X") != 0)
+            {
+                Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy3X")));
+                Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy3Y")));
+            }
+            else//not moving so set speeds to 0
+            {
+                Anim.SetFloat("Speed", 0.0f);
+                Anim.SetFloat("VertSpeed", 0.0f);
+            }
+
+            if (Input.GetAxis("MoveJoy3Y") != 0 || Input.GetAxis("MoveJoy3X") != 0)
+            {
+                this.transform.position += new Vector3(Input.GetAxis("MoveJoy3X") * speed * Time.deltaTime, Input.GetAxis("MoveJoy3Y") * -speed * Time.deltaTime, 0);
+
+                // ## Flip the sprite left or right
+                if (Input.GetAxis("ShotJoy3X") == 0)
+                {
+                    if (Input.GetAxis("MoveJoy3X") > 0 && !facingRight)
+                    {
+                        Flip();
+                    }
+                    else if (Input.GetAxis("MoveJoy3X") < 0 && facingRight)
+                    {
+                        Flip();
+                    }
+                }
+                else
+                {
+                    if (Input.GetAxis("ShotJoy3X") > 0 && !facingRight)
+                    {
+                        Flip();
+                    }
+                    else if (Input.GetAxis("ShotJoy3X") < 0 && facingRight)
+                    {
+                        Flip();
+                    }
+                }
+            }
+            if (Input.GetAxis("A3") != 0 && recharge <= 0)
+            {
+                Vector3 temp = new Vector3(Input.GetAxis("MoveJoy3X"), -Input.GetAxis("MoveJoy3Y"), 0);
+                temp.Normalize();
+
+                this.transform.position += temp * blink;
+                recharge = coolDown;
+            }
+
+            if (recharge > 0)
+            {
+                recharge -= Time.deltaTime;
+            }
+        }
+
+        else if (this.tag == "Player4")
+        {
+            if (Input.GetAxis("MoveJoy4Y") != 0 && Input.GetAxis("MoveJoy4X") != 0)
+            {
+                Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy4X")));
+                Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy4Y")));
+            }
+            else//not moving so set speeds to 0
+            {
+                Anim.SetFloat("Speed", 0.0f);
+                Anim.SetFloat("VertSpeed", 0.0f);
+            }
+
+            if (Input.GetAxis("MoveJoy4Y") != 0 || Input.GetAxis("MoveJoy4X") != 0)
+            {
+                this.transform.position += new Vector3(Input.GetAxis("MoveJoy4X") * speed * Time.deltaTime, Input.GetAxis("MoveJoy4Y") * -speed * Time.deltaTime, 0);
+
+                // ## Flip the sprite left or right
+                if (Input.GetAxis("ShotJoy4X") == 0)
+                {
+                    if (Input.GetAxis("MoveJoy4X") > 0 && !facingRight)
+                    {
+                        Flip();
+                    }
+                    else if (Input.GetAxis("MoveJoy4X") < 0 && facingRight)
+                    {
+                        Flip();
+                    }
+                }
+                else
+                {
+                    if (Input.GetAxis("ShotJoy4X") > 0 && !facingRight)
+                    {
+                        Flip();
+                    }
+                    else if (Input.GetAxis("ShotJoy4X") < 0 && facingRight)
+                    {
+                        Flip();
+                    }
+                }
+            }
+            if (Input.GetAxis("A4") != 0 && recharge <= 0)
+            {
+                Vector3 temp = new Vector3(Input.GetAxis("MoveJoy4X"), -Input.GetAxis("MoveJoy4Y"), 0);
+                temp.Normalize();
+
+                this.transform.position += temp * blink;
+                recharge = coolDown;
+            }
+
+            if (recharge > 0)
+            {
+                recharge -= Time.deltaTime;
+            }
+        }
     }
     // ## Flip function
     private void Flip()

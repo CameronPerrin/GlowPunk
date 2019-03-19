@@ -4887,7 +4887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foregroundImage: {fileID: 4424159784351711692}
-  updateSpeedSeconds: 0.2
 --- !u!1 &6824959481977152717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4941,13 +4940,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce892d70020f2fd4493fbb97ffd5c5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: 0
-  Anim: {fileID: 7278264475215669189}
+  speed: 10
+  blink: 7.5
+  coolDown: 2.5
+  normalSpeed: 0
+  Anim: {fileID: 0}
   facingRight: 1
-  P1move: 0
-  P2move: 0
-  P1DashTimer: 0
-  P2DashTimer: 0
 --- !u!50 &3517557022836070280
 Rigidbody2D:
   serializedVersion: 4

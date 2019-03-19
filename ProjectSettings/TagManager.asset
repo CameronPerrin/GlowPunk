@@ -10,6 +10,8 @@ TagManager:
   - User1
   - User2
   - Wall
+  - Player3
+  - Player4
   layers:
   - Default
   - TransparentFX

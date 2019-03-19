@@ -5108,13 +5108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce892d70020f2fd4493fbb97ffd5c5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: 0
+  speed: 10
+  blink: 7.5
+  coolDown: 2.5
+  normalSpeed: 0
   Anim: {fileID: 6928682484042175229}
   facingRight: 1
-  P1move: 0
-  P2move: 0
-  P1DashTimer: 0
-  P2DashTimer: 0
 --- !u!50 &3888552071410885296
 Rigidbody2D:
   serializedVersion: 4
