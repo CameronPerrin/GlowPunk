@@ -3033,8 +3033,10 @@ MonoBehaviour:
   - {fileID: 6357706391233301845, guid: 7c47fbbebe1c6a841a5644961c8a6204, type: 3}
   P3Choice:
   - {fileID: 187325864874212977, guid: e9d4109aea3d9174ea9572a810334a44, type: 3}
+  - {fileID: 1328247057513054127, guid: 2212f98d6d05326499a590f768e1a507, type: 3}
   P4Choice:
   - {fileID: 8327952000488313454, guid: 5e595f13fba195544ae14acf51265fcf, type: 3}
+  - {fileID: 8675736982169057659, guid: 4f4a94df91ce3c34f9cd6acef815cabc, type: 3}
 --- !u!4 &1844727437
 Transform:
   m_ObjectHideFlags: 0
