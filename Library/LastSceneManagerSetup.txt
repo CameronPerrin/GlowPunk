@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/CharacterSelection.unity
+- path: Assets/Scenes/TestScenes/CameronTestScene.unity
   isLoaded: 1
   isActive: 1
