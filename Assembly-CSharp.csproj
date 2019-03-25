@@ -53,20 +53,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Bomb.cs" />
      <Compile Include="Assets\Scripts\ArmController.cs" />
      <Compile Include="Assets\Scripts\ArmController2.cs" />
      <Compile Include="Assets\Scripts\AssaultRifle.cs" />
+     <Compile Include="Assets\Scripts\Bomb.cs" />
      <Compile Include="Assets\Scripts\BombMovement.cs" />
      <Compile Include="Assets\Scripts\BulletMovement.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelection\MasterController.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelection\P1CharSelect.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelection\P2CharSelect.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelection\P3CharSelect.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelection\P4CharSelect.cs" />
      <Compile Include="Assets\Scripts\dynamicCameraMovement.cs" />
      <Compile Include="Assets\Scripts\EndingScreen.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\MasterController.cs" />
-     <Compile Include="Assets\Scripts\P1CharSelect.cs" />
-     <Compile Include="Assets\Scripts\P2CharSelect.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\Pistol.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />

@@ -5,10 +5,8 @@ using UnityEngine;
 public class P1CharSelect : MonoBehaviour
 {
     public GameObject PressAText;//initial text
-    public GameObject P1Choice1Text;
-    public GameObject P1Choice1Image;
-    public GameObject P1Choice2Text;
-    public GameObject P1Choice2Image;
+    public List<GameObject> P1ChoiceImage;
+    public List<GameObject> P1ChoiceText;
     public GameObject ReadyText;
     public GameObject MC;//this is the master controller that will ultimately spawn the characters in the next scene
 
@@ -16,7 +14,7 @@ public class P1CharSelect : MonoBehaviour
 
     public bool Selecting, IsReady;
     private int pick;
-    private int buffer, bufferTime;
+    private float buffer, bufferTime;
 
     private bool isReady = false;//needed for ready up
     // Start is called before the first frame update
@@ -24,8 +22,8 @@ public class P1CharSelect : MonoBehaviour
     {
         Selecting = false;
         IsReady = false;
-        pick = 1;
-        bufferTime = 10;//ten frames of buffer
+        pick = 0;
+        bufferTime = 1;//1 second of buffer
         MCScript = MC.GetComponent<MasterController>();
     }
 
@@ -39,16 +37,9 @@ public class P1CharSelect : MonoBehaviour
                 Selecting = true;
                 PressAText.SetActive(false);
                 MCScript.P1Ready = false;//selecting character therefore cannot be ready to start
-                if(pick == 1)//first selection is active
-                {
-                    P1Choice1Text.SetActive(true);
-                    P1Choice1Image.SetActive(true);
-                }
-                else if(pick == 2)
-                {
-                    P1Choice2Text.SetActive(true);
-                    P1Choice2Image.SetActive(true);
-                }
+
+                P1ChoiceImage[pick].SetActive(true);
+                P1ChoiceText[pick].SetActive(true);
             }
         }
         else if(!IsReady)//Selecting Character but not ready
@@ -57,10 +48,12 @@ public class P1CharSelect : MonoBehaviour
             {
                 IsReady = true;
                 MCScript.P1Ready = true;//player chose a character therefore is ready to play
-                P1Choice1Text.SetActive(false);
-                P1Choice1Image.SetActive(false);
-                P1Choice2Text.SetActive(false);
-                P1Choice2Image.SetActive(false);
+
+                for (int i = 0; i < P1ChoiceImage.Count; i++)//set character selections as false
+                {
+                    P1ChoiceImage[i].SetActive(false);
+                    P1ChoiceText[i].SetActive(false);
+                }
                 //^^Set all our UI stuff false for Ready up
 
                 ReadyText.SetActive(true);//Show that the player is ready
@@ -71,36 +64,52 @@ public class P1CharSelect : MonoBehaviour
             {
                 Selecting = false;
                 MCScript.P1Ready = true;//player backed out and is not playing therefore ready up so other players can start
-                P1Choice1Text.SetActive(false);
-                P1Choice1Image.SetActive(false);
-                P1Choice2Text.SetActive(false);
-                P1Choice2Image.SetActive(false);
+                for(int i = 0; i < P1ChoiceImage.Count; i++)//set character selections as false
+                {
+                    P1ChoiceImage[i].SetActive(false);
+                    P1ChoiceText[i].SetActive(false);
+                }
                 //^^Set all our UI stuff false since player backed out
                 PressAText.SetActive(true);
             }
             else if(Input.GetAxis("MoveJoy1X") != 0 && buffer <= 0)
             {
-                if(pick == 1)
+                for (int i = 0; i < P1ChoiceImage.Count; i++)//set character selections as false
                 {
-                    pick = 2;
-                    P1Choice1Text.SetActive(false);
-                    P1Choice1Image.SetActive(false);
-                    P1Choice2Text.SetActive(true);
-                    P1Choice2Image.SetActive(true);
+                    P1ChoiceImage[i].SetActive(false);
+                    P1ChoiceText[i].SetActive(false);
                 }
-                else
+
+                if (Input.GetAxis("MoveJoy1X") < 0)//input is left
                 {
-                    pick = 1;
-                    P1Choice1Text.SetActive(true);
-                    P1Choice1Image.SetActive(true);
-                    P1Choice2Text.SetActive(false);
-                    P1Choice2Image.SetActive(false);
+                    if(pick == 0)//loop to end of array
+                    {
+                        pick = P1ChoiceImage.Count - 1;//set to the end of the array
+                    }
+                    else
+                    {
+                        pick--;
+                    }
                 }
+                else//input is right
+                {
+                    if(pick == P1ChoiceImage.Count - 1)//at the end of the array loop back to beginning 
+                    {
+                        pick = 0;
+                    }
+                    else
+                    {
+                        pick++;
+                    }
+                }
+                P1ChoiceImage[pick].SetActive(true);
+                P1ChoiceText[pick].SetActive(true);
+
                 buffer = bufferTime;
             }
             if(buffer > 0)
             {
-                buffer--;
+                buffer -= Time.deltaTime;
             }
         }
         else//Player is currently readied up
@@ -109,19 +118,11 @@ public class P1CharSelect : MonoBehaviour
             {
                 IsReady = false;
                 ReadyText.SetActive(false);
-                MCScript.P1pick = 0;//0 means no character is selected
+                MCScript.P1pick = -1;//-1 means no character is selected
                 MCScript.P1Ready = false;//player is no longer ready
 
-                if (pick == 1)//set the character selection object back up
-                {
-                    P1Choice1Text.SetActive(true);
-                    P1Choice1Image.SetActive(true);
-                }
-                else if (pick == 2)
-                {
-                    P1Choice2Text.SetActive(true);
-                    P1Choice2Image.SetActive(true);
-                }
+                P1ChoiceImage[pick].SetActive(true);
+                P1ChoiceText[pick].SetActive(true);
             }
         }
     }

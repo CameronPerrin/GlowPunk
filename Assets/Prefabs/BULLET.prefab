@@ -143,7 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+<<<<<<< HEAD
   velocity: {x: -0.9678617, y: 0.25148296, z: 0}
+=======
+  velocity: {x: 0.77351266, y: 0.63378084, z: 0}
+>>>>>>> 7070ec73b5ff4804887f6e51948b1af0207c5ee8
 --- !u!1 &4298623954708782383
 GameObject:
   m_ObjectHideFlags: 0
