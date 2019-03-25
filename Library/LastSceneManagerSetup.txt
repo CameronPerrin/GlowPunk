@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/TestScenes/RobertTestScene.unity
-=======
-- path: Assets/Scenes/CharacterSelection.unity
->>>>>>> 7070ec73b5ff4804887f6e51948b1af0207c5ee8
   isLoaded: 1
   isActive: 1
