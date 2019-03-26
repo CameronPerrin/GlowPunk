@@ -9,6 +9,8 @@ public class Pistol : MonoBehaviour
     private float coolDown = 0;
     public GameObject bullet;
     private ProjectileMovementZec PMZ;
+    public GameObject firePoint;
+    public GameObject muzzleFlare;
 
     Vector3 target, rotate;
 
@@ -56,6 +58,13 @@ public class Pistol : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User1";
                     Instantiate(bullet, transform.position, transform.rotation);
+
+                    // muzzle flare
+                    GameObject tempMuzzle;
+                    tempMuzzle = Instantiate(muzzleFlare, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
+                    Debug.Log(firePoint.transform.position);
+                    Destroy(tempMuzzle, 0.75f);
+
                     this.coolDown = 1 / fireRate;
                 }
             }

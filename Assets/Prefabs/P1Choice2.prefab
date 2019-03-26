@@ -118,6 +118,36 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!1 &4002881803485289756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2776794717083722677}
+  m_Layer: 0
+  m_Name: Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2776794717083722677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002881803485289756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.52, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2831016441006213132}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4127646746098084311
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +206,7 @@ MonoBehaviour:
   normalSpeed: 0
   Anim: {fileID: 0}
   facingRight: 1
+  firePoint: {fileID: 0}
 --- !u!50 &4034908850690924918
 Rigidbody2D:
   serializedVersion: 4
@@ -287,6 +318,9 @@ MonoBehaviour:
   fireRate: 1.1
   inaccuracy: 0.1
   bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
+  firePoint: {fileID: 4002881803485289756}
+  muzzleFlare: {fileID: 1357162262835438, guid: 418f1ccff49a11c4b87c91c464a0427d,
+    type: 3}
 --- !u!114 &7599379066078367416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +338,9 @@ MonoBehaviour:
   spread: 0.1
   pellets: 4
   bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
+  firePoint: {fileID: 4002881803485289756}
+  muzzleFlare: {fileID: 1929021876108210, guid: e0ae0982aa125a34a9033b6bfab1c8e6,
+    type: 3}
 --- !u!114 &4015285582952751375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +356,7 @@ MonoBehaviour:
   bullets: 2
   magSize: 2
   regenTime: 5
+  regeneration: 0
 --- !u!95 &1317206626244443033
 Animator:
   serializedVersion: 3
@@ -722,7 +760,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.35, y: -0.05, z: 2}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2776794717083722677}
   m_Father: {fileID: 7826462677322157311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

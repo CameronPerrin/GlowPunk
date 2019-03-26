@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
     public Animator Anim;
     public bool facingRight = true;
     private Transform playerGraphics; // ## I need something to reference when changing direction (regarding graphics)
+    public GameObject firePoint;
 
     // ## Not sure if I can move the information inside here into the Start() function
     private void Awake()
@@ -268,8 +269,9 @@ public class PlayerMovement : MonoBehaviour {
     {
         // Switch the way the player is labelled as facing.
         facingRight = !facingRight;
-
+        this.firePoint.transform.Rotate(0f, 180f, 0f);
         // Multiply the player's x local scale by -1.
+
         Vector3 theScale = this.transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
