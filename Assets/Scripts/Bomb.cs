@@ -11,6 +11,8 @@ public class Bomb : MonoBehaviour
     private BombMovement BM;
     private SpecialWeapon SW;
 
+    public GameObject muzzleFlare;
+
     Vector3 target, rotate;
 
     // Start is called before the first frame update
@@ -38,6 +40,8 @@ public class Bomb : MonoBehaviour
                     BM.distance = throwDistance;
                     BM.velocity = target;
                     Instantiate(grenade, transform.position, transform.rotation);
+
+                    
 
                     SW.bullets--;
                     this.coolDown = 1 / fireRate;

@@ -10,6 +10,7 @@ public class BombMovement : MonoBehaviour
     public GameObject projectile;
     private ProjectileMovementZec PMZ;
     private Vector3 temp;//temporary vector we will use to help instantiate the bullets
+    public GameObject muzzleFlare;
 
     void Awake()
     {
@@ -77,7 +78,14 @@ public class BombMovement : MonoBehaviour
             PMZ.velocity = temp;
             Instantiate(projectile, transform.position, transform.rotation);
 
+            
+
             Destroy(this.gameObject);//now that we have made all the projectiles destroy the object
+                                     // muzzle flare
+            GameObject tempMuzzle;
+            tempMuzzle = Instantiate(muzzleFlare, transform.position, transform.rotation) as GameObject;
+            Destroy(tempMuzzle, 0.75f);
         }
+        
     }
 }

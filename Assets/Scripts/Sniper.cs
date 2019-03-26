@@ -12,6 +12,9 @@ public class Sniper : MonoBehaviour
     private SniperProjectileMovement2 PMZ;
     private SpecialWeapon SW;
 
+    public GameObject firePoint;
+    public GameObject muzzleFlare;
+
     Vector3 target, rotate;
 
     // Start is called before the first frame update
@@ -60,6 +63,12 @@ public class Sniper : MonoBehaviour
                     bullet.tag = "User1";
                     Instantiate(bullet, transform.position, transform.rotation);
 
+
+                    // muzzle flare
+                    GameObject tempMuzzle;
+                    tempMuzzle = Instantiate(muzzleFlare, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
+                    Destroy(tempMuzzle, 0.75f);
+
                     SW.bullets--;
 
                     this.coolDown = 1 / fireRate;
@@ -105,6 +114,12 @@ public class Sniper : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User2";
                     Instantiate(bullet, transform.position, transform.rotation);
+
+                    // muzzle flare
+                    GameObject tempMuzzle;
+                    tempMuzzle = Instantiate(muzzleFlare, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
+                    Debug.Log(firePoint.transform.position);
+                    Destroy(tempMuzzle, 0.75f);
 
                     SW.bullets--;
 

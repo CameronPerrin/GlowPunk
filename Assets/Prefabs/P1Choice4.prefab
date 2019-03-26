@@ -4981,6 +4981,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &5733063647873569515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5930624624514162589}
+  m_Layer: 0
+  m_Name: Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5930624624514162589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5733063647873569515}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.49, y: 0.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 226743069669060732}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5907436478608373844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5114,6 +5144,7 @@ MonoBehaviour:
   normalSpeed: 0
   Anim: {fileID: 6928682484042175229}
   facingRight: 1
+  firePoint: {fileID: 0}
 --- !u!50 &3888552071410885296
 Rigidbody2D:
   serializedVersion: 4
@@ -5244,6 +5275,9 @@ MonoBehaviour:
   fireRate: 1.1
   inaccuracy: 0.1
   bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
+  firePoint: {fileID: 5733063647873569515}
+  muzzleFlare: {fileID: 1357162262835438, guid: 418f1ccff49a11c4b87c91c464a0427d,
+    type: 3}
 --- !u!114 &4216823145997266244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5258,7 +5292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullets: 1
   magSize: 1
-  regenTime: 10
+  regenTime: 2
+  regeneration: 0
 --- !u!114 &1975446548342848387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5275,6 +5310,9 @@ MonoBehaviour:
   fireRate: 0.5
   inaccuracy: 0
   bullet: {fileID: 1778932910738145927, guid: 3ae12db3160dc0a49b27a8a8072509c0, type: 3}
+  firePoint: {fileID: 5733063647873569515}
+  muzzleFlare: {fileID: 1983767305573306, guid: e134f09441f16bb45824c26c39347a89,
+    type: 3}
 --- !u!1 &7016760626035418132
 GameObject:
   m_ObjectHideFlags: 0
@@ -5429,7 +5467,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.35, y: -0.1, z: 2}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5930624624514162589}
   m_Father: {fileID: 4994174470681789632}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
