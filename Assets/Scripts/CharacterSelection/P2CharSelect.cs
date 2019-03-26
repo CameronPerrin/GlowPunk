@@ -23,7 +23,7 @@ public class P2CharSelect : MonoBehaviour
         Selecting = false;
         IsReady = false;
         pick = 0;
-        bufferTime = 1;//one second of buffer
+        bufferTime = .2f;//one second of buffer
         MCScript = MC.GetComponent<MasterController>();
     }
 

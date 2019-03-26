@@ -23,7 +23,7 @@ public class P1CharSelect : MonoBehaviour
         Selecting = false;
         IsReady = false;
         pick = 0;
-        bufferTime = 1;//1 second of buffer
+        bufferTime = .2f;//1 second of buffer
         MCScript = MC.GetComponent<MasterController>();
     }
 
