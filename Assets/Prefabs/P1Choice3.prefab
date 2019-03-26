@@ -671,7 +671,7 @@ MonoBehaviour:
   normalSpeed: 0
   Anim: {fileID: 1981003933178327839}
   facingRight: 1
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 1742701145210299075}
 --- !u!50 &5669109539698295634
 Rigidbody2D:
   serializedVersion: 4
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullets: 2
   magSize: 2
-  regenTime: 4
+  regenTime: 3
   regeneration: 0
 --- !u!114 &2363059480067010582
 MonoBehaviour:
@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwSpeed: 20
-  fireRate: 0.4
+  fireRate: 0.7
   throwDistance: 25
   projSpeed: 20
   grenade: {fileID: 1628596182892200078, guid: 0f737fab48a1f554ba297085278f84ec, type: 3}

@@ -207,7 +207,7 @@ MonoBehaviour:
   normalSpeed: 0
   Anim: {fileID: 0}
   facingRight: 1
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 4002881803485289756}
 --- !u!50 &4034908850690924918
 Rigidbody2D:
   serializedVersion: 4

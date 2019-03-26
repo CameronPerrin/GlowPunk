@@ -64,10 +64,12 @@ public class PlayerMovement : MonoBehaviour {
                     if (Input.GetAxis("MoveJoy1X") > 0 && !facingRight)
                     {
                         Flip();
+                        facingRight = true;
                     }
                     else if (Input.GetAxis("MoveJoy1X") < 0 && facingRight)
                     {
                         Flip();
+                        facingRight = false;
                     }
                 }
                 else
@@ -75,10 +77,12 @@ public class PlayerMovement : MonoBehaviour {
                     if (Input.GetAxis("ShotJoy1X") > 0 && !facingRight)
                     {
                         Flip();
+                        facingRight = true;
                     }
                     else if (Input.GetAxis("ShotJoy1X") < 0 && facingRight)
                     {
                         Flip();
+                        facingRight = false;
                     }
                 }
             }
@@ -119,10 +123,12 @@ public class PlayerMovement : MonoBehaviour {
                     if (Input.GetAxis("MoveJoy2X") > 0 && !facingRight)
                     {
                         Flip();
+                        facingRight = true;
                     }
                     else if (Input.GetAxis("MoveJoy2X") < 0 && facingRight)
                     {
                         Flip();
+                        facingRight = false;
                     }
                 }
                 else
@@ -130,10 +136,12 @@ public class PlayerMovement : MonoBehaviour {
                     if (Input.GetAxis("ShotJoy2X") > 0 && !facingRight)
                     {
                         Flip();
+                        facingRight = true;
                     }
                     else if (Input.GetAxis("ShotJoy2X") < 0 && facingRight)
                     {
                         Flip();
+                        facingRight = false;
                     }
                 }
             }
@@ -175,10 +183,12 @@ public class PlayerMovement : MonoBehaviour {
                     if (Input.GetAxis("MoveJoy3X") > 0 && !facingRight)
                     {
                         Flip();
+                        facingRight = true;
                     }
                     else if (Input.GetAxis("MoveJoy3X") < 0 && facingRight)
                     {
                         Flip();
+                        facingRight = false;
                     }
                 }
                 else
@@ -186,10 +196,12 @@ public class PlayerMovement : MonoBehaviour {
                     if (Input.GetAxis("ShotJoy3X") > 0 && !facingRight)
                     {
                         Flip();
+                        facingRight = true;
                     }
                     else if (Input.GetAxis("ShotJoy3X") < 0 && facingRight)
                     {
                         Flip();
+                        facingRight = false;
                     }
                 }
             }
@@ -231,10 +243,12 @@ public class PlayerMovement : MonoBehaviour {
                     if (Input.GetAxis("MoveJoy4X") > 0 && !facingRight)
                     {
                         Flip();
+                        facingRight = true;
                     }
                     else if (Input.GetAxis("MoveJoy4X") < 0 && facingRight)
                     {
                         Flip();
+                        facingRight = false;
                     }
                 }
                 else
@@ -242,10 +256,12 @@ public class PlayerMovement : MonoBehaviour {
                     if (Input.GetAxis("ShotJoy4X") > 0 && !facingRight)
                     {
                         Flip();
+                        facingRight = true;
                     }
                     else if (Input.GetAxis("ShotJoy4X") < 0 && facingRight)
                     {
                         Flip();
+                        facingRight = false;
                     }
                 }
             }
