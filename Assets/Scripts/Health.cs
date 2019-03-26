@@ -77,11 +77,19 @@ public class Health : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Colliding");
-        if (collision.tag == "User2" && currentPlayer == 1)
+        if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
         {
             modifyHealth(-8); // needed to use this for healthbars
         }
-        if (collision.tag == "User1" && currentPlayer == 2)
+        else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
+        {
+            modifyHealth(-8);
+        }
+        else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
+        {
+            modifyHealth(-8);
+        }
+        else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
         {
             modifyHealth(-8);
         }

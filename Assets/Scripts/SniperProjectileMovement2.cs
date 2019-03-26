@@ -49,7 +49,7 @@ public class SniperProjectileMovement2 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {     
-        if ((collision.tag == "Wall" || collision.tag == "Border"))
+        if ((collision.tag == "Wall" || collision.tag == "Border") && reflected)
             Destroy(this.gameObject);
         else if (this.tag == "User1" && collision.tag == "Player2")
             Destroy(this.gameObject);
