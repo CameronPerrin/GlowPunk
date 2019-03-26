@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9077810223695739681}
   m_Layer: 0
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: User1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,11 +94,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14a6a19b92acdc48b5b3b7e45b635eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  distance: 0
-  projSpeed: 0
-  velocity: {x: 0, y: 0, z: 0}
-  projectile: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
+  speed: 20
+  distance: 25
+  projSpeed: 20
+  velocity: {x: -0.42417762, y: -0.9055791, z: 0}
+  projectile: {fileID: 5433520768389638577, guid: 92dddfd6598f0fb41b7b5266cc16f6ab,
+    type: 3}
 --- !u!61 &36031344631434885
 BoxCollider2D:
   m_ObjectHideFlags: 0

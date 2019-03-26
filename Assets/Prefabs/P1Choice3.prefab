@@ -705,6 +705,7 @@ MonoBehaviour:
   bullets: 2
   magSize: 2
   regenTime: 4
+  regeneration: 0
 --- !u!114 &2363059480067010582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,9 +718,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce53a51e34435344e9eb6f61f8521485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 15
+  throwSpeed: 20
   fireRate: 0.4
-  throwDistance: 8
+  throwDistance: 25
   projSpeed: 20
   grenade: {fileID: 1628596182892200078, guid: 0f737fab48a1f554ba297085278f84ec, type: 3}
 --- !u!1 &8725291531116551751
