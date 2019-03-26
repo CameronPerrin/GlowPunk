@@ -51,9 +51,13 @@ public class SniperProjectileMovement2 : MonoBehaviour
     {     
         if ((collision.tag == "Wall" || collision.tag == "Border") && reflected)
             Destroy(this.gameObject);
-        else if (this.tag == "User1" && collision.tag == "Player2")
+        if (this.tag == "User1" && (collision.tag == "Player2" || collision.tag == "Player3" || collision.tag == "Player4"))
             Destroy(this.gameObject);
-        else if (this.tag == "User2" && collision.tag == "Player1")
+        if (this.tag == "User2" && (collision.tag == "Player1" || collision.tag == "Player3" || collision.tag == "Player4"))
+            Destroy(this.gameObject);
+        if (this.tag == "User3" && (collision.tag == "Player1" || collision.tag == "Player2" || collision.tag == "Player4"))
+            Destroy(this.gameObject);
+        if (this.tag == "User4" && (collision.tag == "Player1" || collision.tag == "Player2" || collision.tag == "Player3"))
             Destroy(this.gameObject);
     }
     /*private void OnCollisionEnter2D(Collision2D collision)

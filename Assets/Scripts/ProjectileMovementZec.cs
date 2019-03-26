@@ -22,9 +22,13 @@ public class ProjectileMovementZec : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (this.tag == "User1" && collision.tag == "Player2")
+        if (this.tag == "User1" && (collision.tag == "Player2" || collision.tag == "Player3" || collision.tag == "Player4"))
             Destroy(this.gameObject);
-        if (this.tag == "User2" && collision.tag == "Player1")
+        if (this.tag == "User2" && (collision.tag == "Player1" || collision.tag == "Player3" || collision.tag == "Player4"))
+            Destroy(this.gameObject);
+        if (this.tag == "User3" && (collision.tag == "Player1" || collision.tag == "Player2" || collision.tag == "Player4"))
+            Destroy(this.gameObject);
+        if (this.tag == "User4" && (collision.tag == "Player1" || collision.tag == "Player2" || collision.tag == "Player3"))
             Destroy(this.gameObject);
         if (collision.tag == "Border" || collision.tag == "Wall")
             Destroy(this.gameObject);
