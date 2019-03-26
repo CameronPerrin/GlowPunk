@@ -77,6 +77,8 @@
      <Compile Include="Assets\Scripts\Shootin.cs" />
      <Compile Include="Assets\Scripts\Shotgun.cs" />
      <Compile Include="Assets\Scripts\Sniper.cs" />
+     <Compile Include="Assets\Scripts\SniperProjectileMovement.cs" />
+     <Compile Include="Assets\Scripts\SniperProjectileMovement2.cs" />
      <Compile Include="Assets\Scripts\SpecialWeapon.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -349,12 +351,12 @@
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
   </Target>
   -->
-  
+
 </Project>

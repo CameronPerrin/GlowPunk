@@ -9,7 +9,7 @@ public class Sniper : MonoBehaviour
     public float inaccuracy;
     private float coolDown = 0;
     public GameObject bullet;
-    private ProjectileMovementZec PMZ;
+    private SniperProjectileMovement2 PMZ;
     private SpecialWeapon SW;
 
     Vector3 target, rotate;
@@ -17,7 +17,7 @@ public class Sniper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PMZ = bullet.GetComponent<ProjectileMovementZec>();
+        PMZ = bullet.GetComponent<SniperProjectileMovement2>();
         SW = this.GetComponent<SpecialWeapon>();
     }
 

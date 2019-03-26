@@ -6,7 +6,7 @@ public class SpecialWeapon : MonoBehaviour
 {
     public int bullets, magSize;
     public float regenTime;
-    private float regeneration;
+    public float regeneration;
     // Start is called before the first frame update
     void Start()
     {

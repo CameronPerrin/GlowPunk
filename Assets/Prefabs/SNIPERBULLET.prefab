@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1893333116626395709}
   - component: {fileID: 1731485433527414227}
   - component: {fileID: 1760448665433070733}
-  - component: {fileID: 1811364337540266235}
+  - component: {fileID: 149860188192216404}
   m_Layer: 9
   m_Name: SNIPERBULLET
   m_TagString: User1
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006709099, y: -0.00000023841858}
+  m_Offset: {x: 0, y: -0.095861554}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,9 +128,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.85240686, y: 1.2145853}
+  m_Size: {x: 1, y: 2.3420613}
   m_EdgeRadius: 0
---- !u!114 &1811364337540266235
+--- !u!114 &149860188192216404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,11 +139,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1778932910738145927}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdbcded652fc4f24abd76e87fd9a36ab, type: 3}
+  m_Script: {fileID: 11500000, guid: f856c834fc064824d9c5a34c867b46b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 55
-  velocity: {x: 0.99810874, y: -0.061473254, z: 0}
+  velocity: {x: -0.4333927, y: 0.9012052, z: 0}
+  layerToDetect:
+    serializedVersion: 2
+    m_Bits: 0
+  reflected: 0
 --- !u!1 &2527436899423261452
 GameObject:
   m_ObjectHideFlags: 0
