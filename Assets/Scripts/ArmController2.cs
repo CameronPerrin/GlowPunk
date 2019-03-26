@@ -27,7 +27,7 @@ public class ArmController2 : MonoBehaviour
         {
             if (Input.GetAxis("ShotJoy2X") == 0)
             {
-                transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, -angle));
             }
             else
             {

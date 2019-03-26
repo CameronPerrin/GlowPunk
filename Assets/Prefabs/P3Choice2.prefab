@@ -611,7 +611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3477292270387632203}
-  - component: {fileID: 4575314462394197149}
+  - component: {fileID: 171578596802605442}
   m_Layer: 0
   m_Name: pivot_point
   m_TagString: Untagged
@@ -635,7 +635,7 @@ Transform:
   m_Father: {fileID: 4197814587874259922}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4575314462394197149
+--- !u!114 &171578596802605442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6226210770137857360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d081098d750baea459462376db989adb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c28cb8b3315d9a499cebad8b36fbd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7300894108675731708
