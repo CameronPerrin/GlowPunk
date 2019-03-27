@@ -64,7 +64,10 @@ public class dynamicCameraMovement : MonoBehaviour
     {
         //horizontal size is based on actual screen ratio
         float minSizeX = minSizeY * Screen.width / Screen.height;
-
+        float lowestX = 0;
+        float highestX = 0;
+        float lowestY = 0;
+        float highestY = 0;
         //multiplying by 0.5, because the ortographicSize is actually half the height
         float width = 0f;
         float height = 0f;
@@ -75,13 +78,75 @@ public class dynamicCameraMovement : MonoBehaviour
         }
         else if (share.totalPlayers == 3)
         {
-            width = Mathf.Abs(player1.position.x - player2.position.x - player3.position.x) * 0.5f;
-            height = Mathf.Abs(player1.position.y - player2.position.y - player3.position.x) * 0.5f + 5;
+            if (player1.position.x < lowestX)
+                lowestX = player1.position.x;
+            else if (player2.position.x < lowestX)
+                lowestX = player2.position.x;
+            else if (player3.position.x < lowestX)
+                lowestX = player3.position.x;
+
+            if (player1.position.x > highestX)
+                highestX = player1.position.x;
+            else if (player2.position.x > highestX)
+                highestX = player2.position.x;
+            else if (player3.position.x > highestX)
+                highestX = player3.position.x;
+
+            if (player1.position.y < lowestY)
+                lowestY = player1.position.y;
+            else if (player2.position.y < lowestY)
+                lowestY = player2.position.y;
+            else if (player3.position.y < lowestY)
+                lowestY = player3.position.y;
+
+            if (player1.position.y > highestY)
+                highestY = player1.position.y;
+            else if (player2.position.y > highestY)
+                highestY = player2.position.y;
+            else if (player3.position.y > highestY)
+                highestY = player3.position.y;
+            width = Mathf.Abs(lowestX - highestX) * 0.5f;
+            height = Mathf.Abs(lowestY - highestY) * 0.5f + 5;
         }
         else if (share.totalPlayers == 4)
         {
-            width = Mathf.Abs(player1.position.x - player2.position.x - player3.position.x - player4.position.x) * 0.5f;
-            height = Mathf.Abs(player1.position.y - player2.position.y - player3.position.y - player4.position.y) * 0.5f + 5;
+            if (player1.position.x < lowestX)
+                lowestX = player1.position.x;
+            else if (player2.position.x < lowestX)
+                lowestX = player2.position.x;
+            else if (player3.position.x < lowestX)
+                lowestX = player3.position.x;
+            else if (player4.position.x < lowestX)
+                lowestX = player4.position.x;
+
+            if (player1.position.x > highestX)
+                highestX = player1.position.x;
+            else if (player2.position.x > highestX)
+                highestX = player2.position.x;
+            else if (player3.position.x > highestX)
+                highestX = player3.position.x;
+            else if (player4.position.x > highestX)
+                highestX = player4.position.x;
+
+            if (player1.position.y < lowestY)
+                lowestY = player1.position.y;
+            else if (player2.position.y < lowestY)
+                lowestY = player2.position.y;
+            else if (player3.position.y < lowestY)
+                lowestY = player3.position.y;
+            else if (player4.position.y < lowestY)
+                lowestY = player4.position.y;
+
+            if (player1.position.y > highestY)
+                highestY = player1.position.y;
+            else if (player2.position.y > highestY)
+                highestY = player2.position.y;
+            else if (player3.position.y > highestY)
+                highestY = player3.position.y;
+            else if (player4.position.y > highestY)
+                highestY = player4.position.y;
+            width = Mathf.Abs(lowestX - highestX) * 0.5f;
+            height = Mathf.Abs(lowestY - highestY) * 0.5f + 5;
         }
 
         //computing the size
