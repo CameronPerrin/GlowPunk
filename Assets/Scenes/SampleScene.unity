@@ -4189,7 +4189,7 @@ MonoBehaviour:
   player3GM: {fileID: 0}
   player4GM: {fileID: 0}
   playerGM: []
-  minSizeY: 5
+  minSizeY: 20
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

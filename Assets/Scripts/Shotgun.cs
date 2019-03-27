@@ -267,6 +267,12 @@ public class Shotgun : MonoBehaviour
                         bullet.tag = "User3";
                         PMZ.speed = bulletSpeed;
                         Instantiate(bullet, transform.position, transform.rotation);
+
+                        // muzzle flare
+                        GameObject tempMuzzle;
+                        tempMuzzle = Instantiate(muzzleFlare, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
+                        Debug.Log(firePoint.transform.position);
+                        Destroy(tempMuzzle, 0.75f);
                     }
 
                     SW.bullets--;
@@ -349,6 +355,12 @@ public class Shotgun : MonoBehaviour
                         bullet.tag = "User4";
                         PMZ.speed = bulletSpeed;
                         Instantiate(bullet, transform.position, transform.rotation);
+
+                        // muzzle flare
+                        GameObject tempMuzzle;
+                        tempMuzzle = Instantiate(muzzleFlare, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
+                        Debug.Log(firePoint.transform.position);
+                        Destroy(tempMuzzle, 0.75f);
                     }
 
                     SW.bullets--;

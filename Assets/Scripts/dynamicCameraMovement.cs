@@ -9,7 +9,7 @@ public class dynamicCameraMovement : MonoBehaviour
     public List<GameObject> playerGM;
     private SharedVariables share;
     private GameObject Access;
-    public float minSizeY = 5f;
+    public float minSizeY = 20f;
     
     void Awake()
     {
@@ -203,7 +203,7 @@ public class dynamicCameraMovement : MonoBehaviour
                 highestY = playerGM[i].transform.position.y;
         }
 
-        width = Mathf.Abs(lowestX - highestX) * 0.5f;
+        width = Mathf.Abs(lowestX - highestX) * 0.6f;
         height = Mathf.Abs(lowestY - highestY) * 0.5f + 5;
         //computing the size
         float camSizeX = Mathf.Max(width, minSizeX) + 10;

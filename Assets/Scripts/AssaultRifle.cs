@@ -114,6 +114,12 @@ public class AssaultRifle : MonoBehaviour
                     bullet.tag = "User2";
                     Instantiate(bullet, transform.position, transform.rotation);
 
+                    // muzzle flare
+                    GameObject tempMuzzle;
+                    tempMuzzle = Instantiate(muzzleFlare, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
+                    Debug.Log(firePoint.transform.position);
+                    Destroy(tempMuzzle, 0.75f);
+
                     SW.bullets--;
                     this.coolDown = 1 / fireRate;
                 }
@@ -160,6 +166,12 @@ public class AssaultRifle : MonoBehaviour
                     bullet.tag = "User3";
                     Instantiate(bullet, transform.position, transform.rotation);
 
+                    // muzzle flare
+                    GameObject tempMuzzle;
+                    tempMuzzle = Instantiate(muzzleFlare, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
+                    Debug.Log(firePoint.transform.position);
+                    Destroy(tempMuzzle, 0.75f);
+
                     SW.bullets--;
                     this.coolDown = 1 / fireRate;
                 }
@@ -205,6 +217,12 @@ public class AssaultRifle : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User4";
                     Instantiate(bullet, transform.position, transform.rotation);
+
+                    // muzzle flare
+                    GameObject tempMuzzle;
+                    tempMuzzle = Instantiate(muzzleFlare, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
+                    Debug.Log(firePoint.transform.position);
+                    Destroy(tempMuzzle, 0.75f);
 
                     SW.bullets--;
                     this.coolDown = 1 / fireRate;
