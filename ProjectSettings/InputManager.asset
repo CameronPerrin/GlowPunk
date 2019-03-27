@@ -595,7 +595,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 4
+    axis: 3
     joyNum: 4
   - serializedVersion: 3
     m_Name: ShotJoy4Y
@@ -611,7 +611,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 3
+    axis: 4
     joyNum: 4
   - serializedVersion: 3
     m_Name: ShotJoy3X

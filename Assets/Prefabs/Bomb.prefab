@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9077810223695739681}
   m_Layer: 0
   m_Name: Bomb
-  m_TagString: User1
+  m_TagString: User3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   speed: 20
   distance: 25
   projSpeed: 20
-  velocity: {x: 0.63915884, y: -0.7690748, z: 0}
+  velocity: {x: 0.534549, y: -0.84513754, z: 0}
   projectile: {fileID: 5433520768389638577, guid: 92dddfd6598f0fb41b7b5266cc16f6ab,
     type: 3}
   muzzleFlare: {fileID: 1766839135796830, guid: 1696ce4413327a748928e1f9d7ccb388,
