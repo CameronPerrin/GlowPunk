@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Health : MonoBehaviour {
+public class Health : MonoBehaviour
+{
 
     private int health = 100;
     public int currentPlayer;//which player is this script on
@@ -25,13 +26,13 @@ public class Health : MonoBehaviour {
 
     // Use this for initialization
 
-    void Awake ()
+    void Awake()
     {
         Access = GameObject.Find("HealthVariables");
         share = Access.GetComponent<SharedVariables>();
         share.totalPlayers++;
         SW = Player.GetComponent<SpecialWeapon>();
-	}
+    }
 
     public void modifyHealth(int amount)
     {
@@ -41,25 +42,74 @@ public class Health : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         if (share.totalPlayers < 2)
         {
             if (Player.name.Contains("P1Choice1"))//Player 1 wins
-                {
-                    SceneManager.LoadScene("EndingScreenP1Gunner");
-                }
-                else if (Player.name.Contains("P1Choice2"))
-                {
-                    SceneManager.LoadScene("EndingScreenP1Shotgunner");
-                }
-                else if (Player.name.Contains("P2Choice1"))
-                {
-                    SceneManager.LoadScene("EndingScreenP2Gunner");
-                }
-                else if (Player.name.Contains("P2Choice2"))
-                {
-                    SceneManager.LoadScene("EndingScreenP2Shotgunner");
-                }
+            {
+                SceneManager.LoadScene("EndingScreenP1Gunner");
+            }
+            else if (Player.name.Contains("P1Choice2"))
+            {
+                SceneManager.LoadScene("EndingScreenP1Shotgunner");
+            }
+            else if (Player.name.Contains("P1Choice3"))
+            {
+                SceneManager.LoadScene("EndingScreenP1Bomber");
+            }
+            else if (Player.name.Contains("P1Choice4"))
+            {
+                SceneManager.LoadScene("EndingScreenP1Sniper");
+            }
+            else if (Player.name.Contains("P2Choice1"))//Player 1 wins
+            {
+                SceneManager.LoadScene("EndingScreenP2Gunner");
+            }
+            else if (Player.name.Contains("P2Choice2"))
+            {
+                SceneManager.LoadScene("EndingScreenP2Shotgunner");
+            }
+            else if (Player.name.Contains("P2Choice3"))
+            {
+                SceneManager.LoadScene("EndingScreenP2Bomber");
+            }
+            else if (Player.name.Contains("P2Choice4"))
+            {
+                SceneManager.LoadScene("EndingScreenP2Sniper");
+            }
+            else if (Player.name.Contains("P3Choice1"))//Player 1 wins
+            {
+                SceneManager.LoadScene("EndingScreenP3Gunner");
+            }
+            else if (Player.name.Contains("P3Choice2"))
+            {
+                SceneManager.LoadScene("EndingScreenP3Shotgunner");
+            }
+            else if (Player.name.Contains("P3Choice3"))
+            {
+                SceneManager.LoadScene("EndingScreenP3Bomber");
+            }
+            else if (Player.name.Contains("P3Choice4"))
+            {
+                SceneManager.LoadScene("EndingScreenP3Sniper");
+            }
+            else if (Player.name.Contains("P4Choice1"))//Player 1 wins
+            {
+                SceneManager.LoadScene("EndingScreenP4Gunner");
+            }
+            else if (Player.name.Contains("P4Choice2"))
+            {
+                SceneManager.LoadScene("EndingScreenP4Shotgunner");
+            }
+            else if (Player.name.Contains("P4Choice3"))
+            {
+                SceneManager.LoadScene("EndingScreenP4Bomber");
+            }
+            else if (Player.name.Contains("P4Choice4"))
+            {
+                SceneManager.LoadScene("EndingScreenP4Sniper");
+            }
         }
         if (this.cHealth <= 0)
         {
@@ -67,12 +117,12 @@ public class Health : MonoBehaviour {
             Player.SetActive(false);
         }
         int temp = SW.bullets;
-        
+
         //healthText.text = "Player 1 Health: " + P1Health.ToString();
         //healthText2.text = "Player 2 Health: " + P2Health.ToString();
     }
 
-    
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
