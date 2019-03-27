@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour {
             // ## Animator change based off of movement
             // ## - THIS IS JUST FOR ANIMATION, LOOK UNDER THIS FOR ACTUAL MOVEMENT - ##
             
-            if (Input.GetAxis("MoveJoy1Y") != 0 && Input.GetAxis("MoveJoy1X") != 0)
+            if (Input.GetAxis("MoveJoy1Y") != 0 || Input.GetAxis("MoveJoy1X") != 0)
             {
                 Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy1X")));
                 Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy1Y")));
@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         else if (this.tag == "Player2")
         {
-            if (Input.GetAxis("MoveJoy2Y") != 0 && Input.GetAxis("MoveJoy2X") != 0)
+            if (Input.GetAxis("MoveJoy2Y") != 0 || Input.GetAxis("MoveJoy2X") != 0)
             {
                 Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy2X")));
                 Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy2Y")));
@@ -162,7 +162,7 @@ public class PlayerMovement : MonoBehaviour {
 
         else if (this.tag == "Player3")
         {
-            if (Input.GetAxis("MoveJoy3Y") != 0 && Input.GetAxis("MoveJoy3X") != 0)
+            if (Input.GetAxis("MoveJoy3Y") != 0 || Input.GetAxis("MoveJoy3X") != 0)
             {
                 Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy3X")));
                 Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy3Y")));
@@ -222,7 +222,7 @@ public class PlayerMovement : MonoBehaviour {
 
         else if (this.tag == "Player4")
         {
-            if (Input.GetAxis("MoveJoy4Y") != 0 && Input.GetAxis("MoveJoy4X") != 0)
+            if (Input.GetAxis("MoveJoy4Y") != 0 || Input.GetAxis("MoveJoy4X") != 0)
             {
                 Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy4X")));
                 Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy4Y")));
