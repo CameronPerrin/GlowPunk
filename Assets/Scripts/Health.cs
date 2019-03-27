@@ -114,7 +114,8 @@ public class Health : MonoBehaviour
         if (this.cHealth <= 0)
         {
             share.totalPlayers--;
-            Player.SetActive(false);
+            //Player.SetActive(false);
+            Destroy(this.gameObject);
         }
         int temp = SW.bullets;
 
