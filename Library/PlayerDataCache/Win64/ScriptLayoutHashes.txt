@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/jsoran/Desktop/Glow Punk Build/GlowPunkTest.exe
+C:/Users/jsoran/Desktop/Glow Punk Build/GlowPunkTest_Data/GlowPunkTest.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/CharacterSelection.unity
@@ -9,6 +9,17 @@ Assets/Scenes/ending scene/EndingScreenP1Gunner.unity
 Assets/Scenes/ending scene/EndingScreenP1Shotgunner.unity
 Assets/Scenes/ending scene/EndingScreenP2Gunner.unity
 Assets/Scenes/ending scene/EndingScreenP2Shotgunner.unity
+Assets/Scenes/ending scene/EndingScreenP4Sniper.unity
+Assets/Scenes/ending scene/EndingScreenP4Shotgunner.unity
+Assets/Scenes/ending scene/EndingScreenP4Gunner.unity
+Assets/Scenes/ending scene/EndingScreenP4Bomber.unity
+Assets/Scenes/ending scene/EndingScreenP3Shotgunner.unity
+Assets/Scenes/ending scene/EndingScreenP3Gunner.unity
+Assets/Scenes/ending scene/EndingScreenP3Bomber.unity
+Assets/Scenes/ending scene/EndingScreenP2Sniper.unity
+Assets/Scenes/ending scene/EndingScreenP2Bomber.unity
+Assets/Scenes/ending scene/EndingScreenP1Sniper.unity
+Assets/Scenes/ending scene/EndingScreenP1Bomber.unity
 SceneListEnd?
 a1f19ad47d3094e235f21b74dfc423a8 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessLayer
 726fcf7961cbb4108aa5be5e55b8c8bf Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ColorGrading

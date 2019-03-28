@@ -26,4 +26,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ending scene/EndingScreenP2Shotgunner.unity
     guid: a042747bb3a75f74eb7b6bec5b30ef7f
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP4Sniper.unity
+    guid: 6c3d2faa1a0535a41999a573d84b6033
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP4Shotgunner.unity
+    guid: 982ffa3bb6bad59498e096703ce1c538
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP4Gunner.unity
+    guid: 93ec0e9e62a64364b88495024c0c6844
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP4Bomber.unity
+    guid: 29c4b06fe7ffbdb40a3bbd14b73b9f30
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP3Shotgunner.unity
+    guid: 8f7d154f0f3141244bcafda765229fbf
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP3Gunner.unity
+    guid: 4951ab3c6940fb942829cd39920271de
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP3Bomber.unity
+    guid: 05c1edb2200fad845b5c8ab948ea0925
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP2Sniper.unity
+    guid: 14947d5ba9ca427438db18b168c95433
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP2Bomber.unity
+    guid: 1e3e7f065c3b0d74e87ac76bece89c50
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP1Sniper.unity
+    guid: 595af3b38e7521044b7b029330e34c72
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP1Bomber.unity
+    guid: 1a6808abf1035674d89f4fa8307cd62d
   m_configObjects: {}

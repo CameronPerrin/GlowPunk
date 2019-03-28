@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour {
                 Vector3 temp = new Vector3(Input.GetAxis("MoveJoy1X"), -Input.GetAxis("MoveJoy1Y"), 0);
                 temp.Normalize();
 
-                this.transform.position += temp * blink;
+                //this.transform.position += temp * blink;
                 recharge = coolDown;
             }
             
@@ -150,7 +150,7 @@ public class PlayerMovement : MonoBehaviour {
                 Vector3 temp = new Vector3(Input.GetAxis("MoveJoy2X"), -Input.GetAxis("MoveJoy2Y"), 0);
                 temp.Normalize();
 
-                this.transform.position += temp * blink;
+                //this.transform.position += temp * blink;
                 recharge = coolDown;
             }
 
@@ -210,7 +210,7 @@ public class PlayerMovement : MonoBehaviour {
                 Vector3 temp = new Vector3(Input.GetAxis("MoveJoy3X"), -Input.GetAxis("MoveJoy3Y"), 0);
                 temp.Normalize();
 
-                this.transform.position += temp * blink;
+                //this.transform.position += temp * blink;
                 recharge = coolDown;
             }
 
@@ -270,7 +270,7 @@ public class PlayerMovement : MonoBehaviour {
                 Vector3 temp = new Vector3(Input.GetAxis("MoveJoy4X"), -Input.GetAxis("MoveJoy4Y"), 0);
                 temp.Normalize();
 
-                this.transform.position += temp * blink;
+                //this.transform.position += temp * blink;
                 recharge = coolDown;
             }
 
