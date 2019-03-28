@@ -143,11 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 55
-  velocity: {x: 0.8210709, y: -0.5708263, z: 0}
+  velocity: {x: 1, y: 0, z: 0}
   layerToDetect:
     serializedVersion: 2
     m_Bits: 0
-  reflected: 0
+  ReflectionAmount: 3
 --- !u!96 &1852211821995554627
 TrailRenderer:
   serializedVersion: 2

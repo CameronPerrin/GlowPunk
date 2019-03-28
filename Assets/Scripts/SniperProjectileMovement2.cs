@@ -7,12 +7,15 @@ public class SniperProjectileMovement2 : MonoBehaviour
     public float speed = 100f;
     public Vector3 velocity;
     public LayerMask layerToDetect;
-    public bool reflected;
-
+    //public bool reflected;
+    private int reflected;
+    public int ReflectionAmount;
     // Update is called once per frame
     void Awake()
     {
-        reflected = false;
+        //reflected = false;
+        reflected = 0;
+        ReflectionAmount = 2;
         Debug.Log("Projectile Away");
 
     }
@@ -36,20 +39,23 @@ public class SniperProjectileMovement2 : MonoBehaviour
         RaycastHit2D downRay = Physics2D.Raycast(transform.position, Vector2.down, 100, wall);
         RaycastHit2D leftRay = Physics2D.Raycast(transform.position, Vector2.left, 100, wall);
 
-        if (upRay.distance <= 1 && reflected == false && (upRay.collider.gameObject.tag == "Wall" || upRay.collider.gameObject.tag == "Border"))
-        { velocity = new Vector3(velocity.x, -velocity.y, 0); reflected = true; Debug.Log("UpRay Triggered"); }
-        else if (downRay.distance <= 1 && reflected == false && (downRay.collider.gameObject.tag == "Wall" || downRay.collider.gameObject.tag == "Border"))
-        { velocity = new Vector3(velocity.x, -velocity.y, 0); reflected = true; Debug.Log("DownRay Triggered"); }
-        else if (rightRay.distance <= 1 && reflected == false && (rightRay.collider.gameObject.tag == "Wall" || rightRay.collider.gameObject.tag == "Border"))
-        { velocity = new Vector3(-velocity.x, velocity.y, 0); reflected = true; Debug.Log("RightRay Triggered"); }
-        else if (leftRay.distance <= 1 && reflected == false && (leftRay.collider.gameObject.tag == "Wall" || leftRay.collider.gameObject.tag == "Border"))
-        { velocity = new Vector3(-velocity.x, velocity.y, 0); reflected = true; Debug.Log("LeftRay Triggered"); }
+        if (upRay.distance <= 1 && reflected < ReflectionAmount && (upRay.collider.gameObject.tag == "Wall" || upRay.collider.gameObject.tag == "Border"))
+        { velocity = new Vector3(velocity.x, -velocity.y, 0); reflected++; Debug.Log("UpRay Triggered"); }
+
+        else if (downRay.distance <= 1 && reflected < ReflectionAmount && (downRay.collider.gameObject.tag == "Wall" || downRay.collider.gameObject.tag == "Border"))
+        { velocity = new Vector3(velocity.x, -velocity.y, 0); reflected++; Debug.Log("DownRay Triggered"); }
+
+        else if (rightRay.distance <= 1 && reflected < ReflectionAmount && (rightRay.collider.gameObject.tag == "Wall" || rightRay.collider.gameObject.tag == "Border"))
+        { velocity = new Vector3(-velocity.x, velocity.y, 0); reflected++; Debug.Log("RightRay Triggered"); }
+
+        else if (leftRay.distance <= 1 && reflected < ReflectionAmount && (leftRay.collider.gameObject.tag == "Wall" || leftRay.collider.gameObject.tag == "Border"))
+        { velocity = new Vector3(-velocity.x, velocity.y, 0); reflected++; Debug.Log("LeftRay Triggered"); }
         else { };
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {     
-        if ((collision.tag == "Wall" || collision.tag == "Border") && reflected)
+        if ((collision.tag == "Wall" || collision.tag == "Border") && reflected == ReflectionAmount)
             Destroy(this.gameObject);
         if (this.tag == "User1" && (collision.tag == "Player2" || collision.tag == "Player3" || collision.tag == "Player4"))
             Destroy(this.gameObject);

@@ -19,9 +19,14 @@ public class Health : MonoBehaviour
     private SharedVariables share;
     private SpecialWeapon SW;
 
+    private int bulletDamage;
+    private int sniperDamage;
+
     private void OnEnable()
     {
         cHealth = health;
+        bulletDamage = -12;
+        sniperDamage = -25;
     }
 
     // Use this for initialization
@@ -132,38 +137,38 @@ public class Health : MonoBehaviour
         {
             if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
             {
-                modifyHealth(-12); // needed to use this for healthbars
+                modifyHealth(bulletDamage); // needed to use this for healthbars
             }
             else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
             {
-                modifyHealth(-12);
+                modifyHealth(bulletDamage);
             }
             else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
             {
-                modifyHealth(-12);
+                modifyHealth(bulletDamage);
             }
             else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
             {
-                modifyHealth(-12);
+                modifyHealth(bulletDamage);
             }
         }
         if (collision.name == "SNIPERBULLET(Clone)")
         {
             if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
             {
-                modifyHealth(-25); // needed to use this for healthbars
+                modifyHealth(sniperDamage); // needed to use this for healthbars
             }
             else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
             {
-                modifyHealth(-25);
+                modifyHealth(sniperDamage);
             }
             else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
             {
-                modifyHealth(-25);
+                modifyHealth(sniperDamage);
             }
             else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
             {
-                modifyHealth(-25);
+                modifyHealth(sniperDamage);
             }
         }
     }
