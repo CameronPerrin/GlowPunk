@@ -53,8 +53,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  blink: 7.5
-  coolDown: 2.5
+  sprintSpeed: 18
+  coolDown: 9
+  duration: 2
+  timer: 0
   normalSpeed: 0
   Anim: {fileID: 0}
   facingRight: 1

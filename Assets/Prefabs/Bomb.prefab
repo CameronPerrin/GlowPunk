@@ -97,7 +97,7 @@ MonoBehaviour:
   speed: 20
   distance: 25
   projSpeed: 20
-  velocity: {x: -0.8736547, y: 0.48654655, z: 0}
+  velocity: {x: -1, y: 0, z: 0}
   projectile: {fileID: 5433520768389638577, guid: 92dddfd6598f0fb41b7b5266cc16f6ab,
     type: 3}
   muzzleFlare: {fileID: 1766839135796830, guid: 1696ce4413327a748928e1f9d7ccb388,

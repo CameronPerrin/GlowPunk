@@ -3123,6 +3123,7 @@ MonoBehaviour:
   player2GM: {fileID: 0}
   player3GM: {fileID: 0}
   player4GM: {fileID: 0}
+  playerGM: []
   minSizeY: 15
 --- !u!20 &519420031
 Camera:

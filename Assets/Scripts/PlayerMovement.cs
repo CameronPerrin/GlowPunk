@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour {
     //public GameObject player;
     private Rigidbody2D rb2d;
     public float speed;
-    public float blink, coolDown;//distance of players blink ability
+    public float sprintSpeed, coolDown, duration, timer;//distance of players sprintSpeed ability
     private float recharge = 0;
     [HideInInspector]
     public float normalSpeed;//want variable so the outside objects and scripts and alter the speed of player and change it back
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
     // ## Not sure if I can move the information inside here into the Start() function
     private void Awake()
     {
-        normalSpeed = speed;
+        normalSpeed = 10;
         Anim = GetComponent<Animator>();
         this.playerGraphics = this.transform.Find("Graphics");
     }
@@ -86,18 +86,25 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
-            if (Input.GetAxis("A1") != 0 && recharge <= 0)//player blink
+            if (Input.GetAxis("A1") != 0 && recharge <= 0)//player sprintSpeed
             {
-                Vector3 temp = new Vector3(Input.GetAxis("MoveJoy1X"), -Input.GetAxis("MoveJoy1Y"), 0);
-                temp.Normalize();
-
-                //this.transform.position += temp * blink;
+                this.speed = sprintSpeed;
                 recharge = coolDown;
+                timer = duration;
             }
             
-            if(recharge > 0)//recharge for blink
+            if(recharge > 0)//recharge for sprintSpeed
             {
                 recharge -= Time.deltaTime;
+            }
+            if(timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+            else if(timer <= 0)
+            {
+                this.speed = normalSpeed;
+                timer = 0;
             }
         }
         else if (this.tag == "Player2")
@@ -147,16 +154,23 @@ public class PlayerMovement : MonoBehaviour {
             }
             if (Input.GetAxis("A2") != 0 && recharge <= 0)
             {
-                Vector3 temp = new Vector3(Input.GetAxis("MoveJoy2X"), -Input.GetAxis("MoveJoy2Y"), 0);
-                temp.Normalize();
-
-                //this.transform.position += temp * blink;
+                this.speed = sprintSpeed;
                 recharge = coolDown;
+                timer = duration;
             }
 
-            if (recharge > 0)
+            if (recharge > 0)//recharge for sprintSpeed
             {
                 recharge -= Time.deltaTime;
+            }
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+            else if (timer <= 0)
+            {
+                this.speed = normalSpeed;
+                timer = 0;
             }
         }
 
@@ -207,16 +221,23 @@ public class PlayerMovement : MonoBehaviour {
             }
             if (Input.GetAxis("A3") != 0 && recharge <= 0)
             {
-                Vector3 temp = new Vector3(Input.GetAxis("MoveJoy3X"), -Input.GetAxis("MoveJoy3Y"), 0);
-                temp.Normalize();
-
-                //this.transform.position += temp * blink;
+                this.speed = sprintSpeed;
                 recharge = coolDown;
+                timer = duration;
             }
 
-            if (recharge > 0)
+            if (recharge > 0)//recharge for sprintSpeed
             {
                 recharge -= Time.deltaTime;
+            }
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+            else if (timer <= 0)
+            {
+                this.speed = normalSpeed;
+                timer = 0;
             }
         }
 
@@ -267,16 +288,23 @@ public class PlayerMovement : MonoBehaviour {
             }
             if (Input.GetAxis("A4") != 0 && recharge <= 0)
             {
-                Vector3 temp = new Vector3(Input.GetAxis("MoveJoy4X"), -Input.GetAxis("MoveJoy4Y"), 0);
-                temp.Normalize();
-
-                //this.transform.position += temp * blink;
+                this.speed = sprintSpeed;
                 recharge = coolDown;
+                timer = duration;
             }
 
-            if (recharge > 0)
+            if (recharge > 0)//recharge for sprintSpeed
             {
                 recharge -= Time.deltaTime;
+            }
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+            else if (timer <= 0)
+            {
+                this.speed = normalSpeed;
+                timer = 0;
             }
         }
     }
