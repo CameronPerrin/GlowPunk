@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Shotgun : MonoBehaviour
 {
-    public float bulletSpeed, fireRate;
+    public float bulletSpeed;
     public float spread;
     public int pellets;
-    private float coolDown = 0;
     private Rigidbody2D rb;
     public GameObject bullet;
     private ProjectileMovementZec PMZ;
@@ -31,7 +30,7 @@ public class Shotgun : MonoBehaviour
     {
         if (this.tag == "Player1")
         {
-            if (Input.GetAxis("P1Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
+            if (Input.GetAxis("P1Fire2") != 0 && SW.isReady)
             {
                 if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
                 {
@@ -103,23 +102,17 @@ public class Shotgun : MonoBehaviour
                         Destroy(tempMuzzle, 0.75f);
                     }
 
-                    SW.bullets--;
-                    this.coolDown = 1 / fireRate;
+                    SW.isReady = false;
                 }
-            }
-            else if(coolDown > 0)
-            {
-                this.coolDown -= Time.deltaTime;
             }
         }
         else if (this.tag == "Player2")
         {
-            if (Input.GetAxis("P2Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
+            if (Input.GetAxis("P2Fire2") != 0 && SW.isReady)
             {
                 if (Input.GetAxis("ShotJoy2X") != 0 || Input.GetAxis("ShotJoy2Y") != 0)
                 {
                     int temp;
-
 
                     target = new Vector3(Input.GetAxis("ShotJoy2X"), Input.GetAxis("ShotJoy2Y"), 0);
                     target.Normalize();
@@ -187,27 +180,19 @@ public class Shotgun : MonoBehaviour
                         Destroy(tempMuzzle, 0.75f);
                     }
 
-                    SW.bullets--;
-                    this.coolDown = 1/fireRate;
-
+                    SW.isReady = false;
                 }
                 
             }
-            else if(coolDown > 0)
-            {
-                this.coolDown -= Time.deltaTime;
-            }
-            
         }
 
         else if (this.tag == "Player3")
         {
-            if (Input.GetAxis("P3Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
+            if (Input.GetAxis("P3Fire2") != 0 && SW.isReady)
             {
                 if (Input.GetAxis("ShotJoy3X") != 0 || Input.GetAxis("ShotJoy3Y") != 0)
                 {
                     int temp;
-
 
                     target = new Vector3(Input.GetAxis("ShotJoy3X"), Input.GetAxis("ShotJoy3Y"), 0);
                     target.Normalize();
@@ -275,27 +260,19 @@ public class Shotgun : MonoBehaviour
                         Destroy(tempMuzzle, 0.75f);
                     }
 
-                    SW.bullets--;
-                    this.coolDown = 1 / fireRate;
-
+                    SW.isReady = false;
                 }
 
             }
-            else if (coolDown > 0)
-            {
-                this.coolDown -= Time.deltaTime;
-            }
-
         }
 
         else if (this.tag == "Player4")
         {
-            if (Input.GetAxis("P4Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
+            if (Input.GetAxis("P4Fire2") != 0 && SW.isReady)
             {
                 if (Input.GetAxis("ShotJoy4X") != 0 || Input.GetAxis("ShotJoy4Y") != 0)
                 {
                     int temp;
-
 
                     target = new Vector3(Input.GetAxis("ShotJoy4X"), Input.GetAxis("ShotJoy4Y"), 0);
                     target.Normalize();
@@ -363,17 +340,10 @@ public class Shotgun : MonoBehaviour
                         Destroy(tempMuzzle, 0.75f);
                     }
 
-                    SW.bullets--;
-                    this.coolDown = 1 / fireRate;
-
+                    SW.isReady = false;
                 }
 
             }
-            else if (coolDown > 0)
-            {
-                this.coolDown -= Time.deltaTime;
-            }
-
         }
     }
 }

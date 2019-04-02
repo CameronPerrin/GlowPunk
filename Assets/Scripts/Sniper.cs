@@ -5,9 +5,8 @@ using UnityEngine;
 public class Sniper : MonoBehaviour
 {
  
-    public float bulletSpeed, fireRate;
+    public float bulletSpeed;
     public float inaccuracy;
-    private float coolDown = 0;
     public GameObject bullet;
     private SniperProjectileMovement2 PMZ;
     private SpecialWeapon SW;
@@ -29,7 +28,7 @@ public class Sniper : MonoBehaviour
     {
         if (this.tag == "Player1")
         {
-            if (Input.GetAxis("P1Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
+            if (Input.GetAxis("P1Fire2") != 0 && SW.isReady)
             {
                 if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
                 {
@@ -69,19 +68,13 @@ public class Sniper : MonoBehaviour
                     tempMuzzle = Instantiate(muzzleFlare, firePoint.transform.position, firePoint.transform.rotation) as GameObject;
                     Destroy(tempMuzzle, 0.75f);
 
-                    SW.bullets--;
-
-                    this.coolDown = 1 / fireRate;
+                    SW.isReady = false;//set special weapon so its on cooldown
                 }
-            }
-            else
-            {
-                this.coolDown -= Time.deltaTime;
             }
         }
         else if (this.tag == "Player2")
         {
-            if (Input.GetAxis("P2Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
+            if (Input.GetAxis("P2Fire2") != 0 && SW.isReady)
             {
                 if (Input.GetAxis("ShotJoy2X") != 0 || Input.GetAxis("ShotJoy2Y") != 0)
                 {
@@ -121,20 +114,14 @@ public class Sniper : MonoBehaviour
                     Debug.Log(firePoint.transform.position);
                     Destroy(tempMuzzle, 0.75f);
 
-                    SW.bullets--;
-
-                    this.coolDown = 1 / fireRate;
+                    SW.isReady = false;//set special weapon so its on cooldown
                 }
-            }
-            else
-            {
-                this.coolDown -= Time.deltaTime;
             }
         }
 
         else if (this.tag == "Player3")
         {
-            if (Input.GetAxis("P3Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
+            if (Input.GetAxis("P3Fire2") != 0 && SW.isReady)
             {
                 if (Input.GetAxis("ShotJoy3X") != 0 || Input.GetAxis("ShotJoy3Y") != 0)
                 {
@@ -174,20 +161,14 @@ public class Sniper : MonoBehaviour
                     Debug.Log(firePoint.transform.position);
                     Destroy(tempMuzzle, 0.75f);
 
-                    SW.bullets--;
-
-                    this.coolDown = 1 / fireRate;
+                    SW.isReady = false;//set special weapon so its on cooldown
                 }
-            }
-            else
-            {
-                this.coolDown -= Time.deltaTime;
             }
         }
 
         else if (this.tag == "Player4")
         {
-            if (Input.GetAxis("P4Fire2") != 0 && this.coolDown <= 0 && SW.bullets > 0)
+            if (Input.GetAxis("P4Fire2") != 0 && SW.isReady)
             {
                 if (Input.GetAxis("ShotJoy4X") != 0 || Input.GetAxis("ShotJoy4Y") != 0)
                 {
@@ -227,14 +208,8 @@ public class Sniper : MonoBehaviour
                     Debug.Log(firePoint.transform.position);
                     Destroy(tempMuzzle, 0.75f);
 
-                    SW.bullets--;
-
-                    this.coolDown = 1 / fireRate;
+                    SW.isReady = false;//set the special weapon so its on cooldown
                 }
-            }
-            else
-            {
-                this.coolDown -= Time.deltaTime;
             }
         }
     }

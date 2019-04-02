@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 30
-  fireRate: 1.1
+  fireRate: 1.8
   inaccuracy: 0.1
   bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
   firePoint: {fileID: 2853958294457165735}
@@ -455,10 +455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0928ffb90161d9846b5d2e99f5678102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullets: 1
-  magSize: 1
   regenTime: 2
   regeneration: 0
+  isReady: 0
 --- !u!114 &8322255027903958735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,7 +471,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 55
-  fireRate: 0.5
   inaccuracy: 0
   bullet: {fileID: 1778932910738145927, guid: 3ae12db3160dc0a49b27a8a8072509c0, type: 3}
   firePoint: {fileID: 2853958294457165735}

@@ -122,7 +122,7 @@ public class Health : MonoBehaviour
             //Player.SetActive(false);
             Destroy(this.Player.gameObject);
         }
-        int temp = SW.bullets;
+        //int temp = SW.bullets;
 
         //healthText.text = "Player 1 Health: " + P1Health.ToString();
         //healthText2.text = "Player 2 Health: " + P2Health.ToString();

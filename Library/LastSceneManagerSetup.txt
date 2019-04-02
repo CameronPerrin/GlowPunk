@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ending scene/EndingScreenP4Sniper.unity
+- path: Assets/Scenes/TestScenes/ZecTestScene.unity
   isLoaded: 1
   isActive: 1

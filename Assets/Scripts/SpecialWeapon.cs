@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class SpecialWeapon : MonoBehaviour
 {
-    public int bullets, magSize;
     public float regenTime;
     public float regeneration;
+    public bool isReady;
     // Start is called before the first frame update
     void Start()
     {
-        bullets = magSize;
+        isReady = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (bullets < magSize)//if we do not have max ammo regenerate ammo
+        if (!isReady)//if we are on cooldown
         {
             regeneration += Time.deltaTime;
             if (regeneration > regenTime)//time to regenerate some ammo
             {
-                bullets++;
-                regeneration -= regenTime;
+                isReady = true;
+                regeneration = 0;
             }
         }
-        else//if we are not setting the regenerating ammo set the regen to 0 so we start regeneration correctly
+        else//if our ability is ready
         {
             regeneration = 0;
         }
