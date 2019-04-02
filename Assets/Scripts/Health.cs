@@ -133,7 +133,7 @@ public class Health : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Colliding");
-        if (collision.name == "BULLET(Clone)" || collision.name == "BULLET2(Clone)")
+        if (collision.name == "BULLET(Clone)" || collision.name == "BULLET2(Clone)" || collision.name == "BULLET3(Clone)")
         {
             if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
             {

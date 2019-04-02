@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbcded652fc4f24abd76e87fd9a36ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  velocity: {x: -0.9940399, y: -0.10901682, z: 0}
+  speed: 30
+  velocity: {x: 0.76453143, y: 0.6445863, z: 0}
 --- !u!1 &4298623954708782383
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +222,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.503193
+        value: 0.82541287
         inSlope: -0.5203263
         outSlope: -0.5203263
         tangentMode: 0
