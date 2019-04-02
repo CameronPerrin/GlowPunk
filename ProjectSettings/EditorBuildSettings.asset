@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ending scene/EndingScreenP1Bomber.unity
     guid: 1a6808abf1035674d89f4fa8307cd62d
+  - enabled: 1
+    path: Assets/Scenes/ending scene/EndingScreenP3Sniper.unity
+    guid: 5a1aceb04472a564387001ba77460db2
   m_configObjects: {}
