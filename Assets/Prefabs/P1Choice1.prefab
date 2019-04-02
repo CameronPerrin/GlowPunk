@@ -25,12 +25,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082058202362273423}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.37, y: -1.94, z: 0.13671875}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8892250032965000865}
-  m_RootOrder: 1
+  m_Father: {fileID: 2301423537622703056}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &594731257512436428
 ParticleSystem:
@@ -4907,6 +4907,59 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &3502223677632639784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2301423537622703056}
+  - component: {fileID: 342695104665852519}
+  m_Layer: 0
+  m_Name: Running dust static
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2301423537622703056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502223677632639784}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.069999695, y: -2.3, z: 0.13671875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 625731447383895995}
+  m_Father: {fileID: 8892250032965000865}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &342695104665852519
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502223677632639784}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3981047316616536106
 GameObject:
   m_ObjectHideFlags: 0
@@ -5047,7 +5100,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 8016191813059144829}
-  - {fileID: 625731447383895995}
+  - {fileID: 2301423537622703056}
   - {fileID: 5493816107970282954}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -5073,6 +5126,7 @@ MonoBehaviour:
   Anim: {fileID: 7589844784382825463}
   facingRight: 1
   firePoint: {fileID: 5567362775082758103}
+  child: {fileID: 1856536195778616531}
 --- !u!50 &4361105246751908794
 Rigidbody2D:
   serializedVersion: 4
@@ -5221,9 +5275,9 @@ MonoBehaviour:
   bulletSpeed: 50
   fireRate: 0.15
   inaccuracy: 0.2
-  bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
+  bullet: {fileID: 1283957840465060, guid: b7c1d3ed2b3782446961bced8e76f66c, type: 3}
   burst: 5
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 5567362775082758103}
   muzzleFlare: {fileID: 1128714005065290, guid: dd48bdc36da27a94f9a403b7c5d598f0,
     type: 3}
 --- !u!114 &3744182147271666766

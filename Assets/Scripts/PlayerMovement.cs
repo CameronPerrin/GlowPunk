@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour {
     public bool facingRight = true;
     private Transform playerGraphics; // ## I need something to reference when changing direction (regarding graphics)
     public GameObject firePoint;
+    public GameObject child;
 
     // ## Not sure if I can move the information inside here into the Start() function
     private void Awake()
@@ -319,5 +320,12 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 theScale = this.transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+
+        //child = GameObject.Find ("SpriteRotate");
+ 
+        // flip the child. lol
+        Vector3 childScale = child.transform.localScale;
+        childScale.x *= -1;
+        child.transform.localScale = childScale;
     }
 }
