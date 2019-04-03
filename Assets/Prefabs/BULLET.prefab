@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  velocity: {x: 0.9997695, y: -0.021469507, z: 0}
+  velocity: {x: -0.9286554, y: 0.37094373, z: 0}
   impact: {fileID: 499140642099957762, guid: c916aabc9aadf1c4db655478f8d1f2df, type: 3}
 --- !u!1 &4298623954708782383
 GameObject:
