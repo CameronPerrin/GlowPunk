@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   velocity: {x: -0.70710677, y: 0.70710677, z: 0}
+  impact: {fileID: 0}
 --- !u!96 &4306988713173756232
 TrailRenderer:
   serializedVersion: 2

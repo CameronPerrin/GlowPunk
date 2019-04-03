@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
@@ -12,12 +13,16 @@ public class Health : MonoBehaviour
     public int currentPlayer;//which player is this script on
     public GameObject Player;
     public event Action<float> OnHealthPctChanged = delegate { };
+    public GameObject FloatingTextPrefab_Normal;
+    public GameObject FloatingTextPrefab_Sniper;
+    public GameObject FloatingTextPrefab_SMG;
 
     private int cHealth;
 
     private GameObject Access;//Access Game Object is for the game object that tracks which players are left standing
     private SharedVariables share;
     private SpecialWeapon SW;
+    private TextMeshProUGUI textMesh;
 
     private int bulletDamage;
     private int sniperDamage;
@@ -135,21 +140,51 @@ public class Health : MonoBehaviour
         Debug.Log("Colliding");
         if (collision.name == "BULLET(Clone)" || collision.name == "BULLET2(Clone)" || collision.name == "BULLET3(Clone)")
         {
-            if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
+            if (collision.name == "BULLET3(Clone)")
             {
-                modifyHealth(bulletDamage); // needed to use this for healthbars
+                if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
+                {
+                    modifyHealth(bulletDamage); // needed to use this for healthbars
+                    ShowFloatingText_SMG(bulletDamage);
+                }
+                else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
+                {
+                    modifyHealth(bulletDamage);
+                    ShowFloatingText_SMG(bulletDamage);
+                }
+                else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
+                {
+                    modifyHealth(bulletDamage);
+                    ShowFloatingText_SMG(bulletDamage);
+                }
+                else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
+                {
+                    modifyHealth(bulletDamage);
+                    ShowFloatingText_SMG(bulletDamage);
+                }
             }
-            else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
+            else
             {
-                modifyHealth(bulletDamage);
-            }
-            else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
-            {
-                modifyHealth(bulletDamage);
-            }
-            else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
-            {
-                modifyHealth(bulletDamage);
+                if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
+                {
+                    modifyHealth(bulletDamage); // needed to use this for healthbars
+                    ShowFloatingText_Normal(bulletDamage);
+                }
+                else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
+                {
+                    modifyHealth(bulletDamage);
+                    ShowFloatingText_Normal(bulletDamage);
+                }
+                else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
+                {
+                    modifyHealth(bulletDamage);
+                    ShowFloatingText_Normal(bulletDamage);
+                }
+                else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
+                {
+                    modifyHealth(bulletDamage);
+                    ShowFloatingText_Normal(bulletDamage);
+                }
             }
         }
         if (collision.name == "SNIPERBULLET(Clone)")
@@ -157,19 +192,44 @@ public class Health : MonoBehaviour
             if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
             {
                 modifyHealth(sniperDamage); // needed to use this for healthbars
+                ShowFloatingText_Sniper(sniperDamage);
             }
             else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
             {
                 modifyHealth(sniperDamage);
+                ShowFloatingText_Sniper(sniperDamage);
             }
             else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
             {
                 modifyHealth(sniperDamage);
+                ShowFloatingText_Sniper(sniperDamage);
             }
             else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
             {
                 modifyHealth(sniperDamage);
+                ShowFloatingText_Sniper(sniperDamage);
             }
         }
+    }
+    
+    void ShowFloatingText_Normal(int damage)
+    {
+       damage *= -1; // to display a positive number instead of a negative one.
+       var go = Instantiate(FloatingTextPrefab_Normal, transform.position, Quaternion.identity, transform);
+       go.GetComponent<TextMeshPro>().text = damage.ToString();
+    }
+
+    void ShowFloatingText_Sniper(int damage)
+    {
+        damage *= -1; // to display a positive number instead of a negative one.
+        var go = Instantiate(FloatingTextPrefab_Sniper, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TextMeshPro>().text = damage.ToString();
+    }
+
+    void ShowFloatingText_SMG(int damage)
+    {
+        damage *= -1; // to display a positive number instead of a negative one.
+        var go = Instantiate(FloatingTextPrefab_SMG, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TextMeshPro>().text = damage.ToString();
     }
 }

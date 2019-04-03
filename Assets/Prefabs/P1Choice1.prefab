@@ -5058,7 +5058,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5567362775082758103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.17, y: 0.08, z: 0}
+  m_LocalPosition: {x: 2, y: 0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 744965319475638646}
@@ -5457,6 +5457,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlayer: 1
   Player: {fileID: 5972403233602195711}
+  FloatingTextPrefab_Normal: {fileID: 6213589799274099864, guid: cb8a896a490dfca4cb4ed3ec999b1870,
+    type: 3}
+  FloatingTextPrefab_Sniper: {fileID: 6213589799274099864, guid: a11e58838473e6c4aaf9ba7f15956080,
+    type: 3}
+  FloatingTextPrefab_SMG: {fileID: 6213589799274099864, guid: d9ebe272944ecb0448e07ef28e03e847,
+    type: 3}
 --- !u!1 &7564937922825094684
 GameObject:
   m_ObjectHideFlags: 0

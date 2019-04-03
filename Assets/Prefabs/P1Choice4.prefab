@@ -5298,8 +5298,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  blink: 7.5
+  sprintSpeed: 0
   coolDown: 2.5
+  duration: 0
+  timer: 0
   normalSpeed: 0
   Anim: {fileID: 6928682484042175229}
   facingRight: 1
@@ -5553,6 +5555,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlayer: 1
   Player: {fileID: 6598079689660797429}
+  FloatingTextPrefab_Normal: {fileID: 6213589799274099864, guid: cb8a896a490dfca4cb4ed3ec999b1870,
+    type: 3}
+  FloatingTextPrefab_Sniper: {fileID: 6213589799274099864, guid: a11e58838473e6c4aaf9ba7f15956080,
+    type: 3}
+  FloatingTextPrefab_SMG: {fileID: 6213589799274099864, guid: d9ebe272944ecb0448e07ef28e03e847,
+    type: 3}
 --- !u!1 &7029878679646521110
 GameObject:
   m_ObjectHideFlags: 0
