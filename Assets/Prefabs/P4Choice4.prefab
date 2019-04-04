@@ -408,15 +408,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  sprintSpeed: 0
-  coolDown: 2.5
-  duration: 0
+  sprintSpeed: 30
+  coolDown: 8
+  duration: 0.5
   timer: 0
   normalSpeed: 0
   Anim: {fileID: 1357221004657729794}
   facingRight: 1
   firePoint: {fileID: 4430871680351019284}
   child: {fileID: 8557921083796498006}
+  text1: {fileID: 6213589799274099864, guid: cb8a896a490dfca4cb4ed3ec999b1870, type: 3}
+  text2: {fileID: 6213589799274099864, guid: d9ebe272944ecb0448e07ef28e03e847, type: 3}
+  text3: {fileID: 6213589799274099864, guid: a11e58838473e6c4aaf9ba7f15956080, type: 3}
 --- !u!50 &5117383112322617679
 Rigidbody2D:
   serializedVersion: 4

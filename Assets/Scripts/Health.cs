@@ -144,46 +144,46 @@ public class Health : MonoBehaviour
             {
                 if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
                 {
-                    modifyHealth(bulletDamage); // needed to use this for healthbars
                     ShowFloatingText_SMG(bulletDamage);
+                    modifyHealth(bulletDamage); // needed to use this for healthbars
                 }
                 else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
                 {
-                    modifyHealth(bulletDamage);
                     ShowFloatingText_SMG(bulletDamage);
+                    modifyHealth(bulletDamage);
                 }
                 else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
                 {
-                    modifyHealth(bulletDamage);
                     ShowFloatingText_SMG(bulletDamage);
+                    modifyHealth(bulletDamage);
                 }
                 else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
                 {
-                    modifyHealth(bulletDamage);
                     ShowFloatingText_SMG(bulletDamage);
+                    modifyHealth(bulletDamage);
                 }
             }
             else
             {
                 if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
                 {
-                    modifyHealth(bulletDamage); // needed to use this for healthbars
                     ShowFloatingText_Normal(bulletDamage);
+                    modifyHealth(bulletDamage); // needed to use this for healthbars
                 }
                 else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
                 {
-                    modifyHealth(bulletDamage);
                     ShowFloatingText_Normal(bulletDamage);
+                    modifyHealth(bulletDamage);
                 }
                 else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
                 {
-                    modifyHealth(bulletDamage);
                     ShowFloatingText_Normal(bulletDamage);
+                    modifyHealth(bulletDamage);
                 }
                 else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
                 {
-                    modifyHealth(bulletDamage);
                     ShowFloatingText_Normal(bulletDamage);
+                    modifyHealth(bulletDamage);
                 }
             }
         }
@@ -191,23 +191,23 @@ public class Health : MonoBehaviour
         {
             if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
             {
-                modifyHealth(sniperDamage); // needed to use this for healthbars
                 ShowFloatingText_Sniper(sniperDamage);
+                modifyHealth(sniperDamage); // needed to use this for healthbars
             }
             else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
             {
-                modifyHealth(sniperDamage);
                 ShowFloatingText_Sniper(sniperDamage);
+                modifyHealth(sniperDamage);
             }
             else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
             {
-                modifyHealth(sniperDamage);
                 ShowFloatingText_Sniper(sniperDamage);
+                modifyHealth(sniperDamage);
             }
             else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
             {
-                modifyHealth(sniperDamage);
                 ShowFloatingText_Sniper(sniperDamage);
+                modifyHealth(sniperDamage);
             }
         }
     }

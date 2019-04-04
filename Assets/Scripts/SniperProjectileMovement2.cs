@@ -9,14 +9,14 @@ public class SniperProjectileMovement2 : MonoBehaviour
     public LayerMask layerToDetect;
     //public bool reflected;
     private int reflected;
-    public int ReflectionAmount;
+    public int ReflectionAmount = 0;
     public GameObject impact;
     // Update is called once per frame
     void Awake()
     {
         //reflected = false;
         reflected = 0;
-        ReflectionAmount = 2;
+        //ReflectionAmount = 2;
         Debug.Log("Projectile Away");
 
     }

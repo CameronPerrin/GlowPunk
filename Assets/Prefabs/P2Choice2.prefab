@@ -63,6 +63,9 @@ MonoBehaviour:
   facingRight: 1
   firePoint: {fileID: 927972971979092458}
   child: {fileID: 6017571671065643139}
+  text1: {fileID: 6213589799274099864, guid: cb8a896a490dfca4cb4ed3ec999b1870, type: 3}
+  text2: {fileID: 6213589799274099864, guid: d9ebe272944ecb0448e07ef28e03e847, type: 3}
+  text3: {fileID: 6213589799274099864, guid: a11e58838473e6c4aaf9ba7f15956080, type: 3}
 --- !u!50 &906109123062697344
 Rigidbody2D:
   serializedVersion: 4

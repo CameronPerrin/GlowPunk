@@ -5378,9 +5378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  sprintSpeed: 0
-  coolDown: 2.5
-  duration: 0
+  sprintSpeed: 30
+  coolDown: 8
+  duration: 0.5
   timer: 0
   normalSpeed: 0
   Anim: {fileID: 6928682484042175229}
