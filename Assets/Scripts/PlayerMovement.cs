@@ -49,14 +49,14 @@ public class PlayerMovement : MonoBehaviour {
             
             if (Input.GetAxis("MoveJoy1Y") != 0 || Input.GetAxis("MoveJoy1X") != 0)
             {
-                Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy1X")));
-                Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy1Y")));
+                Anim.SetBool("Moving", true);
             }
             else//not moving so set speeds to 0
             {
-                Anim.SetFloat("Speed", 0.0f);
-                Anim.SetFloat("VertSpeed", 0.0f);
+                Anim.SetBool("Moving", false);
             }
+            Anim.SetFloat("VertSpeed", Input.GetAxis("MoveJoy1Y"));
+            Anim.SetFloat("Aim", Input.GetAxis("ShotJoy1Y"));
 
             if (Input.GetAxis("MoveJoy1Y") != 0 || Input.GetAxis("MoveJoy1X") != 0)
             {
@@ -115,14 +115,14 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (Input.GetAxis("MoveJoy2Y") != 0 || Input.GetAxis("MoveJoy2X") != 0)
             {
-                Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy2X")));
-                Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy2Y")));
+                Anim.SetBool("Moving", true);
             }
             else//not moving so set speeds to 0
             {
-                Anim.SetFloat("Speed", 0.0f);
-                Anim.SetFloat("VertSpeed", 0.0f);
+                Anim.SetBool("Moving", false);
             }
+            Anim.SetFloat("VertSpeed", Input.GetAxis("MoveJoy2Y"));
+            Anim.SetFloat("Aim", Input.GetAxis("ShotJoy2Y"));
 
             if (Input.GetAxis("MoveJoy2Y") != 0 || Input.GetAxis("MoveJoy2X") != 0)
             {
@@ -182,14 +182,14 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (Input.GetAxis("MoveJoy3Y") != 0 || Input.GetAxis("MoveJoy3X") != 0)
             {
-                Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy3X")));
-                Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy3Y")));
+                Anim.SetBool("Moving", true);
             }
             else//not moving so set speeds to 0
             {
-                Anim.SetFloat("Speed", 0.0f);
-                Anim.SetFloat("VertSpeed", 0.0f);
+                Anim.SetBool("Moving", false);
             }
+            Anim.SetFloat("VertSpeed", Input.GetAxis("MoveJoy3Y"));
+            Anim.SetFloat("Aim", Input.GetAxis("ShotJoy3Y"));
 
             if (Input.GetAxis("MoveJoy3Y") != 0 || Input.GetAxis("MoveJoy3X") != 0)
             {
@@ -249,14 +249,14 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (Input.GetAxis("MoveJoy4Y") != 0 || Input.GetAxis("MoveJoy4X") != 0)
             {
-                Anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("MoveJoy4X")));
-                Anim.SetFloat("VertSpeed", Mathf.Abs(Input.GetAxis("MoveJoy4Y")));
+                Anim.SetBool("Moving", true);
             }
             else//not moving so set speeds to 0
             {
-                Anim.SetFloat("Speed", 0.0f);
-                Anim.SetFloat("VertSpeed", 0.0f);
+                Anim.SetBool("Moving", false);
             }
+            Anim.SetFloat("VertSpeed", Input.GetAxis("MoveJoy4Y"));
+            Anim.SetFloat("Aim", Input.GetAxis("ShotJoy4Y"));
 
             if (Input.GetAxis("MoveJoy4Y") != 0 || Input.GetAxis("MoveJoy4X") != 0)
             {
