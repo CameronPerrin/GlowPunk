@@ -280,9 +280,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce53a51e34435344e9eb6f61f8521485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 20
+  throwSpeed: 41
   throwDistance: 25
-  projSpeed: 20
+  projSpeed: 41
   grenade: {fileID: 1628596182892200078, guid: 0f737fab48a1f554ba297085278f84ec, type: 3}
   muzzleFlare: {fileID: 1766839135796830, guid: 1696ce4413327a748928e1f9d7ccb388,
     type: 3}
