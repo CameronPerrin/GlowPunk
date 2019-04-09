@@ -145,6 +145,9 @@ MonoBehaviour:
   speed: 50
   velocity: {x: 0.9705147, y: 0.24104188, z: 0}
   impact: {fileID: 499140642099957762, guid: 8e642e4acba34774c804725a5b75b4f6, type: 3}
+  FloatingText: {fileID: 6213589799274099864, guid: d9ebe272944ecb0448e07ef28e03e847,
+    type: 3}
+  bulletDamage: 12
 --- !u!1 &4298623954708782383
 GameObject:
   m_ObjectHideFlags: 0
