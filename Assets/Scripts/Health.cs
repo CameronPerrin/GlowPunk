@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
     public int currentPlayer;//which player is this script on
     public GameObject Player;
     public event Action<float> OnHealthPctChanged = delegate { };
+    private float delay = 4.0f;
+    private float wait = 0.0f;//variable will count up to delay before it goes to the next scene
     public GameObject FloatingTextPrefab_Normal;
     public GameObject FloatingTextPrefab_Sniper;
     public GameObject FloatingTextPrefab_SMG;
@@ -29,7 +31,7 @@ public class Health : MonoBehaviour
     private int startingPlayers;
     //private float damageAdd;
     //private float damageMulti;
-    private bool swtich = false;
+    private bool swtich = false, win = false;
 
     private void OnEnable()
     {
@@ -64,75 +66,25 @@ public class Health : MonoBehaviour
             { startingPlayers = share.totalPlayers; swtich = true; Debug.Log(startingPlayers); }
         if (share.totalPlayers < 2)
         {
-            if (Player.name.Contains("P1Choice1"))//Player 1 wins
+            if(!win)//run through this once when we win
             {
-                SceneManager.LoadScene("EndingScreenP1Gunner");
+                DestroyProjectiles();
+                win = true;
+                wait = 0;
+                ///POST PROCESSING EFFECT AT END OF GAME CODE SHOULD GO HERE
             }
-            else if (Player.name.Contains("P1Choice2"))
+            
+            if (wait >= delay)//goto next scene
             {
-                SceneManager.LoadScene("EndingScreenP1Shotgunner");
+                NextScene();
             }
-            else if (Player.name.Contains("P1Choice3"))
-            {
-                SceneManager.LoadScene("EndingScreenP1Bomber");
-            }
-            else if (Player.name.Contains("P1Choice4"))
-            {
-                SceneManager.LoadScene("EndingScreenP1Sniper");
-            }
-            else if (Player.name.Contains("P2Choice1"))//Player 1 wins
-            {
-                SceneManager.LoadScene("EndingScreenP2Gunner");
-            }
-            else if (Player.name.Contains("P2Choice2"))
-            {
-                SceneManager.LoadScene("EndingScreenP2Shotgunner");
-            }
-            else if (Player.name.Contains("P2Choice3"))
-            {
-                SceneManager.LoadScene("EndingScreenP2Bomber");
-            }
-            else if (Player.name.Contains("P2Choice4"))
-            {
-                SceneManager.LoadScene("EndingScreenP2Sniper");
-            }
-            else if (Player.name.Contains("P3Choice1"))//Player 1 wins
-            {
-                SceneManager.LoadScene("EndingScreenP3Gunner");
-            }
-            else if (Player.name.Contains("P3Choice2"))
-            {
-                SceneManager.LoadScene("EndingScreenP3Shotgunner");
-            }
-            else if (Player.name.Contains("P3Choice3"))
-            {
-                SceneManager.LoadScene("EndingScreenP3Bomber");
-            }
-            else if (Player.name.Contains("P3Choice4"))
-            {
-                SceneManager.LoadScene("EndingScreenP3Sniper");
-            }
-            else if (Player.name.Contains("P4Choice1"))//Player 1 wins
-            {
-                SceneManager.LoadScene("EndingScreenP4Gunner");
-            }
-            else if (Player.name.Contains("P4Choice2"))
-            {
-                SceneManager.LoadScene("EndingScreenP4Shotgunner");
-            }
-            else if (Player.name.Contains("P4Choice3"))
-            {
-                SceneManager.LoadScene("EndingScreenP4Bomber");
-            }
-            else if (Player.name.Contains("P4Choice4"))
-            {
-                SceneManager.LoadScene("EndingScreenP4Sniper");
-            }
+            else
+                wait += Time.deltaTime;
         }
         if (this.cHealth <= 0)
         {
             share.totalPlayers--;
-            if(share.totalPlayers == 3 && startingPlayers == 4)
+            /*if(share.totalPlayers == 3 && startingPlayers == 4)//currently unneccessary with new build
             {
                 //Debug.Log("Entered if");
                 share.damageMulti += share.damageAdd;
@@ -144,7 +96,7 @@ public class Health : MonoBehaviour
             else if (share.totalPlayers == 2 && startingPlayers == 3)
             {
                 share.damageMulti += 2*share.damageAdd;
-            }
+            }*/
             //Player.SetActive(false);
             Destroy(this.Player.gameObject);
         }
@@ -252,5 +204,106 @@ public class Health : MonoBehaviour
         damage *= -1; // to display a positive number instead of a negative one.
         var go = Instantiate(FloatingTextPrefab_SMG, transform.position, Quaternion.identity, transform);
         go.GetComponent<TextMeshPro>().text = damage.ToString();
+    }
+
+    void NextScene()
+    {
+        if (Player.name.Contains("P1Choice1"))//Player 1 wins
+        {
+            SceneManager.LoadScene("EndingScreenP1Gunner");
+        }
+        else if (Player.name.Contains("P1Choice2"))
+        {
+            SceneManager.LoadScene("EndingScreenP1Shotgunner");
+        }
+        else if (Player.name.Contains("P1Choice3"))
+        {
+            SceneManager.LoadScene("EndingScreenP1Bomber");
+        }
+        else if (Player.name.Contains("P1Choice4"))
+        {
+            SceneManager.LoadScene("EndingScreenP1Sniper");
+        }
+        else if (Player.name.Contains("P2Choice1"))//Player 1 wins
+        {
+            SceneManager.LoadScene("EndingScreenP2Gunner");
+        }
+        else if (Player.name.Contains("P2Choice2"))
+        {
+            SceneManager.LoadScene("EndingScreenP2Shotgunner");
+        }
+        else if (Player.name.Contains("P2Choice3"))
+        {
+            SceneManager.LoadScene("EndingScreenP2Bomber");
+        }
+        else if (Player.name.Contains("P2Choice4"))
+        {
+            SceneManager.LoadScene("EndingScreenP2Sniper");
+        }
+        else if (Player.name.Contains("P3Choice1"))//Player 1 wins
+        {
+            SceneManager.LoadScene("EndingScreenP3Gunner");
+        }
+        else if (Player.name.Contains("P3Choice2"))
+        {
+            SceneManager.LoadScene("EndingScreenP3Shotgunner");
+        }
+        else if (Player.name.Contains("P3Choice3"))
+        {
+            SceneManager.LoadScene("EndingScreenP3Bomber");
+        }
+        else if (Player.name.Contains("P3Choice4"))
+        {
+            SceneManager.LoadScene("EndingScreenP3Sniper");
+        }
+        else if (Player.name.Contains("P4Choice1"))//Player 1 wins
+        {
+            SceneManager.LoadScene("EndingScreenP4Gunner");
+        }
+        else if (Player.name.Contains("P4Choice2"))
+        {
+            SceneManager.LoadScene("EndingScreenP4Shotgunner");
+        }
+        else if (Player.name.Contains("P4Choice3"))
+        {
+            SceneManager.LoadScene("EndingScreenP4Bomber");
+        }
+        else if (Player.name.Contains("P4Choice4"))
+        {
+            SceneManager.LoadScene("EndingScreenP4Sniper");
+        }
+    }
+
+    void DestroyProjectiles()
+    {
+        GameObject[] projectiles;//create list of projectiles
+
+        projectiles = GameObject.FindGameObjectsWithTag("User1");//grab all player 1's projectiles and store them into list
+
+        foreach (GameObject shot in projectiles)//loop to destroy all projectiles
+        {
+            Destroy(shot);
+        }
+
+        projectiles = GameObject.FindGameObjectsWithTag("User2");//grab all player 2's projectiles and store them into list
+
+        foreach (GameObject shot in projectiles)//loop to destroy all projectiles
+        {
+            Destroy(shot);
+        }
+
+        projectiles = GameObject.FindGameObjectsWithTag("User3");//grab all player 3's projectiles and store them into list
+
+        foreach (GameObject shot in projectiles)//loop to destroy all projectiles
+        {
+            Destroy(shot);
+        }
+
+        projectiles = GameObject.FindGameObjectsWithTag("User4");//grab all player 4's projectiles and store them into list
+
+        foreach (GameObject shot in projectiles)//loop to destroy all projectiles
+        {
+            Destroy(shot);
+        }
     }
 }
