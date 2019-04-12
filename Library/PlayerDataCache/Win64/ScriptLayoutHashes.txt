@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/jsoran/Desktop/WORKING BUILD/GlowPunkTest.exe
+C:/Users/rshamus/Documents/GitHub/GlowPunk/BUILD4-8-19/GlowPunkTest.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/CharacterSelection.unity
@@ -41,7 +41,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-aadb4521c0d8f59ecfd441954cab02d4 Assembly-CSharp.dll:.SharedVariables
+4e844fd1d4515dd03003f5b9ee97eeac Assembly-CSharp.dll:.SharedVariables
 71f7f12b8d0f4fd73590db8bcb6d453c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Bloom
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 af93f9c42e90877a9ba31e37adfd900c Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.MotionBlur
