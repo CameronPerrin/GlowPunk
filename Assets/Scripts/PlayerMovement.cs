@@ -19,9 +19,6 @@ public class PlayerMovement : MonoBehaviour {
     private Transform playerGraphics; // ## I need something to reference when changing direction (regarding graphics)
     public GameObject firePoint;
     public GameObject child;
-    public GameObject text1;
-    public GameObject text2;
-    public GameObject text3;
 
     // ## Not sure if I can move the information inside here into the Start() function
     private void Awake()
@@ -330,20 +327,5 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 childScale = child.transform.localScale;
         childScale.x *= -1;
         child.transform.localScale = childScale;
-
-        // flip text1
-        Vector3 text1Scale = text1.transform.localScale;
-        text1Scale.x *= -1;
-        text1.transform.localScale = text1Scale;
-
-        // flip text2
-        Vector3 text2Scale = text2.transform.localScale;
-        text2Scale.x *= -1;
-        text2.transform.localScale = text2Scale;
-
-        // flip text3
-        Vector3 text3Scale = text3.transform.localScale;
-        text3Scale.x *= -1;
-        text3.transform.localScale = text3Scale;
     }
 }

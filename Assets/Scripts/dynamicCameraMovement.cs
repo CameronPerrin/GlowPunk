@@ -88,7 +88,7 @@ public class dynamicCameraMovement : MonoBehaviour
         }
 
         middle /= playerGM.Count;
-        Debug.Log(middle);
+        //Debug.Log(middle);
         GetComponent<Camera>().transform.position = new Vector3(
             middle.x,
             middle.y,

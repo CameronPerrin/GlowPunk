@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SniperProjectileMovement2 : MonoBehaviour
 {
@@ -11,14 +12,20 @@ public class SniperProjectileMovement2 : MonoBehaviour
     private int reflected;
     public int ReflectionAmount = 0;
     public GameObject impact;
+
+    public GameObject FloatingText;//the floating text we will instantiate
+    public float bulletDamage = 12;
+    private GameObject Access;
+    private SharedVariables share;
     // Update is called once per frame
     void Awake()
     {
         //reflected = false;
         reflected = 0;
         //ReflectionAmount = 2;
-        Debug.Log("Projectile Away");
-
+        Access = GameObject.Find("HealthVariables");
+        share = Access.GetComponent<SharedVariables>();
+        FloatingText.GetComponent<TextMeshPro>().text = (bulletDamage * share.damageMulti).ToString();
     }
 
     void FixedUpdate()
@@ -81,43 +88,51 @@ public class SniperProjectileMovement2 : MonoBehaviour
     {
         if ((collision.tag == "Wall" || collision.tag == "Border") && reflected == ReflectionAmount)
         {
-            Destroy(this.gameObject);
             // Spawn impact vfx
             GameObject impactTemp;
             impactTemp = Instantiate(impact, transform.position, transform.rotation) as GameObject;
             Destroy(impactTemp, 0.75f);
+            Destroy(this.gameObject);
         }
         if (this.tag == "User1" && (collision.tag == "Player2" || collision.tag == "Player3" || collision.tag == "Player4"))
         {
-            Destroy(this.gameObject);
+            FloatingText.GetComponent<TextMeshPro>().text = (bulletDamage * share.damageMulti).ToString();//needed in case damage scales and changes the value of the damage
+            Instantiate(FloatingText, this.transform.position, Quaternion.identity);
             // Spawn impact vfx
             GameObject impactTemp;
             impactTemp = Instantiate(impact, transform.position, transform.rotation) as GameObject;
             Destroy(impactTemp, 0.75f);
+            Destroy(this.gameObject);
         }
         if (this.tag == "User2" && (collision.tag == "Player1" || collision.tag == "Player3" || collision.tag == "Player4"))
         {
-            Destroy(this.gameObject);
+            FloatingText.GetComponent<TextMeshPro>().text = (bulletDamage * share.damageMulti).ToString();//needed in case damage scales and changes the value of the damage
+            Instantiate(FloatingText, this.transform.position, Quaternion.identity);
             // Spawn impact vfx
             GameObject impactTemp;
             impactTemp = Instantiate(impact, transform.position, transform.rotation) as GameObject;
             Destroy(impactTemp, 0.75f);
+            Destroy(this.gameObject);
         }
         if (this.tag == "User3" && (collision.tag == "Player1" || collision.tag == "Player2" || collision.tag == "Player4"))
         {
-            Destroy(this.gameObject);
+            FloatingText.GetComponent<TextMeshPro>().text = (bulletDamage * share.damageMulti).ToString();//needed in case damage scales and changes the value of the damage
+            Instantiate(FloatingText, this.transform.position, Quaternion.identity);
             // Spawn impact vfx
             GameObject impactTemp;
             impactTemp = Instantiate(impact, transform.position, transform.rotation) as GameObject;
             Destroy(impactTemp, 0.75f);
+            Destroy(this.gameObject);
         }
         if (this.tag == "User4" && (collision.tag == "Player1" || collision.tag == "Player2" || collision.tag == "Player3"))
         {
-            Destroy(this.gameObject);
+            FloatingText.GetComponent<TextMeshPro>().text = (bulletDamage * share.damageMulti).ToString();//needed in case damage scales and changes the value of the damage
+            Instantiate(FloatingText, this.transform.position, Quaternion.identity);
             // Spawn impact vfx
             GameObject impactTemp;
             impactTemp = Instantiate(impact, transform.position, transform.rotation) as GameObject;
             Destroy(impactTemp, 0.75f);
+            Destroy(this.gameObject);
         }
 
         
