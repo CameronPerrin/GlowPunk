@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     private float recharge = 0;
     [HideInInspector]
     public float normalSpeed;//want variable so the outside objects and scripts and alter the speed of player and change it back
+    public float healingFactor = 1;
 
     // ## Movement animation and direction
     public Animator Anim;
@@ -20,12 +21,19 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject firePoint;
     public GameObject child;
 
+    private Health hp;
+    private GameObject Access;
+
+
+
     // ## Not sure if I can move the information inside here into the Start() function
     private void Awake()
     {
         normalSpeed = 10;
         Anim = GetComponent<Animator>();
         this.playerGraphics = this.transform.Find("Graphics");
+        Access = this.transform.GetChild(0).gameObject;
+        hp = Access.GetComponent<Health>();
     }
         
     // Use this for initialization
@@ -38,6 +46,7 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
+        hp = Access.GetComponent<Health>();
         this.transform.rotation = new Quaternion(0, 0, 0, 0);
         if (this.tag == "Player1")
         {
@@ -92,6 +101,7 @@ public class PlayerMovement : MonoBehaviour {
                 this.speed = sprintSpeed;
                 recharge = coolDown;
                 timer = duration;
+                
             }
             
             if(recharge > 0)//recharge for sprintSpeed
@@ -101,6 +111,11 @@ public class PlayerMovement : MonoBehaviour {
             if(timer > 0)
             {
                 timer -= Time.deltaTime;
+                if (this.hp.cHealth < 50)
+                {
+                    this.hp.modifyHealth(healingFactor * Time.deltaTime);
+                }
+
             }
             else if(timer <= 0)
             {
@@ -167,6 +182,10 @@ public class PlayerMovement : MonoBehaviour {
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
+                if (this.hp.cHealth < 50)
+                {
+                    this.hp.modifyHealth(healingFactor * Time.deltaTime);
+                }
             }
             else if (timer <= 0)
             {
@@ -234,6 +253,10 @@ public class PlayerMovement : MonoBehaviour {
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
+                if (this.hp.cHealth < 50)
+                {
+                    this.hp.modifyHealth(healingFactor * Time.deltaTime);
+                }
             }
             else if (timer <= 0)
             {
@@ -301,6 +324,10 @@ public class PlayerMovement : MonoBehaviour {
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
+                if (this.hp.cHealth < 50)
+                {
+                    this.hp.modifyHealth(healingFactor * Time.deltaTime);
+                }
             }
             else if (timer <= 0)
             {

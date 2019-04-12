@@ -9,7 +9,7 @@ using TMPro;
 public class Health : MonoBehaviour
 {
 
-    private float health = 100;
+    public float health = 100;
     public int currentPlayer;//which player is this script on
     public GameObject Player;
     public event Action<float> OnHealthPctChanged = delegate { };
@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
     public GameObject FloatingTextPrefab_Sniper;
     public GameObject FloatingTextPrefab_SMG;
 
-    private float cHealth;
+    public float cHealth;
 
     private GameObject Access;//Access Game Object is for the game object that tracks which players are left standing
     private SharedVariables share;

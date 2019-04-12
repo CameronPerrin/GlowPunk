@@ -5383,6 +5383,7 @@ MonoBehaviour:
   duration: 0.5
   timer: 0
   normalSpeed: 0
+  healingFactor: 28
   Anim: {fileID: 6928682484042175229}
   facingRight: 1
   firePoint: {fileID: 5733063647873569515}
@@ -5633,6 +5634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9655504c6ae8348a1114cbe5cda90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   currentPlayer: 1
   Player: {fileID: 6598079689660797429}
   FloatingTextPrefab_Normal: {fileID: 6213589799274099864, guid: cb8a896a490dfca4cb4ed3ec999b1870,
@@ -5641,6 +5643,7 @@ MonoBehaviour:
     type: 3}
   FloatingTextPrefab_SMG: {fileID: 6213589799274099864, guid: d9ebe272944ecb0448e07ef28e03e847,
     type: 3}
+  cHealth: 0
 --- !u!1 &7029878679646521110
 GameObject:
   m_ObjectHideFlags: 0

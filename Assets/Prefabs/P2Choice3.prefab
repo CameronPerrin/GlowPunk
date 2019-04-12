@@ -113,13 +113,11 @@ MonoBehaviour:
   duration: 4
   timer: 0
   normalSpeed: 0
+  healingFactor: 4
   Anim: {fileID: 3097566592876798884}
   facingRight: 1
   firePoint: {fileID: 3003449628086121080}
   child: {fileID: 4562944744372328441}
-  text1: {fileID: 6213589799274099864, guid: cb8a896a490dfca4cb4ed3ec999b1870, type: 3}
-  text2: {fileID: 6213589799274099864, guid: d9ebe272944ecb0448e07ef28e03e847, type: 3}
-  text3: {fileID: 6213589799274099864, guid: a11e58838473e6c4aaf9ba7f15956080, type: 3}
 --- !u!50 &9164136828524680169
 Rigidbody2D:
   serializedVersion: 4
@@ -535,6 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9655504c6ae8348a1114cbe5cda90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   currentPlayer: 2
   Player: {fileID: 1245934557609615532}
   FloatingTextPrefab_Normal: {fileID: 6213589799274099864, guid: cb8a896a490dfca4cb4ed3ec999b1870,
@@ -543,6 +542,7 @@ MonoBehaviour:
     type: 3}
   FloatingTextPrefab_SMG: {fileID: 6213589799274099864, guid: d9ebe272944ecb0448e07ef28e03e847,
     type: 3}
+  cHealth: 0
 --- !u!1 &3169650729663359570
 GameObject:
   m_ObjectHideFlags: 0
