@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
-            if (Input.GetAxis("A1") != 0 && recharge <= 0)//player sprintSpeed
+            if (Input.GetAxis("Dash1") != 0 && recharge <= 0)//player sprintSpeed
             {
                 this.speed = sprintSpeed;
                 recharge = coolDown;
@@ -168,7 +168,7 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
-            if (Input.GetAxis("A2") != 0 && recharge <= 0)
+            if (Input.GetAxis("Dash2") != 0 && recharge <= 0)
             {
                 this.speed = sprintSpeed;
                 recharge = coolDown;
@@ -239,7 +239,7 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
-            if (Input.GetAxis("A3") != 0 && recharge <= 0)
+            if (Input.GetAxis("Dash3") != 0 && recharge <= 0)
             {
                 this.speed = sprintSpeed;
                 recharge = coolDown;
@@ -310,7 +310,7 @@ public class PlayerMovement : MonoBehaviour {
                     }
                 }
             }
-            if (Input.GetAxis("A4") != 0 && recharge <= 0)
+            if (Input.GetAxis("Dash4") != 0 && recharge <= 0)
             {
                 this.speed = sprintSpeed;
                 recharge = coolDown;
