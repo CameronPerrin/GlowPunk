@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/rshamus/Documents/GitHub/GlowPunk/BUILD4-8-19/GlowPunkTest.exe
+C:/Users/zmccarthy/Desktop/GlowPunkTest.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/CharacterSelection.unity
@@ -157,7 +157,7 @@ d9514118504603b6d04fa08625c1ae35 Assembly-CSharp.dll:.HealthBar
 8b1992ef0d6dc4013c4cbdbc50fb78f9 Assembly-CSharp.dll:.P4CharSelect
 61b9d9b6f4b6a222dfea8b131b3d3227 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ChromaticAberration
 ff36e321b6fdfc1bd51e695f14eaddbf Assembly-CSharp.dll:.MasterController
-071aa2faea43c644e3255f720f8d3092 Assembly-CSharp.dll:.MainMenu
+16b2ec9df6a893a94a22247727738449 Assembly-CSharp.dll:.MainMenu
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 61ec225169a22f854a1949e6f07ce86f Assembly-CSharp.dll:.ProjectileMovementZec
 25fbc88f5ce4ea8fa9bf831be16c3129 Assembly-CSharp.dll:.P3CharSelect

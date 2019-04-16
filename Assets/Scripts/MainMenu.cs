@@ -2,16 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-    public List<GameObject> Images;
+    public List<TextMeshProUGUI> align;
     private int selected;
+    public int small, big;
     private float buffer, bufferTime;
+    public TMP_ColorGradient on, off;
 
     void Start() {
         selected = 0;
-        Images[0].SetActive(true);
+        align[0].alignment = TMPro.TextAlignmentOptions.Right;//show the first button as selected
+        for(int i = 1; i < align.Count; i++)//loop that will ensure that all other option are not selected
+        {
+            align[i].alignment = TMPro.TextAlignmentOptions.Left;
+            align[i].colorGradientPreset = off;
+            align[i].fontSize = small;
+        }
         bufferTime = .2f;
     }
 
@@ -19,7 +28,7 @@ public class MainMenu : MonoBehaviour
     {
         if(Input.GetAxis("MoveJoy1Y") > 0 && buffer <= 0)//user presses upward
         {
-            if(selected + 1 == Images.Count)//stay in the bounds of our options
+            if(selected + 1 == align.Count)//stay in the bounds of our options
             {
                 selected = 0;
             }
@@ -33,7 +42,7 @@ public class MainMenu : MonoBehaviour
         {
             if(selected == 0)//stay in the bounds of our options
             {
-                selected = Images.Count - 1;
+                selected = align.Count - 1;
             }
             else
             {
@@ -42,11 +51,15 @@ public class MainMenu : MonoBehaviour
             buffer = bufferTime;
         }
         
-        for(int i = 0; i < Images.Count; i++)
+        for(int i = 0; i < align.Count; i++)
         {
-            Images[i].SetActive(false);
+            align[i].alignment = TMPro.TextAlignmentOptions.Left;
+            align[i].colorGradientPreset = off;
+            align[i].fontSize = small;
         }
-        Images[selected].SetActive(true);
+        align[selected].alignment = TMPro.TextAlignmentOptions.Right;
+        align[selected].colorGradientPreset = on;
+        align[selected].fontSize = big;
         //^^Show the current option we are hovering^^
 
         if(Input.GetButtonDown("A1"))//player selects an option

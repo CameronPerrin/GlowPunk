@@ -165,22 +165,22 @@ public class Health : MonoBehaviour
             if (currentPlayer == 1 && (collision.tag == "User2" || collision.tag == "User3" || collision.tag == "User4"))
             {
                 //ShowFloatingText_Sniper(sniperDamage * share.damageMulti);
-                modifyHealth(sniperDamage); // needed to use this for healthbars
+                modifyHealth(sniperDamage * share.damageMulti ); // needed to use this for healthbars
             }
             else if (currentPlayer == 2 && (collision.tag == "User1" || collision.tag == "User3" || collision.tag == "User4"))
             {
                 //ShowFloatingText_Sniper(sniperDamage * share.damageMulti);
-                modifyHealth(sniperDamage);
+                modifyHealth(sniperDamage * share.damageMulti);
             }
             else if (currentPlayer == 3 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User4"))
             {
                 //ShowFloatingText_Sniper(sniperDamage * share.damageMulti);
-                modifyHealth(sniperDamage);
+                modifyHealth(sniperDamage * share.damageMulti);
             }
             else if (currentPlayer == 4 && (collision.tag == "User1" || collision.tag == "User2" || collision.tag == "User3"))
             {
                 //ShowFloatingText_Sniper(sniperDamage * share.damageMulti);
-                modifyHealth(sniperDamage);
+                modifyHealth(sniperDamage * share.damageMulti);
             }
         }
     }
