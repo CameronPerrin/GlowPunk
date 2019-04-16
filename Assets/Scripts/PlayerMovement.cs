@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour {
     private Transform playerGraphics; // ## I need something to reference when changing direction (regarding graphics)
     public GameObject firePoint;
     public GameObject child;
+    public GameObject trail;
+    public GameObject trailFollowPoint;
 
     private Health hp;
     private GameObject Access;
@@ -101,6 +103,11 @@ public class PlayerMovement : MonoBehaviour {
                 this.speed = sprintSpeed;
                 recharge = coolDown;
                 timer = duration;
+
+                GameObject trailTemp;
+                trailTemp = Instantiate(trail, transform.position, transform.rotation) as GameObject;
+                trailTemp.transform.parent = trailFollowPoint.transform.parent;
+                Destroy(trailTemp, 1.5f);
                 
             }
             

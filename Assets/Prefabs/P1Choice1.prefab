@@ -5208,6 +5208,8 @@ MonoBehaviour:
   facingRight: 1
   firePoint: {fileID: 5567362775082758103}
   child: {fileID: 1856536195778616531}
+  trail: {fileID: 8494701911308935334, guid: c6acd5416dfa1d940b26c4070a80ea7b, type: 3}
+  trailFollowPoint: {fileID: 3502223677632639784}
 --- !u!50 &4361105246751908794
 Rigidbody2D:
   serializedVersion: 4
