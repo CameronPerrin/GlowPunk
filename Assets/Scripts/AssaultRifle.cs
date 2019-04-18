@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class AssaultRifle : MonoBehaviour
@@ -10,6 +11,7 @@ public class AssaultRifle : MonoBehaviour
     private ProjectileMovementZec PMZ;
     private SpecialWeapon SW;
     public int burst;
+    public event Action<float> ammoChange = delegate { };
 
     public GameObject firePoint;
     public GameObject muzzleFlare;
