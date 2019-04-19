@@ -67,7 +67,7 @@ public class MasterController : MonoBehaviour
 
             Destroy(this.gameObject);
         }
-        if(P1Ready && P2Ready && P3Ready && P4Ready)//players are ready to play
+        else if(P1Ready && P2Ready && P3Ready && P4Ready)//players are ready to play
         {
             Players = 0;
             if (P1pick >= 0 && P1pick < P1Choice.Count)//player 1 picks the assualt character

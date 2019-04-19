@@ -143,7 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 55
+<<<<<<< HEAD
   velocity: {x: -0.98029286, y: 0.19754994, z: 0}
+=======
+  velocity: {x: 0.68309736, y: -0.73032725, z: 0}
+>>>>>>> 92db24c95b3fc3beb56cef9b23cc156848197343
   layerToDetect:
     serializedVersion: 2
     m_Bits: 0

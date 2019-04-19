@@ -35,6 +35,8 @@ public class AssaultRifle : MonoBehaviour
         {
             if (Input.GetAxis("P1Fire2") != 0 && SW.isReady)
             {
+                
+                // Set a number 1 or 0 to represent the amount of energy left in the ammo bar
                 if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
                 {
                     target = new Vector3(Input.GetAxis("ShotJoy1X"), Input.GetAxis("ShotJoy1Y"), 0);

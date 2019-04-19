@@ -10,7 +10,7 @@ public class FloatingText : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, DestroyTime);
-
+        
         transform.localPosition += offset;
         transform.localPosition += new Vector3(Random.Range(-RandomizeIntensity.x, RandomizeIntensity.x),
             Random.Range(-RandomizeIntensity.y, RandomizeIntensity.y),

@@ -38,8 +38,6 @@ public class Shotgun : MonoBehaviour
             {
                 if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
                 {
-                    int temp;
-
                     target = new Vector3(Input.GetAxis("ShotJoy1X"), Input.GetAxis("ShotJoy1Y"), 0);
                     target.Normalize();
                     float offset, convert;
@@ -118,8 +116,6 @@ public class Shotgun : MonoBehaviour
             {
                 if (Input.GetAxis("ShotJoy2X") != 0 || Input.GetAxis("ShotJoy2Y") != 0)
                 {
-                    int temp;
-
                     target = new Vector3(Input.GetAxis("ShotJoy2X"), Input.GetAxis("ShotJoy2Y"), 0);
                     target.Normalize();
                     float offset, convert;
@@ -200,8 +196,6 @@ public class Shotgun : MonoBehaviour
             {
                 if (Input.GetAxis("ShotJoy3X") != 0 || Input.GetAxis("ShotJoy3Y") != 0)
                 {
-                    int temp;
-
                     target = new Vector3(Input.GetAxis("ShotJoy3X"), Input.GetAxis("ShotJoy3Y"), 0);
                     target.Normalize();
                     float offset, convert;
@@ -282,8 +276,6 @@ public class Shotgun : MonoBehaviour
             {
                 if (Input.GetAxis("ShotJoy4X") != 0 || Input.GetAxis("ShotJoy4Y") != 0)
                 {
-                    int temp;
-
                     target = new Vector3(Input.GetAxis("ShotJoy4X"), Input.GetAxis("ShotJoy4Y"), 0);
                     target.Normalize();
                     float offset, convert;
