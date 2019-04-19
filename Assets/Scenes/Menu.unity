@@ -230,7 +230,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418460901}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: d6bcb317f5d20cc428fef2258877a097, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 4dc221c73cec31d4480d88f16d250e8f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 316082511}
@@ -243,12 +243,14 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -354,6 +356,11 @@ PrefabInstance:
     - target: {fileID: 8741427628640351056, guid: 356340c7de450364084f7f276d9d6f22,
         type: 3}
       propertyPath: m_fontColorGradient.bottomRight.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741427629052241745, guid: 356340c7de450364084f7f276d9d6f22,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8741427629444111365, guid: 356340c7de450364084f7f276d9d6f22,
@@ -512,11 +519,6 @@ PrefabInstance:
         type: 3}
       propertyPath: big
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8741427629052241745, guid: 356340c7de450364084f7f276d9d6f22,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8741427629052241747, guid: 356340c7de450364084f7f276d9d6f22,
         type: 3}

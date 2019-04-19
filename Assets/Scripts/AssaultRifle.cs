@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
 
 public class AssaultRifle : MonoBehaviour
@@ -11,7 +10,6 @@ public class AssaultRifle : MonoBehaviour
     private ProjectileMovementZec PMZ;
     private SpecialWeapon SW;
     public int burst;
-    public event Action<float> ammoChange = delegate { };
 
     public GameObject firePoint;
     public GameObject muzzleFlare;
@@ -33,6 +31,8 @@ public class AssaultRifle : MonoBehaviour
         {
             if (Input.GetAxis("P1Fire2") != 0 && SW.isReady)
             {
+                
+                // Set a number 1 or 0 to represent the amount of energy left in the ammo bar
                 if (Input.GetAxis("ShotJoy1X") != 0 || Input.GetAxis("ShotJoy1Y") != 0)
                 {
                     target = new Vector3(Input.GetAxis("ShotJoy1X"), Input.GetAxis("ShotJoy1Y"), 0);

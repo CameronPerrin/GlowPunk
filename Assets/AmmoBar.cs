@@ -11,26 +11,41 @@ public class AmmoBar : MonoBehaviour
 
     private void Awake()
     {
-        GetComponentInParent<AssaultRifle>().ammoChange += HandleHealthChanged;
+        bool rdy = GetComponentInParent<SpecialWeapon>().isReady;
     }
 
-    private void HandleHealthChanged(float pct)
+    private void HandleAmmoChange(float pct)
     {
-        StartCoroutine(ChangeToPct(pct));
+       // StartCoroutine(ChangeToPct(pct));
     }
 
-    private IEnumerator ChangeToPct(float pct)
+    private void FixedUpdate()
     {
         float preChangePct = foregroundImage_2.fillAmount;
         float elapsed = 0f;
+        float temp;
 
+        
+            if (GetComponentInParent<SpecialWeapon>().isReady)
+                foregroundImage_2.fillAmount = 1;
+            else
+            {
+                temp = GetComponentInParent<SpecialWeapon>().regeneration / GetComponentInParent<SpecialWeapon>().regenTime;
+            foregroundImage_2.fillAmount = Mathf.Lerp(temp, foregroundImage_2.fillAmount, elapsed / updateSpeedSeconds);
+                //yield return null;
+            }
+            
+        
+        /*
         while (elapsed < updateSpeedSeconds)
         {
             elapsed += Time.deltaTime;
             foregroundImage_2.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSeconds);
             yield return null;
         }
+        
 
         foregroundImage_2.fillAmount = pct;
+        */
     }
 }

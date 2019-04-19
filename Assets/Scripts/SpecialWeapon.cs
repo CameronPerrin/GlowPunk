@@ -19,7 +19,7 @@ public class SpecialWeapon : MonoBehaviour
         if (!isReady)//if we are on cooldown
         {
             regeneration += Time.deltaTime;
-            if (regeneration > regenTime)//time to regenerate some ammo
+            if (regeneration >= regenTime)//time to regenerate some ammo
             {
                 isReady = true;
                 regeneration = 0;

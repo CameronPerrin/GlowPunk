@@ -4922,6 +4922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ab41a5822d4f549afb65e6c342b762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foregroundImage_2: {fileID: 8438455934706066897}
 --- !u!1 &3024298781994165318
 GameObject:
   m_ObjectHideFlags: 0
