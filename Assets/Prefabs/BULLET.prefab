@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  velocity: {x: -0.99899244, y: 0.044880234, z: 0}
+  velocity: {x: 0.9151903, y: -0.40302187, z: 0}
   impact: {fileID: 499140642099957762, guid: c916aabc9aadf1c4db655478f8d1f2df, type: 3}
   FloatingText: {fileID: 6213589799274099864, guid: cb8a896a490dfca4cb4ed3ec999b1870,
     type: 3}

@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Pistol : MonoBehaviour
 {
+    public AudioSource source;
+    //[Tooltip("0- Pistol 1- Assault")]
+    public AudioClip shotSounds;
     public float bulletSpeed, fireRate;
     public float inaccuracy;
     private float coolDown = 0;
@@ -18,6 +22,7 @@ public class Pistol : MonoBehaviour
     void Start()
     {
         PMZ = bullet.GetComponent<ProjectileMovementZec>();
+        //source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +63,8 @@ public class Pistol : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User1";
                     Instantiate(bullet, transform.position, transform.rotation);
+                    source.clip = shotSounds;
+                    source.Play();
 
                     // muzzle flare
                     GameObject tempMuzzle;
@@ -108,6 +115,8 @@ public class Pistol : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User2";
                     Instantiate(bullet, transform.position, transform.rotation);
+                    source.clip = shotSounds;
+                    source.Play();
 
                     // muzzle flare
                     GameObject tempMuzzle;
@@ -158,6 +167,8 @@ public class Pistol : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User3";
                     Instantiate(bullet, transform.position, transform.rotation);
+                    source.clip = shotSounds;
+                    source.Play();
 
                     // muzzle flare
                     GameObject tempMuzzle;
@@ -209,6 +220,8 @@ public class Pistol : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User4";
                     Instantiate(bullet, transform.position, transform.rotation);
+                    source.clip = shotSounds;
+                    source.Play();
 
                     // muzzle flare
                     GameObject tempMuzzle;

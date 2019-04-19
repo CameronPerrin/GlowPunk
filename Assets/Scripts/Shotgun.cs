@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Shotgun : MonoBehaviour
 {
+    public AudioSource source;
+    //[Tooltip("0- Pistol 1- Assault")]
+    public AudioClip shotSounds;
     public float bulletSpeed;
     public float spread;
     public int pellets;
@@ -23,6 +26,7 @@ public class Shotgun : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         PMZ = bullet.GetComponent<ProjectileMovementZec>();
         SW = this.GetComponent<SpecialWeapon>();
+        //source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -94,6 +98,8 @@ public class Shotgun : MonoBehaviour
                         bullet.tag = "User1";
                         PMZ.speed = bulletSpeed;
                         Instantiate(bullet, transform.position, transform.rotation);
+                        source.clip = shotSounds;
+                        source.Play();
 
                         // muzzle flare
                         GameObject tempMuzzle;
@@ -172,6 +178,8 @@ public class Shotgun : MonoBehaviour
                         bullet.tag = "User2";
                         PMZ.speed = bulletSpeed;
                         Instantiate(bullet, transform.position, transform.rotation);
+                        source.clip = shotSounds;
+                        source.Play();
 
                         // muzzle flare
                         GameObject tempMuzzle;
@@ -252,6 +260,8 @@ public class Shotgun : MonoBehaviour
                         bullet.tag = "User3";
                         PMZ.speed = bulletSpeed;
                         Instantiate(bullet, transform.position, transform.rotation);
+                        source.clip = shotSounds;
+                        source.Play();
 
                         // muzzle flare
                         GameObject tempMuzzle;
@@ -332,6 +342,8 @@ public class Shotgun : MonoBehaviour
                         bullet.tag = "User4";
                         PMZ.speed = bulletSpeed;
                         Instantiate(bullet, transform.position, transform.rotation);
+                        source.clip = shotSounds;
+                        source.Play();
 
                         // muzzle flare
                         GameObject tempMuzzle;

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Sniper : MonoBehaviour
 {
- 
+    public AudioSource source;
+    //[Tooltip("0- Pistol 1- Assault")]
+    public AudioClip shotSounds;
     public float bulletSpeed;
     public float inaccuracy;
     public GameObject bullet;
@@ -61,6 +63,8 @@ public class Sniper : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User1";
                     Instantiate(bullet, transform.position, transform.rotation);
+                    source.clip = shotSounds;
+                    source.Play();
 
 
                     // muzzle flare
@@ -107,6 +111,8 @@ public class Sniper : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User2";
                     Instantiate(bullet, transform.position, transform.rotation);
+                    source.clip = shotSounds;
+                    source.Play();
 
                     // muzzle flare
                     GameObject tempMuzzle;
@@ -154,6 +160,8 @@ public class Sniper : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User3";
                     Instantiate(bullet, transform.position, transform.rotation);
+                    source.clip = shotSounds;
+                    source.Play();
 
                     // muzzle flare
                     GameObject tempMuzzle;
@@ -201,6 +209,8 @@ public class Sniper : MonoBehaviour
                     PMZ.speed = bulletSpeed;
                     bullet.tag = "User4";
                     Instantiate(bullet, transform.position, transform.rotation);
+                    source.clip = shotSounds;
+                    source.Play();
 
                     // muzzle flare
                     GameObject tempMuzzle;

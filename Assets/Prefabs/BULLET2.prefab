@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbcded652fc4f24abd76e87fd9a36ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 32
+  speed: 41
   velocity: {x: -0.70710677, y: 0.70710677, z: 0}
   impact: {fileID: 499140642099957762, guid: c916aabc9aadf1c4db655478f8d1f2df, type: 3}
   FloatingText: {fileID: 6213589799274099864, guid: cb8a896a490dfca4cb4ed3ec999b1870,

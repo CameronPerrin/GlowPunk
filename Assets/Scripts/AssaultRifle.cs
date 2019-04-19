@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AssaultRifle : MonoBehaviour
 {
+    public AudioSource source;
+    //[Tooltip("0- Pistol 1- Assault")]
+    public AudioClip shotSounds;
     public float bulletSpeed, fireRate;
     public float inaccuracy;
     public GameObject bullet;
@@ -22,6 +25,7 @@ public class AssaultRifle : MonoBehaviour
     {
         PMZ = bullet.GetComponent<ProjectileMovementZec>();
         SW = this.GetComponent<SpecialWeapon>();
+        //source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,8 +42,9 @@ public class AssaultRifle : MonoBehaviour
                     SW.isReady = false;
 
                     theTag = "User1";
-
-                    for(int i = 0; i < burst; i++)//for loop will set up the time to instantiate bullets for burst
+                    source.clip = shotSounds;
+                    source.Play();
+                    for (int i = 0; i < burst; i++)//for loop will set up the time to instantiate bullets for burst
                     {
                         Invoke("ShootAMan", fireRate * i);//do the thing at different time
                     }
@@ -57,6 +62,8 @@ public class AssaultRifle : MonoBehaviour
                     SW.isReady = false;
 
                     theTag = "User2";
+                    source.clip = shotSounds;
+                    source.Play();
                     for (int i = 0; i < burst; i++)//for loop will set up the time to instantiate bullets for burst
                     {
                         Invoke("ShootAMan", fireRate * i);//do the thing at different time
@@ -76,6 +83,8 @@ public class AssaultRifle : MonoBehaviour
                     SW.isReady = false;
 
                     theTag = "User3";
+                    source.clip = shotSounds;
+                    source.Play();
                     for (int i = 0; i < burst; i++)//for loop will set up the time to instantiate bullets for burst
                     {
                         Invoke("ShootAMan", fireRate * i);//do the thing at different time
@@ -95,6 +104,8 @@ public class AssaultRifle : MonoBehaviour
                     SW.isReady = false;
 
                     theTag = "User4";
+                    source.clip = shotSounds;
+                    source.Play();
                     for (int i = 0; i < burst; i++)//for loop will set up the time to instantiate bullets for burst
                     {
                         Invoke("ShootAMan", fireRate * i);//do the thing at different time
@@ -166,6 +177,7 @@ public class AssaultRifle : MonoBehaviour
         PMZ.speed = bulletSpeed;
         bullet.tag = theTag;
         Instantiate(bullet, transform.position, transform.rotation);
+        
 
         // muzzle flare
         GameObject tempMuzzle;

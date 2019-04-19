@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BombMovement : MonoBehaviour
 {
+    public AudioSource source;
+    //[Tooltip("0- Pistol 1- Assault")]
+    public AudioClip shotSounds;
     public float speed, distance, projSpeed;
     private float moved;
     public Vector3 velocity;
@@ -40,6 +43,8 @@ public class BombMovement : MonoBehaviour
 
         if (moved >= distance)//BOOM TIME
         {
+            source.clip = shotSounds;
+            source.Play();
             projectile.tag = this.tag;//copy the tag of the bullet with the tag of the bomb
             temp = new Vector3(0,1,0);//upwards projectile
             PMZ.velocity = temp;
