@@ -9638,8 +9638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.8, y: 59.3}
-  m_SizeDelta: {x: 409.6, y: 91.7}
+  m_AnchoredPosition: {x: -304.1, y: 59.3}
+  m_SizeDelta: {x: 396.9, y: 91.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2408823493900806446
 CanvasRenderer:
@@ -9891,7 +9891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391456749e77c9a4ba56012029d9cd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
+  source: {fileID: 1434318166414439378}
   shotSounds: {fileID: 8300000, guid: b5202fd736ff2f945b8e4202d3da631f, type: 3}
   bulletSpeed: 30
   fireRate: 1.8

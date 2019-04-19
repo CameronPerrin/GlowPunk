@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/zmccarthy/Desktop/Build/GlowPunkTest.exe
+C:/Users/jsoran/Desktop/waaaa/GlowPunkTest.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/CharacterSelection.unity
@@ -78,6 +78,7 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+1fb45f4652e45e8dee1a55ff46a950fe Assembly-CSharp.dll:.menuMusic
 f542c1afca5bb4022f91fdda19b8d622 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.DepthOfField
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -147,14 +148,15 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.EndingScreen
 755b0d4eec45eb0a8b536ea2a3f4b060 Assembly-CSharp.dll:.SniperProjectileMovement2
-9d3c97f56f722baa02a65b87b5d0ed21 Assembly-CSharp.dll:.Pistol
+458bb6fed416e886a25ccb8fd1e8e2a1 Assembly-CSharp.dll:.Pistol
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 d9514118504603b6d04fa08625c1ae35 Assembly-CSharp.dll:.HealthBar
 7e6ed836cbaa230e56d6a2bbae1b9bb5 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessEffectSettings
-9575e1b8476048be19d5cabab7776c50 Assembly-CSharp.dll:.Sniper
+d02ded3e28cbfe6d7cfd745cd8ea3b51 Assembly-CSharp.dll:.Sniper
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 8b1992ef0d6dc4013c4cbdbc50fb78f9 Assembly-CSharp.dll:.P4CharSelect
+5a426df162db4e3e563acbd9be4f73f2 Assembly-CSharp.dll:.AmmoBar
 61b9d9b6f4b6a222dfea8b131b3d3227 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ChromaticAberration
 ff36e321b6fdfc1bd51e695f14eaddbf Assembly-CSharp.dll:.MasterController
 16b2ec9df6a893a94a22247727738449 Assembly-CSharp.dll:.MainMenu
@@ -164,11 +166,13 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 d6fc8d3165070298511ec776ea575626 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessResources
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
+1fb45f4652e45e8dee1a55ff46a950fe Assembly-CSharp.dll:.bombNoise
 a53651ee3996fbba20dfe0fce02f0b23 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.AutoExposure
-89bbe3765659a641146e2724d754c133 Assembly-CSharp.dll:.AssaultRifle
+7ebb50045a7f263ed02eb357b039c18e Assembly-CSharp.dll:.AssaultRifle
 50c443b12ccc0b475183318b5088bcc5 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessDebug
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
-c6fe06b021dbc20f99cf836f98aa6d94 Assembly-CSharp.dll:.BombMovement
+1fb45f4652e45e8dee1a55ff46a950fe Assembly-CSharp.dll:.gameMusic
+183cec9fb1e3222f08e93e6cada66818 Assembly-CSharp.dll:.BombMovement
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -207,7 +211,7 @@ a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 993dd54bea381693fe066cf6d9468cd5 Assembly-CSharp.dll:.Pause
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 28ebde48fddd6d8ddf2ef190c356102e Assembly-CSharp.dll:.FloatingText
-de1773128131bfabcf8214e52c1c4eec Assembly-CSharp.dll:.Shotgun
+9a410e7ab919fd272f297510241cc2f1 Assembly-CSharp.dll:.Shotgun
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ArmController
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 2a36f7153066dde0b2988459765e7950 Assembly-CSharp.dll:.BulletMovement

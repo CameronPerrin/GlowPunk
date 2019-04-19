@@ -875,7 +875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: a7ed6cba66ef98147af4242fed18135c, type: 2}
-  m_Color: {r: 0.08675194, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.98039216, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10646,6 +10646,7 @@ GameObject:
   - component: {fileID: 3948422796188273374}
   - component: {fileID: 6235883005766751702}
   - component: {fileID: 8369180695570018343}
+  - component: {fileID: 5700851854584388505}
   m_Layer: 8
   m_Name: Health Bar
   m_TagString: Untagged
@@ -10750,6 +10751,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foregroundImage: {fileID: 8695890643113714218}
+--- !u!114 &5700851854584388505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8557921083796498006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ab41a5822d4f549afb65e6c342b762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foregroundImage_2: {fileID: 6277588266063513004}
 --- !u!1 &9126680968828825039
 GameObject:
   m_ObjectHideFlags: 0

@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391456749e77c9a4ba56012029d9cd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
+  source: {fileID: 8353892676030741547}
   shotSounds: {fileID: 8300000, guid: b5202fd736ff2f945b8e4202d3da631f, type: 3}
   bulletSpeed: 30
   fireRate: 1.8

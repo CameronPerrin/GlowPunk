@@ -12,11 +12,11 @@ public class SharedVariables : MonoBehaviour
     {
         if(totalPlayers == 2)
         {
-            damageMulti = 2.0f;
+            damageMulti = 1.5f;
         }
         else if(totalPlayers == 3)
         {
-            damageMulti = 1.5f;
+            damageMulti = 1.25f;
         }
         else//four players 
         {
