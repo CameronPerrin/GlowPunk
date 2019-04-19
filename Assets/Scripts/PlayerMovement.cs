@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject child;
     public GameObject trail;
     public GameObject trailFollowPoint;
+    public GameObject dashBoot;
 
     private Health hp;
     private GameObject Access;
@@ -107,9 +108,14 @@ public class PlayerMovement : MonoBehaviour {
                 GameObject trailTemp;
                 trailTemp = Instantiate(trail, transform.position, transform.rotation) as GameObject;
                 trailTemp.transform.parent = trailFollowPoint.transform.parent;
-                Destroy(trailTemp, 1.5f);
-                
+                Destroy(trailTemp, 2f);
+                dashBoot.SetActive(false);
+
+
             }
+
+            if (recharge <= 0)
+                dashBoot.SetActive(true);
             
             if(recharge > 0)//recharge for sprintSpeed
             {

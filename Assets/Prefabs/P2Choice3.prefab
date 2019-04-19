@@ -119,8 +119,9 @@ MonoBehaviour:
   facingRight: 1
   firePoint: {fileID: 3003449628086121080}
   child: {fileID: 4562944744372328441}
-  trail: {fileID: 0}
-  trailFollowPoint: {fileID: 0}
+  trail: {fileID: 7612020845013637616, guid: cb4637694b051934791089f78935c996, type: 3}
+  trailFollowPoint: {fileID: 1137891090131142439}
+  dashBoot: {fileID: 5140876121832250299}
 --- !u!50 &9164136828524680169
 Rigidbody2D:
   serializedVersion: 4
@@ -252,7 +253,7 @@ MonoBehaviour:
   bulletSpeed: 30
   fireRate: 1.8
   inaccuracy: 0.1
-  bullet: {fileID: 1283957840465060, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
+  bullet: {fileID: 303, guid: 02ba9d49a0096e9458b66c1d95d0172e, type: 3}
   firePoint: {fileID: 3003449628086121080}
   muzzleFlare: {fileID: 1357162262835438, guid: 418f1ccff49a11c4b87c91c464a0427d,
     type: 3}
@@ -1024,6 +1025,7 @@ RectTransform:
   - {fileID: 7657963041558440806}
   - {fileID: 7410243125597767265}
   - {fileID: 5276277314961418152}
+  - {fileID: 2915685944125337706}
   m_Father: {fileID: 3213164413393329198}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5910,6 +5912,85 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &5140876121832250299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2915685944125337706}
+  - component: {fileID: 1662770800479509729}
+  m_Layer: 0
+  m_Name: SHOE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2915685944125337706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140876121832250299}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -433, y: -508, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_Children: []
+  m_Father: {fileID: 3600896857835298070}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1662770800479509729
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140876121832250299}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 80ca30772ee4613499529ca4a8e01479, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.6, y: 1.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &5230722712864427772
 GameObject:
   m_ObjectHideFlags: 0
