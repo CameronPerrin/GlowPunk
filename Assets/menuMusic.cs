@@ -32,5 +32,9 @@ public class menuMusic : MonoBehaviour
             source.Play();
             stwitch = true;
         }
+        if(Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
