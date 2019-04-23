@@ -4707,11 +4707,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2133808799156302282}
     m_Modifications:
-    - target: {fileID: 8494701911308935334, guid: c6acd5416dfa1d940b26c4070a80ea7b,
-        type: 3}
-      propertyPath: m_Name
-      value: Trail
-      objectReference: {fileID: 0}
     - target: {fileID: 7538610101409295026, guid: c6acd5416dfa1d940b26c4070a80ea7b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4766,6 +4761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494701911308935334, guid: c6acd5416dfa1d940b26c4070a80ea7b,
+        type: 3}
+      propertyPath: m_Name
+      value: Trail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6acd5416dfa1d940b26c4070a80ea7b, type: 3}
@@ -4830,15 +4830,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7411272454006933363, guid: a5d719bf5a8848447b284c60d4a7e941,
+    - target: {fileID: 198753516012280316, guid: a5d719bf5a8848447b284c60d4a7e941,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4147547993454256348, guid: a5d719bf5a8848447b284c60d4a7e941,
-        type: 3}
-      propertyPath: source
-      value: 
+      propertyPath: InitialModule.startSize.scalar
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 198458812902837368, guid: a5d719bf5a8848447b284c60d4a7e941,
         type: 3}
@@ -4850,10 +4845,20 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.scalar
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 198753516012280316, guid: a5d719bf5a8848447b284c60d4a7e941,
+    - target: {fileID: 199826813773481460, guid: a5d719bf5a8848447b284c60d4a7e941,
         type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 4
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411272454006933363, guid: a5d719bf5a8848447b284c60d4a7e941,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147547993454256348, guid: a5d719bf5a8848447b284c60d4a7e941,
+        type: 3}
+      propertyPath: source
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7411272454006933363, guid: a5d719bf5a8848447b284c60d4a7e941, type: 3}

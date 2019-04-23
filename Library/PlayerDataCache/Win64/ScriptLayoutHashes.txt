@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/rshamus/Documents/GitHub/GlowPunk/FINALBUILD4-19-19V2/GlowPunkTest.exe
+C:/Users/jsoran/Desktop/FINYAL PRYODUCT/GlowPunkTest.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/CharacterSelection.unity

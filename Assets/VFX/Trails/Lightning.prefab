@@ -4674,7 +4674,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -9372,7 +9372,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -14104,11 +14104,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4471336470932668296}
     m_Modifications:
-    - target: {fileID: 8494701911308935334, guid: c6acd5416dfa1d940b26c4070a80ea7b,
-        type: 3}
-      propertyPath: m_Name
-      value: Trail
-      objectReference: {fileID: 0}
     - target: {fileID: 7538610101409295026, guid: c6acd5416dfa1d940b26c4070a80ea7b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14163,6 +14158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494701911308935334, guid: c6acd5416dfa1d940b26c4070a80ea7b,
+        type: 3}
+      propertyPath: m_Name
+      value: Trail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6acd5416dfa1d940b26c4070a80ea7b, type: 3}

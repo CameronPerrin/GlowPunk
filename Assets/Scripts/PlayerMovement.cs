@@ -186,7 +186,16 @@ public class PlayerMovement : MonoBehaviour {
                 this.speed = sprintSpeed;
                 recharge = coolDown;
                 timer = duration;
+
+                GameObject trailTemp;
+                trailTemp = Instantiate(trail, transform.position, transform.rotation) as GameObject;
+                trailTemp.transform.parent = trailFollowPoint.transform.parent;
+                Destroy(trailTemp, 2f);
+                dashBoot.SetActive(false);
             }
+
+            if (recharge <= 0)
+                dashBoot.SetActive(true);
 
             if (recharge > 0)//recharge for sprintSpeed
             {
@@ -257,7 +266,16 @@ public class PlayerMovement : MonoBehaviour {
                 this.speed = sprintSpeed;
                 recharge = coolDown;
                 timer = duration;
+
+                GameObject trailTemp;
+                trailTemp = Instantiate(trail, transform.position, transform.rotation) as GameObject;
+                trailTemp.transform.parent = trailFollowPoint.transform.parent;
+                Destroy(trailTemp, 2f);
+                dashBoot.SetActive(false);
             }
+
+            if (recharge <= 0)
+                dashBoot.SetActive(true);
 
             if (recharge > 0)//recharge for sprintSpeed
             {
@@ -328,7 +346,16 @@ public class PlayerMovement : MonoBehaviour {
                 this.speed = sprintSpeed;
                 recharge = coolDown;
                 timer = duration;
+
+                GameObject trailTemp;
+                trailTemp = Instantiate(trail, transform.position, transform.rotation) as GameObject;
+                trailTemp.transform.parent = trailFollowPoint.transform.parent;
+                Destroy(trailTemp, 2f);
+                dashBoot.SetActive(false);
             }
+
+            if (recharge <= 0)
+                dashBoot.SetActive(true);
 
             if (recharge > 0)//recharge for sprintSpeed
             {
